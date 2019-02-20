@@ -120,6 +120,34 @@
   }
 }
 
+// line 버튼
+// -------------------------
+.btn-outline {
+  background: $btn-default-bg;
+  color: $btn-default-color;
+
+  &:hover,
+  &:active,
+  &.active{
+    color: $btn-outline-hover-color;
+    background: $btn-primary-bg;
+    border-color: $btn-primary-bg;
+  }
+}
+
+@each $btnname, $btnbg in ( primary : $btn-primary-bg , success : $btn-success-bg, info : $btn-info-bg, warning : $btn-warning-bg, danger : $btn-danger-bg ){
+
+  .btn-#{$btnname}.btn-outline{
+
+    &:hover,
+    &:active,
+    &.active{
+      background: $btnbg;
+      border-color: $btnbg;
+    }
+  }
+}
+
 
 // Button Sizes
 // --------------------------------------------------
