@@ -8,49 +8,79 @@
 	<h1>버튼</h1>
 	<div class="pblock">
 		<!-- Standard button -->
-		<button type="button" class="btn btn-default">Default</button>
-
-		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 		<button type="button" class="btn btn-primary">Primary</button>
-		<!-- Indicates a successful or positive action -->
+		<button type="button" class="btn btn-secondary">secondary</button>
 		<button type="button" class="btn btn-success">Success</button>
-		<!-- Contextual button for informational alert messages -->
 		<button type="button" class="btn btn-info">Info</button>
-		<!-- Indicates caution should be taken with this action -->
 		<button type="button" class="btn btn-warning">Warning</button>
-		<!-- Indicates a dangerous or potentially negative action -->
 		<button type="button" class="btn btn-danger">Danger</button>
-		<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+		<button type="button" class="btn btn-light">Light</button>
+		<button type="button" class="btn btn-dark">Dark</button>
 		<button type="button" class="btn btn-link">Link</button>
 	</div>
 	<div class="pblock">
-		<p>라인만 있는 경우 btn-outline 클래스 추가</p>
-		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-		<button type="button" class="btn btn-primary btn-outline">Primary</button>
-		<!-- Indicates a successful or positive action -->
-		<button type="button" class="btn btn-success btn-outline">Success</button>
-		<!-- Contextual button for informational alert messages -->
-		<button type="button" class="btn btn-info btn-outline">Info</button>
-		<!-- Indicates caution should be taken with this action -->
-		<button type="button" class="btn btn-warning btn-outline">Warning</button>
-		<!-- Indicates a dangerous or potentially negative action -->
-		<button type="button" class="btn btn-danger btn-outline">Danger</button>
+		<p>라인만 있는 경우 btn-outline-색상 클래스 추가</p>
+		<button type="button" class="btn btn-outline-primary">Primary</button>
+		<button type="button" class="btn btn-outline-secondary">secondary</button>
+		<button type="button" class="btn btn-outline-success">Success</button>
+		<button type="button" class="btn btn-outline-info">Info</button>
+		<button type="button" class="btn btn-outline-warning">Warning</button>
+		<button type="button" class="btn btn-outline-danger">Danger</button>
+		<button type="button" class="btn btn-outline-light">Light</button>
+		<button type="button" class="btn btn-outline-dark">Dark</button>
+		<button type="button" class="btn btn-outline-dark btn-round"><span class="fas fa-save"></span>Dark</button>
 	</div>
 	<div class="pblock">
-		<p>버튼 사이즈별로 btn-lg, btn-sm, btn-xs  클래스 추가</p>
+		<p>버튼 사이즈별로 btn-lg, btn-sm 클래스 추가</p>
 		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 		<button type="button" class="btn btn-primary btn-lg">Primary</button>
 		<button type="button" class="btn btn-primary">Primary</button>
 		<button type="button" class="btn btn-primary btn-sm">Primary</button>
-		<button type="button" class="btn btn-primary btn-xs">Primary</button>
 	</div>
 	<div class="pblock">
 		<p>버튼이 block 이어야 할경우 btn-block 클래스 추가</p>
 		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 		<button type="button" class="btn btn-primary btn-block">Primary</button>
 	</div>
-	<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-search"></span></button>
-	
+	<span class="fas fa-igloo"></span> <!-- using a <span> element to reference the icon -->
+	<span class="fas fa-save"></span> <!-- using a <span> element to reference the icon -->
+	<span class="fas fa-check"></span> <!-- using a <span> element to reference the icon -->
+</div>
+
+<div>
+	<h1>폼</h1>
+	<div class="pblock">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+			<label class="form-check-label" for="defaultCheck1">
+				Default checkbox
+			</label>
+		</div>
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+			<label class="form-check-label" for="defaultCheck2">
+				Disabled checkbox
+			</label>
+		</div>
+	</div>
+	<div class="form-check">
+			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+			<label class="form-check-label" for="exampleRadios1">
+			  Default radio
+			</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+			<label class="form-check-label" for="exampleRadios2">
+			  Second default radio
+			</label>
+		  </div>
+		  <div class="form-check">
+			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+			<label class="form-check-label" for="exampleRadios3">
+			  Disabled radio
+			</label>
+		  </div>
 </div>
 </body>
 </html>
