@@ -226,6 +226,9 @@
   @include border-radius($custom-select-border-radius, 0);
   @include box-shadow($custom-select-box-shadow);
   appearance: none;
+  -webkit-appearance:none;
+  -moz-appearance: none; 
+  
 
   &:focus {
     border-color: $custom-select-focus-border-color;

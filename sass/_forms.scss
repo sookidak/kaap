@@ -202,13 +202,50 @@ textarea.form-control {
 .form-check {
   position: relative;
   display: block;
-  padding-left: $form-check-input-gutter;
 }
 
 .form-check-input {
   position: absolute;
   margin-top: $form-check-input-margin-y;
-  margin-left: -$form-check-input-gutter;
+  opacity:0;
+
+  &[type=checkbox] + .form-check-label:before,
+  &[type=radio] + .form-check-label:before{
+    content:'';
+    position:absolute;
+    display:inline-block;
+    left:0;
+    top:50%;
+    margin-top:-0.5rem;
+    width:1rem;
+    height:1rem;
+    background: $white;
+    border-radius:2px;
+    text-align: center;
+    line-height: 0.9rem;
+    border:1px solid $gray-500;
+    @include fa-icon(0.5rem, 600)
+  }
+
+  &[type=radio] + .form-check-label:before{
+    border-radius:1rem;
+  }
+
+  &[type=checkbox]:checked+ .form-check-label:before{
+    content:'\f00c';
+    background: $blue;
+    border-color:$blue;
+    color:$white;
+  }
+
+  &[type=radio]:checked+ .form-check-label:before{
+    content:'\f111';
+    color: $blue;
+  }
+
+  &+.form-check-label{
+    padding-left: $form-check-input-gutter;
+  }
 
   &:disabled ~ .form-check-label {
     color: $text-muted;
@@ -216,6 +253,7 @@ textarea.form-control {
 }
 
 .form-check-label {
+  font-size: 0.8rem;
   margin-bottom: 0; // Override default `<label>` bottom margin
 }
 

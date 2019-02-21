@@ -34,7 +34,7 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #007bff !default;
+$blue:    #0091EA !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -383,7 +383,7 @@ $table-border-level:          -6 !default;
 $input-btn-padding-y:         .32rem !default;
 $input-btn-padding-x:         .5rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         $font-size-base * .875 !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;

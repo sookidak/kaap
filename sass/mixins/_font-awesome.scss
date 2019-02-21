@@ -1,0 +1,11 @@
+@mixin fa-icon( $size, $weight) {
+	font-family: "Font Awesome 5 Free";
+	font-size:$size;
+	font-weight:$weight;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	display: inline-block;
+	@content;
+  }
