@@ -1,4 +1,32 @@
-.header{border-bottom:1px solid $gray-300;}
-.header h1{width:100%;}
-.header h1 img{width:100%;}
+.header{
+	border-bottom:1px solid $gray-300;
+	text-align:center;
+	h1{
+		width:180px;
+		display:inline-block;
+		img{
+			width:100%;
+		}
+	}
+}
+
+.mo-nav{position:absolute;right:10px;top:10px;}
 .contents-wrap{margin-top:30px;margin-bottom:100px}
+.util-wrap{border-bottom:1px solid $gray-300;height:60px;}
+
+@include media-breakpoint-up(xl) {
+	.header{
+		text-align:left;
+		h1{
+			position:absolute;
+			left:100px;
+			top:64px;
+		}
+		.gnb{
+			height:$gnb-height;
+		}
+	}
+	.navbar{
+		height:100px;position: relative;
+	}
+}

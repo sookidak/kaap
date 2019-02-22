@@ -13,7 +13,10 @@
 
 .nav-link {
   display: block;
-  padding: $nav-link-padding-y $nav-link-padding-x;
+  height:$gnb-height;
+  line-height:$gnb-height;
+  padding: 0 $nav-link-padding-x;
+  color:#212121;
 
   @include hover-focus {
     text-decoration: none;
