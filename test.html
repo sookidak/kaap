@@ -1,140 +1,111 @@
 <!DOCTYPE html>
 @@include('_inc/_top-setting.html')
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Brand</a>
-      </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-<header class="header container-fluid">
-    <div class="util-wrap row">
-        <div class="col-12 col-xl-2">
-            <h1><img src="./img/logo.svg" class="logo_svg"></h1>
-            <div class="mo-nav d-xl-none">
-                <button type="button" class="btn btn-outline-secondary"><span class="fa fa-bars"></span></button>
-            </div>
-        </div>
-        <div class="col-12 col-xl-10 text-right">
-            <div class="form-inline d-xl-inline-block">
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
-                        <label class="form-check-label" for="exampleRadios1">
-                            Default radio
-                        </label>
-                    </div>
-                    <div class="form-check ml-1">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
-                            Second default radio
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="d-none d-xl-inline">
-                <span class="user">신한사용자</span>
-                <button type="button">로그아웃</button>
-            </div>
-        </div>
-    </div>
-    <div class="row gnb">
-        <div class="col-xl-12 d-none d-xl-inline-block">
-            <nav class="nav justify-content-end">
-                <li type="li" class="nav-link">상품제안</li>
-                <li class="nav-link">
-                    상품 조달 및 입찰
-                </li>
-                <li class="nav-link">
-                    상품 낙찰 및 문서생성
-                </li>
-                <li class="nav-link">
-                   시장현황
-                </li>
-                <li class="nav-link">
-                   리스크분석
-                </li>
-                <li class="nav-link">
-                   경영정보
-                </li>
-                <li class="nav-link">
-                   게시판
-                </li>
-                <li class="nav-item">
-                   관리
-                </li>
-            </nav>
-        </div>
-    </div>
-</header>
+<section class="header-wrap">
+	<header class="header container">
+		<div class="util-wrap row">
+			<div class="col-12 col-xl-2">
+				<h1 class="logo"><img src="./img/logo.svg" class="logo_svg"></h1>
+				<div class="">
+
+					<div class="custom-control custom-switch">
+						<input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+						<label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-xl-10 text-right">
+				<div class="form-inline d-xl-inline">
+					<label class="radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">조달하기
+					</label>
+					<label class="radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">입찰하기
+					</label>
+				</div>
+				<div class="d-none d-xl-inline">
+					<span class="user">신한사용자</span>
+					<button type="button">로그아웃</button>
+				</div>
+			</div>
+		</div>
+		<div class="row gnb">
+				<nav class="navbar navbar-default">
+						<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+						</div>
+					
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								<li class="divider"></li>
+								<li><a href="#">One more separated link</a></li>
+								</ul>
+							</li>
+							</ul>
+							<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+							</form>
+							<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								</ul>
+							</li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+						</div><!-- /.container-fluid -->
+						</nav>
+		</div>
+	</header>
+</section>
 <section class="container-wrap">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-                <div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner wj-state-focus wj-state-focused" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15">
-                    <div class="wj-input">
-                        <div class="wj-input-group">
-                            <span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button></span>
-                            <input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required="">
-                            <span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style="">
-                                <button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner wj-state-focus wj-state-focused" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15">
-                    <div class="wj-input"><div class="wj-input-group"><span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button></span><input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required=""><span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button></span></div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6">
+				<div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner wj-state-focus wj-state-focused" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15">
+					<div class="wj-input">
+						<div class="wj-input-group">
+							<span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button></span>
+							<input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required="">
+							<span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style="">
+								<button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner wj-state-focus wj-state-focused" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15">
+					<div class="wj-input"><div class="wj-input-group"><span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button></span><input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required=""><span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button></span></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </section>
 
