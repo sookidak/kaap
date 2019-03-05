@@ -1,109 +1,121 @@
 <!DOCTYPE html>
 @@include('_inc/_top-setting.html')
-<section class="header-wrap">
-	<header class="header container">
-		<div class="util-wrap row">
-			<div class="col-12 col-xl-2">
-				<h1 class="logo"><img src="./img/logo.svg" class="logo_svg"></h1>
-				<div class="">
-
-					<div class="custom-control custom-switch">
-						<input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
-						<label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 col-xl-10 text-right">
-				<div class="form-inline d-xl-inline">
-					<label class="radio-inline">
-					<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">조달하기
-					</label>
-					<label class="radio-inline">
-					<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">입찰하기
-					</label>
-				</div>
-				<div class="d-none d-xl-inline">
-					<span class="user">신한사용자</span>
-					<button type="button">로그아웃</button>
-				</div>
-			</div>
-		</div>
-		<div class="row gnb">
-				<nav class="navbar navbar-default">
-						<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							</button>
-						</div>
-					
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-							<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-							<li><a href="#">Link</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Separated link</a></li>
-								<li class="divider"></li>
-								<li><a href="#">One more separated link</a></li>
-								</ul>
-							</li>
-							</ul>
-							<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Search">
+<header class="header-wrap">
+	<div class="util">
+		<div class="container">
+			<h1 class="title-1 navbar-brand col-sm-4"><img src="./img/logo.svg" alt="ELS master"></h1>
+			<div class="navbar-right col-sm-8 text-right">		
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="switch-wrap">
+							<div class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
 							</div>
-							<button type="submit" class="btn btn-default">Submit</button>
-							</form>
-							<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">Link</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Separated link</a></li>
-								</ul>
-							</li>
-							</ul>
-						</div><!-- /.navbar-collapse -->
-						</div><!-- /.container-fluid -->
-						</nav>
-		</div>
-	</header>
-</section>
-<section class="container-wrap">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-6">
-				<div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner wj-state-focus wj-state-focused" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15">
-					<div class="wj-input">
-						<div class="wj-input-group">
-							<span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button></span>
-							<input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required="">
-							<span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style="">
-								<button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button></span>
-						</div>
+							<span>사이드메뉴사용</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<label class="radio-inline">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">조달하기
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">입찰하기
+						</label>
+					</div>
+					<div class="form-group">
+						<span class="user">신한사용자</span>
+						<button type="button">로그아웃</button>
 					</div>
 				</div>
 			</div>
-			<div class="col-6">
-				<div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner wj-state-focus wj-state-focused" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15">
-					<div class="wj-input"><div class="wj-input-group"><span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button></span><input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required=""><span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button></span></div>
-				</div>
+		</div>
+	</div>
+	<div class="container gnb">
+		<nav class="navbar">
+			<ul class="nav nav-pills nav-justified">
+				<li role="presentation" class="active"><a href="#">상품정보</a></li>
+				<li role="presentation"><a href="#">상품판매</a></li>
+				<li role="presentation"><a href="#">고객관리</a></li>
+				<li role="presentation"><a href="#">시장분석</a></li>
+				<li role="presentation"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">본사관리 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+						<li class="divider"></li>
+						<li><a href="#">One more separated link</a></li>
+					</ul>
+				</li>
+				<li role="presentation"><a href="#">게시판</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section class="contents-wrap">
+	<div class="container">
+		<div class="location">
+			<ol class="breadcrumb">
+				<li><a href="#">상품정보</a></li>
+				<li><a href="#">판매상품</a></li>
+				<li class="active">판매상품 리스트</li>
+			</ol>
+		</div>
+		<div class="pagetitle">
+			<h2 class="title-2">페이지 타이틀</h2>
+			<div class="title-right">
+				<span class="badge">
+					단위 : 백만원
+				</span>
+				<span class="badge">
+					단위 : 백만원
+				</span>
 			</div>
+		</div>
+		<div class="lookup-wrap">
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="exampleInputEmail1">발행일</label>
+					<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-inputdate wj-inputdatetime wj-state-focus wj-state-focused" tabindex="-1" _wjsiblingidprop="5" id="dt">
+						<div class="wj-template">
+							<div class="wj-input">
+								<div class="wj-input-group wj-input-btn-visible">
+									<input wj-part="input" type="tel" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="Date and Time">
+									<span class="wj-input-group-btn">
+										<button wj-part="btn" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Calendar"><span class="wj-glyph-calendar"></span></button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<span>~</span>
+					<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-inputdate wj-inputdatetime wj-state-focus wj-state-focused" tabindex="-1" _wjsiblingidprop="5" id="dt">
+							<div class="wj-template">
+								<div class="wj-input">
+									<div class="wj-input-group wj-input-btn-visible">
+										<input wj-part="input" type="tel" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="Date and Time">
+										<span class="wj-input-group-btn">
+											<button wj-part="btn" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Calendar"><span class="wj-glyph-calendar"></span></button>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">상품구분</label>
+					<div class="wj-control wj-content wj-dropdown wj-combobox wj-menu wj-state-collapsed wj-state-focus wj-state-focused" tabindex="0" role="menubar" _wjsiblingidprop="12" id="im"><div class="wj-template"><div class="wj-input"><div class="wj-input-group wj-input-btn-visible"><div wj-part="header" class="wj-form-control">header</div><input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-owns="_dropdown" style="display: none;"><span wj-part="btn" class="wj-input-group-btn" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">상품위험등급</label>
+					<div class="wj-control wj-content wj-dropdown wj-combobox wj-menu wj-state-collapsed wj-state-focus wj-state-focused" tabindex="0" role="menubar" _wjsiblingidprop="12" id="im"><div class="wj-template"><div class="wj-input"><div class="wj-input-group wj-input-btn-visible"><div wj-part="header" class="wj-form-control">header</div><input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-owns="_dropdown" style="display: none;"><span wj-part="btn" class="wj-input-group-btn" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+				</div>
+				
+				<button type="submit" class="btn btn-primary">조회</button>
+			</form>
 		</div>
 	</div>
 

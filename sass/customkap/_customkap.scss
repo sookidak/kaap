@@ -1,12 +1,177 @@
-.logo{
-	height:35px;
+//kap reset
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Links
+
+a {
+	color:initial;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited {
+		color:initial;
+		text-decoration: none;
+	}
+	&:focus {
+		@include tab-focus;
+	}
+}
+  
+
+
+
+// kap 컴포넌트
+
+/* The switch - the box around the slider */
+.switch-wrap{
+	position: relative;
+	display: inline-block;
+}
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 15px;
+	
+	input {
+		display:none;
+
+		&:checked + .slider {
+			background-color: #2196F3;
+		}
+		&:focus + .slider {
+			box-shadow: 0 0 1px #2196F3;
+		}
+		&:checked + .slider:before {
+			-webkit-transform: translateX(13px);
+			-ms-transform: translateX(13px);
+			transform: translateX(13px);
+		}
+	}
+	/* The slider */
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
+
+		&:before {
+			position: absolute;
+			content: "";
+			height: 9px;
+			width: 9px;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			-webkit-transition: .4s;
+			transition: .4s;
+		}
+		/* Rounded sliders */
+		&.round {
+			border-radius: 9px;
+		}
+		&.round:before {
+			border-radius: 50%;
+		}
+	}
+}
+
+// 경로
+
+.location{
+	text-align:right;
+}
+.breadcrumb {
+	padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+	margin-bottom: $line-height-computed;
+
+	> li {
+		+ li:before {
+		content: '>'; 
+		// Unicode space added since inline-block means non-collapsing white-space
+		padding: 0 5px;
+		}
+		a{
+			color: $breadcrumb-color;
+		}
+	}
+}
+
+
+
+
+// header
+.header-wrap{
+	width:100%;
+	border-bottom:1px solid #e6e9ed;
+}
+.util{
+	border-bottom:1px solid #e6e9ed;
+}
+
+// navbar
+.navbar-brand{
+	padding:0;
 	>img{
 		height:100%;
 	}
 }
 
-.header-wrap{
-	width:100%;
-	margin:0 auto;
-	border-bottom:1px solid gray;
+// 페이지 타이틀
+.pagetitle{
+	position: relative;
+	padding-top:19px;
+	padding-bottom:15px;
+	@include clearfix ;
+
+	&:before{
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		display:inline-block;
+		width:30px;
+		height:1px;
+		background: #000;
+	}
+	>.title-2{
+		float:left;
+		font-size:32px;
+		font-weight: bold;
+		margin:0;
+		
+	}
+	>.title-right{
+		float:right;
+	}
 }
+
+
+
+// 조회bar
+.lookup-wrap{
+	background: #34373f;
+	padding:10px 0 0;
+	.form-group{
+		margin-bottom:10px;
+	  >label{
+		padding-left:25px;
+		padding-right:15px;
+		margin-bottom:0;
+		vertical-align: middle;
+		color:#fff;
+	  }
+	}
+	.btn{
+		margin-bottom:10px;
+	}
+  }

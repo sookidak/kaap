@@ -1,3 +1,6 @@
+//kap custom
+@import "customkap/variableskap";
+
 // Core variables and mixins
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
@@ -8,7 +11,7 @@
 @import "bootstrap/glyphicons";
 
 // Core CSS
-@import "bootstrap/scaffolding";
+@import "bootstrap/scaffolding";//reset
 @import "bootstrap/type";
 @import "bootstrap/code";
 @import "bootstrap/grid";
@@ -49,6 +52,6 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
+
 //kap custom
 @import "customkap/customkap";
-@import "customkap/variables";
