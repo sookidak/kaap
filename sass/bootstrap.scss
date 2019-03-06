@@ -53,5 +53,39 @@
 @import "bootstrap/responsive-utilities";
 
 
+
+
+
 //kap custom
 @import "customkap/customkap";
+
+
+
+
+
+// wijmo
+// misc
+@import "customkap/wijmo/misc/mixins"; // functions
+@import "customkap/wijmo/misc/constants"; // named colors
+@import "customkap/wijmo/misc/variables"; // theme variables
+@import "customkap/wijmo/misc/glyphs"; // wijmo glyphs
+
+/// core mcustomkap/wijmo/odules
+@import "customkap/wijmo/core/core";
+@import "customkap/wijmo/core/input";
+@import "customkap/wijmo/core/grid";
+@import "customkap/wijmo/core/grid_grouppanel";
+@import "customkap/wijmo/core/grid_filter";
+@import "customkap/wijmo/core/chart";
+@import "customkap/wijmo/core/chart_interaction";
+@import "customkap/wijmo/core/chart_hierarchical";
+@import "customkap/wijmo/core/gauge";
+@import "customkap/wijmo/core/nav";
+
+/// enterpcustomkap/wijmo/rise modules
+@import "customkap/wijmo/enterprise/sheet";
+@import "customkap/wijmo/enterprise/multirow";
+@import "customkap/wijmo/enterprise/olap";
+@import "customkap/wijmo/enterprise/viewer";
+@import "customkap/wijmo/enterprise/chart_finance";
+

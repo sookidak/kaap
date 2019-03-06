@@ -4,7 +4,6 @@
 // --------------------------------------------------
 
 // Links
-
 a {
 	color:initial;
 	text-decoration: none;
@@ -16,12 +15,7 @@ a {
 		color:initial;
 		text-decoration: none;
 	}
-	&:focus {
-		@include tab-focus;
-	}
 }
-  
-
 
 
 // kap 컴포넌트
@@ -85,9 +79,41 @@ a {
 	}
 }
 
-// 경로
 
-.location{
+// header
+.header-wrap{
+	width:100%;
+	border-bottom:1px solid #e6e9ed;
+}
+.util-wrap{
+	border-bottom:1px solid #e6e9ed;
+}
+
+// navbar
+.navbar-brand{
+	padding:0;
+	>img{
+		height:100%;
+	}
+}
+.body-wrap{
+	min-height:700px;
+	.container{
+		position: relative;
+	}
+}
+
+// footer
+.footer-wrap{
+	margin-top:30px;
+	background: #f5f7fa;
+	border-top:1px solid #e6e9ed;
+	min-height:50px;
+}
+
+
+// 경로
+.location-wrap{
 	text-align:right;
 }
 .breadcrumb {
@@ -106,28 +132,8 @@ a {
 	}
 }
 
-
-
-
-// header
-.header-wrap{
-	width:100%;
-	border-bottom:1px solid #e6e9ed;
-}
-.util{
-	border-bottom:1px solid #e6e9ed;
-}
-
-// navbar
-.navbar-brand{
-	padding:0;
-	>img{
-		height:100%;
-	}
-}
-
 // 페이지 타이틀
-.pagetitle{
+.pagetitle-wrap{
 	position: relative;
 	padding-top:19px;
 	padding-bottom:15px;
@@ -155,16 +161,32 @@ a {
 	}
 }
 
+//lnb
+.lnb-wrap{
+	display:none;
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	width:180px;
+	background: #e1e1e1;
+}
 
 
 // 조회bar
 .lookup-wrap{
+	position: relative;
 	background: #34373f;
 	padding:10px 0 0;
+	color:#fff;
+	.form-inline{
+		padding-right:140px;
+	}
 	.form-group{
 		margin-bottom:10px;
-	  >label{
 		padding-left:25px;
+		height:30px;
+	  >label{
 		padding-right:15px;
 		margin-bottom:0;
 		vertical-align: middle;
@@ -174,4 +196,33 @@ a {
 	.btn{
 		margin-bottom:10px;
 	}
-  }
+	.btn-execution{
+		position: absolute;
+		right:8px;
+		top:10px;
+	}
+	.kap-datetime{
+		width:130px;
+	}
+
+}
+
+// 하단 내용 나오는 부분
+.contents-body{
+	background: #ecf0f1;
+	padding:20px;
+}
+.cont-wrap{
+	[class*="inner"] {
+	   background: #fff;
+	   border:1px solid #eaeaea;
+	   border-bottom:1px solid #bdbdbd;
+	}
+	[class^="inner"] {
+		margin-bottom:20px;
+	}
+}
+
+.cont-wrap{
+	margin-top:20px;
+}
