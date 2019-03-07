@@ -1,75 +1,12 @@
-<!DOCTYPE html>
 @@include('_inc/_top-setting.html')
-<!-- header -->
-<header class="header-wrap">
-	<div class="util-wrap">
-		<div class="container">
-			<h1 class="title-1 navbar-brand col-sm-4"><img src="./img/logo.svg" alt="ELS master"></h1>
-			<div class="navbar-right col-sm-8 text-right">		
-				<div class="form-inline">
-					<div class="form-group">
-						<label class="switch-wrap">
-							<div class="switch">
-								<input type="checkbox">
-								<span class="slider round"></span>
-							</div>
-							<span>사이드메뉴사용</span>
-						</label>
-					</div>
-					<div class="form-group">
-						<label class="radio-inline">
-							<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">조달하기
-						</label>
-						<label class="radio-inline">
-							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">입찰하기
-						</label>
-					</div>
-					<div class="form-group">
-						<span class="user">신한사용자</span>
-						<button type="button">로그아웃</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="gnb-wrap">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="btn btn-default">lnb</button>
-			</div>
-			<nav class="navbar">
-				<ul class="nav nav-pills nav-justified">
-					<li role="presentation" class="active"><a href="#">상품정보</a></li>
-					<li role="presentation"><a href="#">상품판매</a></li>
-					<li role="presentation"><a href="#">고객관리</a></li>
-					<li role="presentation"><a href="#">시장분석</a></li>
-					<li role="presentation"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">본사관리 <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li>
-					<li role="presentation"><a href="#">게시판</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</header>
-<!-- //header -->
+@@include('_inc/_header.html')
 
 <!-- contents body -->
 <section class="body-wrap">
-	<div class="container">
-		<!-- 좌측메뉴 -->
-		<aside class="lnb-wrap">
-			leftmenu
-		</aside>
-		<!-- //좌측메뉴 -->
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+
+		@@include('_inc/_lnb.html')
+		
 		<!-- main 컨텐츠 영역 -->
 		<section class="body-main-wrap">
 			<div class="location-wrap">
@@ -181,18 +118,32 @@
 					</div>
 					<div class="data-wrap">
 						<div class="row">
-							<div class="col-sm-8">
-								<div class="inner">44444</div>
+							<div class="col-sm-6">
+								<div class="inner">2</div>
 							</div>
-							<div class="col-sm-8">
-								<div class="inner">44444</div>
+							<div class="col-sm-6">
+								<div class="inner">2</div>
 							</div>
 							<div class="clearfix"></div>
-							<div class="col-sm-16">
+							<div class="col-sm-4">
+								<div class="inner">3</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="inner">3</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="inner">3</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-sm-12">
 								<div class="inner">100%</div>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="contents-footer">
+					<button type="button" class="btn btn-primary">확인</button>
+					<button type="button" class="btn btn-default">취소</button>
 				</div>
 
 			</div>
@@ -202,17 +153,5 @@
 	</div>
 </section>
 <!-- //contents body -->
-<!-- footer -->
-<footer class="footer-wrap">
-	<div class="container">
-		<div>ⓒ 2014 KAP Co. All Right Reserved / Korea Asset Pricing</div>
-	</div>
-</footer>
-<!-- //footer -->
 
-
-
-
-
-</body>
-</html>
+@@include('_inc/_footer.html')

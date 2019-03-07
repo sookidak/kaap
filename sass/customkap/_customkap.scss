@@ -1,5 +1,5 @@
-
 // kap 컴포넌트
+//---------------------------
 
 /* The switch - the box around the slider */
 .switch-wrap{
@@ -16,10 +16,10 @@
 		display:none;
 
 		&:checked + .slider {
-			background-color: #2196F3;
+			background-color: #4a89dc;
 		}
 		&:focus + .slider {
-			box-shadow: 0 0 1px #2196F3;
+			box-shadow: 0 0 1px #4a89dc;
 		}
 		&:checked + .slider:before {
 			-webkit-transform: translateX(13px);
@@ -60,8 +60,11 @@
 	}
 }
 
-// wijmo core
 
+
+
+// wijmo core
+//---------------------------
 // primary control class: applies to all Wijmo controls
 .wj-control {
     display: block;
@@ -142,14 +145,73 @@
     }
 }
 
+
+//kap-layout
+//---------------------------
+
 // header
 .header-wrap{
 	width:100%;
 	border-bottom:1px solid #e6e9ed;
 }
+
+.body-wrap{
+	min-height:700px;
+	.container{
+		position: relative;
+
+		// lnb 보여질때 추가되는 class
+		&.lnb-open{
+			padding-left:200px;
+			.lnb-wrap{
+				display:block;
+			}
+		}
+	}
+	
+	//lnb
+	.lnb-wrap{
+		display:none;
+		position: absolute;
+		left:0;
+		top:0;
+		bottom:0;
+		width:180px;
+		background: #fff;
+		border-left:1px solid #ddd;
+		border-right:1px solid #ddd;
+	}
+
+	.body-main-wrap{
+		
+		.contents-body{
+			background: #ecf0f1;
+			padding:20px;
+		}
+		.contents-footer{
+			margin-top:30px;
+			text-align:center;
+		}
+	}
+}
+
+
+// footer
+.footer-wrap{
+	background: #f5f7fa;
+	border-top:1px solid #e6e9ed;
+	min-height:50px;
+}
+
+
+
+
+
+
 .util-wrap{
 	border-bottom:1px solid #e6e9ed;
 }
+
 
 // navbar
 .navbar-brand{
@@ -158,12 +220,7 @@
 		height:100%;
 	}
 }
-.body-wrap{
-	min-height:700px;
-	.container{
-		position: relative;
-	}
-}
+
 .function-wrap{
 	@include clearfix;
 	.function-left{
@@ -172,14 +229,6 @@
 	.function-right{
 		float:right;
 	}
-}
-
-// footer
-.footer-wrap{
-	margin-top:30px;
-	background: #f5f7fa;
-	border-top:1px solid #e6e9ed;
-	min-height:50px;
 }
 
 
@@ -232,16 +281,6 @@
 	}
 }
 
-//lnb
-.lnb-wrap{
-	display:none;
-	position: absolute;
-	left:0;
-	top:0;
-	bottom:0;
-	width:180px;
-	background: #e1e1e1;
-}
 
 
 // 조회bar
@@ -278,11 +317,7 @@
 
 }
 
-// 하단 내용 나오는 부분
-.contents-body{
-	background: #ecf0f1;
-	padding:20px;
-}
+
 .data-wrap{
 	margin-top:20px;
 	
@@ -290,6 +325,6 @@
 	   background: #fff;
 	   border:1px solid #eaeaea;
 	   border-bottom:1px solid #bdbdbd;
-	   margin-bottom:20px;
+	   margin-bottom:10px;
 	}
 }
