@@ -106,7 +106,7 @@
 // inline control class: includes border
 .wj-content {
     display: inline-block;
-    border: 0;
+    border: $wj-bdr;
     border-radius: $wj-bdr-rad;
     overflow: hidden;
 }

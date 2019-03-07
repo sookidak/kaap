@@ -52,40 +52,38 @@
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
+// wijmo
+// misc
+@import "wijmo/misc/mixins"; // functions
+@import "wijmo/misc/constants"; // named colors
+@import "wijmo/misc/variables"; // theme variables
+@import "wijmo/misc/glyphs"; // wijmo glyphs
+
+/// core wijmo/odules
+@import "wijmo/core/core";
+@import "wijmo/core/input";
+@import "wijmo/core/grid";
+@import "wijmo/core/grid_grouppanel";
+@import "wijmo/core/grid_filter";
+@import "wijmo/core/chart";
+@import "wijmo/core/chart_interaction";
+@import "wijmo/core/chart_hierarchical";
+@import "wijmo/core/gauge";
+@import "wijmo/core/nav";
+
+/// enterprise wijmo/modules
+@import "wijmo/enterprise/sheet";
+@import "wijmo/enterprise/multirow";
+@import "wijmo/enterprise/olap";
+@import "wijmo/enterprise/viewer";
+@import "wijmo/enterprise/chart_finance";
+
 
 
 
 
 //kap custom
+@import "customkap/kapreset";
 @import "customkap/customkap";
 
-
-
-
-
-// wijmo
-// misc
-@import "customkap/wijmo/misc/mixins"; // functions
-@import "customkap/wijmo/misc/constants"; // named colors
-@import "customkap/wijmo/misc/variables"; // theme variables
-@import "customkap/wijmo/misc/glyphs"; // wijmo glyphs
-
-/// core mcustomkap/wijmo/odules
-@import "customkap/wijmo/core/core";
-@import "customkap/wijmo/core/input";
-@import "customkap/wijmo/core/grid";
-@import "customkap/wijmo/core/grid_grouppanel";
-@import "customkap/wijmo/core/grid_filter";
-@import "customkap/wijmo/core/chart";
-@import "customkap/wijmo/core/chart_interaction";
-@import "customkap/wijmo/core/chart_hierarchical";
-@import "customkap/wijmo/core/gauge";
-@import "customkap/wijmo/core/nav";
-
-/// enterpcustomkap/wijmo/rise modules
-@import "customkap/wijmo/enterprise/sheet";
-@import "customkap/wijmo/enterprise/multirow";
-@import "customkap/wijmo/enterprise/olap";
-@import "customkap/wijmo/enterprise/viewer";
-@import "customkap/wijmo/enterprise/chart_finance";
 

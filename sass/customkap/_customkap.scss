@@ -1,22 +1,3 @@
-//kap reset
-//
-// Scaffolding
-// --------------------------------------------------
-
-// Links
-a {
-	color:initial;
-	text-decoration: none;
-
-	&:hover,
-	&:focus,
-	&:active,
-	&:visited {
-		color:initial;
-		text-decoration: none;
-	}
-}
-
 
 // kap 컴포넌트
 
@@ -79,6 +60,87 @@ a {
 	}
 }
 
+// wijmo core
+
+// primary control class: applies to all Wijmo controls
+.wj-control {
+    display: block;
+    box-sizing: border-box;
+    color: $wj-txt;
+    @include backgradient($wj-bkg, $wj-bkg-grd);
+    @include prefix(user-select, none, webkit moz ms);
+
+    * {
+        box-sizing: inherit;
+    }
+
+    &[disabled] { // disabled controls (TFS 330684)
+        opacity: $wj-disabled-opacity;
+        cursor: default;
+        pointer-events: none;
+    }
+    // to make contenteditable work on iOS
+    // http://stackoverflow.com/questions/21295698/html5-contenteditable-attribute-not-working-properly-on-ios7-mobile-safari
+    [contenteditable] {
+        @include prefix(user-select, text, webkit moz ms); // Required on iOS
+    }
+    // remove focus outline
+    &:focus, *:focus, a:focus {
+        outline: none;
+    }
+    // remove browser-specific elements from input controls
+    input {
+
+        &::-ms-clear { // remove clear button in IE input elements
+            display: none;
+        }
+
+        &[type=number] { // spinner buttons in Chrome
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        &:invalid { // red outline validation in Firefox
+            box-shadow: none;
+            outline: none; // TFS 327581
+        }
+    }
+    // button elements
+    .wj-btn {
+        @include backgradient($wj-btn-bkg, $wj-btn-grd, $wj-btn-bkg, rgba(0,0,0,.1));
+        color: $wj-btn-txt;
+        cursor: pointer;
+        display: inline-block;
+        border-style: none;
+        padding: 0 10px;
+        text-align: center;
+        min-width: 30px;
+        white-space: nowrap;
+
+        &:focus, &:hover {
+            @include backgradient($wj-btn-hvr, $wj-btn-grd, $wj-btn-bkg, rgba(0,0,0,.2));
+            transition-duration: $wj-tdn-focus;
+        }
+
+        &[disabled] { // disabled buttons in controls
+            opacity: $wj-disabled-opacity;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+    // button-styled links
+    a.wj-btn,
+    button.wj-btn:not(.wj-btn-default) { // not for buttons in input controls
+        border-radius: $wj-bdr-rad;
+        padding: 6px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
 
 // header
 .header-wrap{
@@ -100,6 +162,15 @@ a {
 	min-height:700px;
 	.container{
 		position: relative;
+	}
+}
+.function-wrap{
+	@include clearfix;
+	.function-left{
+		float:left;
+	}
+	.function-right{
+		float:right;
 	}
 }
 
@@ -212,17 +283,13 @@ a {
 	background: #ecf0f1;
 	padding:20px;
 }
-.cont-wrap{
+.data-wrap{
+	margin-top:20px;
+	
 	[class*="inner"] {
 	   background: #fff;
 	   border:1px solid #eaeaea;
 	   border-bottom:1px solid #bdbdbd;
+	   margin-bottom:20px;
 	}
-	[class^="inner"] {
-		margin-bottom:20px;
-	}
-}
-
-.cont-wrap{
-	margin-top:20px;
 }
