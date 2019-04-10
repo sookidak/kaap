@@ -1,0 +1,15 @@
+//kap reset
+
+// Links
+a {
+	color:initial;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited {
+		color:initial;
+		text-decoration: none;
+	}
+}

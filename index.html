@@ -1,177 +1,64 @@
-<!DOCTYPE html>
 @@include('_inc/_top-setting.html')
 <style>
 	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table tbody tr >th,
+	.guide-table tbody tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	.guide-table textarea{
+		width:100%;
+		min-height:240px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
 </style>
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container">
+		<table class="guide-table">
+			<tr>
+				<th>컴포넌트 가이드</th>
+				<td><a href="./guide.html" target="_blank">guide.html</a></td>
+			</tr>
+			<tr>
+				<th>아이콘 가이드</th>
+				<td><a href="./guide_icons.html" target="_blank">guide_icons.html</a></td>
+			</tr>
+			<tr>
+				<th>버튼 가이드</th>
+				<td><a href="./guide_buttons.html" target="_blank">guide_buttons.html</a></td>
+			</tr>
+			<tr>
+				<th>헤더 가이드</th>
+				<td><a href="./guide_headers.html" target="_blank">guide_headers.html</a></td>
+			</tr>
+			<tr>
+				<th>카드형 레이아웃 가이드</th>
+				<td><a href="./guide_card.html" target="_blank">guide_card.html</a></td>
+			</tr>
+			<tr>
+				<th>레이아웃 가이드</th>
+				<td><a href="./layout.html" target="_blank">layout.html</a></td>
+			</tr>
+		</table>
+	</div>
+</main>
+<!-- //contents body -->
 
-<div class="guide-buttons">
-	<h1>버튼</h1>
-	<div class="pblock">
-		<!-- Standard button -->
-		<button type="button" class="btn btn-primary">Primary</button>
-		<button type="button" class="btn btn-secondary">secondary</button>
-		<button type="button" class="btn btn-success">Success</button>
-		<button type="button" class="btn btn-info">Info</button>
-		<button type="button" class="btn btn-warning">Warning</button>
-		<button type="button" class="btn btn-danger">Danger</button>
-		<button type="button" class="btn btn-light">Light</button>
-		<button type="button" class="btn btn-dark">Dark</button>
-		<button type="button" class="btn btn-link">Link</button>
-	</div>
-	<div class="pblock">
-		<p>버튼 사이즈별로 btn-lg, btn-sm 클래스 추가</p>
-		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-		<button type="button" class="btn btn-primary btn-lg">Primary</button>
-		<button type="button" class="btn btn-primary">Primary</button>
-		<button type="button" class="btn btn-primary btn-sm">Primary</button>
-	</div>
-	<div class="pblock">
-		<p>버튼이 block 이어야 할경우 btn-block 클래스 추가</p>
-		<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-		<button type="button" class="btn btn-primary btn-block">Primary</button>
-	</div>
-
-</div>
-<div>
-	<h1>아이콘</h1>
-</div>
-<div>
-	<h1>폼</h1>
-	<div class="pblock">
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-			<label class="form-check-label" for="defaultCheck1">
-				Default checkbox
-			</label>
-		</div>
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
-			<label class="form-check-label" for="defaultCheck2">
-				Disabled checkbox
-			</label>
-		</div>
-		Bootstrap Switch Primary
-	<label class="switch ">
-<input type="checkbox" class="primary">
-<span class="slider round"></span>
-</label>
-	</div>
-	<div class="pblock">
-		<div class="form-check">
-			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-			<label class="form-check-label" for="exampleRadios1">
-				Default radio
-			</label>
-		</div>
-		<div class="form-check">
-			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-			<label class="form-check-label" for="exampleRadios2">
-				Second default radio
-			</label>
-		</div>
-		<div class="form-check">
-			<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-			<label class="form-check-label" for="exampleRadios3">
-				Disabled radio
-			</label>
-		</div>
-	</div>
-	<form>
-		<input type="text" class="form-control" placeholder="First name">
-
-		<div class="form-group">
-		  <label for="formGroupExampleInput">Example label</label>
-		  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-		</div>
-		<div class="form-group">
-		  <label for="formGroupExampleInput2">Another label</label>
-		  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="readonly" readonly>
-		</div>
-		<div class="form-group">
-		  <label for="formGroupExampleInput2">Another label</label>
-		  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="disabled" disabled>
-		</div>
-		<div class="form-group">
-			<label for="exampleFormControlTextarea1">Example textarea</label>
-			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-		</div>
-	</form>
-
-	<select class="custom-select">
-		<option selected>Open this select menu</option>
-		<option value="1">One</option>
-		<option value="2">Two</option>
-		<option value="3">Three</option>
-	</select>
-</div>
-
-<header class="header container-fluid">
-	<div class="row">
-		<div class="col-4">
-			<h1><img src="./img/logo.svg" class="logo_svg"></h1>
-		</div>
-		<div class="col-8">
-		</div>
-	</div>
-	<div class="row">
-		<ul class="nav">
-			<li class="nav-item">
-				<a class="nav-link active" href="#">Active</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-			</li>
-		</ul>
-	</div>
-</header>
-
-<div class="contents-wrap toolbar">
-	<form class="form-inline">
-		<div class="form-group mb-2">
-			<label for="exampleInputEmail1">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-		</div>
-		<div class="form-group mx-sm-3 mb-2">
-			<label for="inputPassword2" class="sr-only">상품구분</label>
-			<input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-		</div>
-		<div class="form-group mx-sm-3 mb-2">
-			<label for="inputPassword2" class="sr-only">상품위험등급</label>
-			<input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-		</div>
-		<button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-	</form>
-</div>
-컬럼 두개씩 한 로우에 넣을때 
-<div class="container">
-	<div class="row">
-		<div class="col">Column</div>
-		<div class="col">Column</div>
-		<div class="w-100"></div>
-		<div class="col">Column</div>
-		<div class="col">Column</div>
-	</div>
-</div>
-<div class="contents-wrap container">
-	<div class="row">
-		<div class="col-sm">
-		One of three columns
-		</div>
-		<div class="col-sm">
-		One of three columns
-		</div>
-		<div class="col-sm">
-		One of three columns
-		</div>
-	</div>
-</div>
-
-@@include('_inc/_bottom.html')
-</body>
-</html>
+@@include('_inc/_footer.html')

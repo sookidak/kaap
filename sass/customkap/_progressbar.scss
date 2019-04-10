@@ -1,0 +1,13 @@
+//progress-bar
+
+.progress-bar{
+    @include border-radius($progress-border-radius);
+}
+@each $name, $color in $pbar-bg{
+    .progress-bar{
+        &.bg-#{$name} {
+            background-color: $color;
+        }
+    }
+
+}

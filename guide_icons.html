@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	textarea{
+		width:100%;
+		height:40px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
+	[class^="icon-"]{
+		color:black;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	.explain-box textarea{
+		height:160px;
+	}
+</style>
+<h1>아이콘폰트 가이드</h1>
+
+<div class="guide-p">
+	<div class="explain-box">
+		<ul>
+			<li>
+				- 아이콘은 기본 span 으로 작업한다
+			</li>
+			<li>
+			- :befoer, :after 처럼 가상선택자로 넣을 경우 아래 예제처럼 .icon-ka 클래스를 extend 한 후 적용한다
+
+				<textarea >
+&:before{
+	@extend .icon-ka;
+	content: $icon-user;
+	display: inline-block;
+	width:17px;
+	height:17px;
+	color:$white;
+}
+				</textarea>
+				
+			</li>
+		</ul>
+	
+	</div>
+	<table class="guide-table">
+		<colgroup>
+			<col style="width:15%">
+			<col style="width:25%">
+			<col style="">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>컴포넌트명</th>
+				<th>형태</th>
+				<th>html 코드</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				Analysis
+			</td>
+			<td>
+				<span class="icon-analysis"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-analysis"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				arrow-next
+			</td>
+			<td>
+				<span class="icon-arrow-next"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-arrow-next"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				arrow-prev
+			</td>
+			<td>
+				<span class="icon-arrow-prev"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-arrow-prev"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calculator
+			</td>
+			<td>
+				<span class="icon-calculator"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-calculator"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				calendar
+			</td>
+			<td>
+				<span class="icon-calendar"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-calendar"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				card
+			</td>
+			<td>
+				<span class="icon-card"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-card"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				cart
+			</td>
+			<td>
+				<span class="icon-cart"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-cart"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				change
+			</td>
+			<td>
+				<span class="icon-change"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-change"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				chart_view
+			</td>
+			<td>
+				<span class="icon-chart-view"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-chart-view"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				check
+			</td>
+			<td>
+				<span class="icon-check"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-check"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				check-circle
+			</td>
+			<td>
+				<span class="icon-check-circle"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-check-circle"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				chrome
+			</td>
+			<td>
+				<span class="icon-chrome"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-chrome"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				close
+			</td>
+			<td>
+				<span class="icon-close"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-close"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				comparison
+			</td>
+			<td>
+				<span class="icon-comparison"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-comparison"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				disk
+			</td>
+			<td>
+				<span class="icon-disk"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-disk"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				document-check
+			</td>
+			<td>
+				<span class="icon-document-check"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-document-check"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				document-view
+			</td>
+			<td>
+				<span class="icon-document-view"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-document-view"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				dotted
+			</td>
+			<td>
+				<span class="icon-dotted"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-dotted"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				download
+			</td>
+			<td>
+				<span class="icon-download"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-download"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				edit
+			</td>
+			<td>
+				<span class="icon-edit"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-edit"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				error
+			</td>
+			<td>
+				<span class="icon-error"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-error"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				excel
+			</td>
+			<td>
+				<span class="icon-excel"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-excel"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				first
+			</td>
+			<td>
+				<span class="icon-first"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-first"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				group
+			</td>
+			<td>
+				<span class="icon-group"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-group"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				ie
+			</td>
+			<td>
+				<span class="icon-ie"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-ie"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				info
+			</td>
+			<td>
+				<span class="icon-info"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-info"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				last
+			</td>
+			<td>
+				<span class="icon-last"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-last"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				list
+			</td>
+			<td>
+				<span class="icon-list"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-list"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				match
+			</td>
+			<td>
+				<span class="icon-match"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-match"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				minus
+			</td>
+			<td>
+				<span class="icon-minus"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-minus"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				next
+			</td>
+			<td>
+				<span class="icon-next"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-next"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				next-circle
+			</td>
+			<td>
+				<span class="icon-next-circle"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-next-circle"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				pencle
+			</td>
+			<td>
+				<span class="icon-pencle"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-pencle"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				plus
+			</td>
+			<td>
+				<span class="icon-plus"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-plus"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				prev
+			</td>
+			<td>
+				<span class="icon-prev"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-prev"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				prev-circle
+			</td>
+			<td>
+				<span class="icon-prev-circle"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-prev-circle"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				print
+			</td>
+			<td>
+				<span class="icon-print"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-print"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				proposal
+			</td>
+			<td>
+				<span class="icon-proposal"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-proposal"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				reject
+			</td>
+			<td>
+				<span class="icon-reject"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-reject"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				request
+			</td>
+			<td>
+				<span class="icon-request"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-request"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				reset
+			</td>
+			<td>
+				<span class="icon-reset"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-reset"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				search
+			</td>
+			<td>
+				<span class="icon-search"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-search"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				time
+			</td>
+			<td>
+				<span class="icon-time"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-time"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				trash-can
+			</td>
+			<td>
+				<span class="icon-trash-can"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-trash-can"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				upload
+			</td>
+			<td>
+				<span class="icon-upload"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-upload"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				user
+			</td>
+			<td>
+				<span class="icon-user"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-user"></span>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				warning
+			</td>
+			<td>
+				<span class="icon-warning"></span>
+			</td>
+			<td>
+				<textarea>
+<span class="icon-warning"></span>
+				</textarea>
+			</td>
+		</tr>
+		
+		</tbody>
+	</table>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>

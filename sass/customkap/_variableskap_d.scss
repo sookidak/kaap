@@ -1,0 +1,486 @@
+// Grid containers
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 728px,
+  lg: 960px,
+  xl: 1200px
+) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           20px !default;
+
+$line-height-lg:              1.5 !default;
+$line-height-sm:              1.5 !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$kap-font-family-sans-serif: 'Noto sans',  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-family-base:            $kap-font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+$kap-font-size-base : 1rem;// Assumes the browser default, typically `16px`
+
+$font-size-ms:                ($kap-font-size-base * .688) !default;// `11px`
+$font-size-xs:                ($kap-font-size-base * .750) !default;// `12px`
+$font-size-sm:                ($kap-font-size-base * .813) !default;// `13px`
+$font-size-base:              ($kap-font-size-base * .875) !default; //  `14px`
+$font-size-lg:                ($kap-font-size-base * .938) !default; //  `15px`
+$font-size-xl:                1rem !default;//  `16px`
+
+$kap-fontweight-l : 300;
+$kap-fontweight-r : 400;
+$kap-fontweight-m : 600;
+
+$font-weight-base:            $kap-fontweight-r !default;
+$line-height-base:            1.5 !default;
+
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $kap-font-size-base * 2 !default;
+$h3-font-size:                $kap-font-size-base * 1.5 !default;
+$h4-font-size:                $font-size-base !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+
+
+
+//color
+// base color
+$kap-blue-light : #E2f1ff;
+$kap-blue : #5d9cec;
+$kap-blue-dark : #4a89dc;
+
+$kap-aqua : #4fc1e9;
+$kap-aqua-dark : #3bafda;
+
+$kap-teal : #48cfad;
+$kap-teal-dark : #37bc9b;
+
+$kap-green-light : #efffce;
+$kap-green : #a0d468;
+$kap-green-dark : #8cc152;
+
+$kap-yellow-light : #feffce;
+$kap-yellow : #ffce54;
+$kap-yellow-dark : #f6bb42;
+
+$kap-orange : #ff8023;
+$kap-orange-dark : #ed6e12;
+
+$kap-red-light : #ffe2e2;
+$kap-red : #f74b5d;
+$kap-red-dark : #e53749;
+
+$kap-pink : #f68fce;
+$kap-pink-dark : #e766b5;
+
+$kap-purple : #ac92ec;
+$kap-purple-dark : #967adc;
+
+$kap-gray-100 : #fafafa;
+$kap-gray-200 : #f5f7fa;
+$kap-gray-300 : #e6e9ed;
+$kap-gray-400 : #ccd1d9;
+$kap-gray-500 : #aab2bd;
+$kap-gray-600 : #656d78;
+$kap-gray-700 : #434a54;
+
+
+// bootstrap 기본 color 재정의
+$blue:   $kap-blue !default;
+$yellow: $kap-yellow !default;
+$green:  $kap-green !default;
+$red:    $kap-red !default;
+$white : #fff;
+
+//font color
+$kap-fontcolor-white : #fff;
+$kap-fontcolor-light : #bdbdbd;
+$kap-fontcolor-gray-light : #9e9e9e;
+$kap-fontcolor-gray : #616161;
+$kap-fontcolor-gray-dark : #424242;
+$kap-fontcolor-black : #212121;
+
+
+//  기본 보더 컬러 설정
+$kap-border-color-light : $kap-gray-300;
+$kap-border-color : $kap-gray-400;
+
+
+
+$kap-hover-color : $kap-gray-200;
+
+// nav color
+$kap-navitem-first : #c2185b;
+$kap-navitem-second : #0097a7;
+$kap-navitem-third : #ffa000;
+$kap-navitem-fourth : #afb42b;
+$kap-navitem-fifth : #303f9f;
+$kap-navitem-sixth : #455a64;
+$kap-navitem-seventh : #212121;
+$kap-navitem-eighth : #212121;
+
+$kap-bdr-rad : 4px;
+$kap-bdr-rad-sm : 3px;
+$kap-bdr-rad-xs : 2px;
+$kap-bdr-rad-lg : 1rem;
+
+
+//components size
+$kap-components-height : 30px;
+
+// border-radius 재정의
+$border-radius:               $kap-bdr-rad !default;
+$border-radius-lg:            $kap-bdr-rad !default;
+$border-radius-sm:            $kap-bdr-rad-sm !default;
+
+
+// theme colors
+
+// 위험군 배지
+$danger1:     $kap-blue !default;
+$danger2:     $kap-green-dark !default;
+$danger3:     $kap-yellow-dark !default;
+$danger4:     $kap-orange-dark !default;
+$danger5:     $kap-red-dark !default;
+
+// 진행관련 배지
+$check:     $kap-yellow-dark !default;
+$match:     $kap-purple-dark !default;
+$no:        $kap-red-dark !default;
+$define:    $kap-blue !default;
+
+// 기본 컬러 재지정
+
+$primary:       $kap-blue !default;
+$secondary:     $kap-gray-600 !default;
+$success:       $kap-green !default;
+$info:          $kap-aqua !default;
+$warning:       $kap-yellow !default;
+$danger:        $kap-red !default;
+$light:         $kap-gray-400 !default;
+$dark:          $kap-gray-600  !default;
+
+
+
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $kap-gray-400,
+    "lightbetter":      $kap-gray-200,
+    "dark":       $dark,
+    "green":      $kap-green,
+    "red":        $kap-red,
+    "purple":     $kap-purple,
+    "blue":    $primary,
+ 
+    "danger1":  $danger1,
+    "danger2":  $danger2,
+    "danger3":  $danger3,
+    "danger4":  $danger4,
+    "danger5":  $danger5,
+    "check":    $check,
+    "match":    $match,
+    "no":       $no,
+    "define":   $define
+  ),
+  $theme-colors
+);
+
+
+// text-sm
+$text-sm-color: $kap-fontcolor-gray;
+$text-sm-size: $font-size-sm;
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         .22rem !default;
+$input-btn-padding-x:         .75rem !default;
+$input-btn-line-height:       $line-height-base !default;
+
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-x:               7px !default;
+$btn-line-height:             $input-btn-line-height !default;
+
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      0.5rem !default;
+$input-btn-line-height-lg:    $line-height-lg !default;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+//btn-icon
+$btn-icon-padding-y : 6px;
+$btn-icon-padding-x : 6px;
+$btn-icon-font-size : 1rem;
+$btn-icon-line-height : 1rem;;
+$btn-icon-border-radius : $kap-bdr-rad;
+
+$btn-icon-padding-y-lg : 7px;
+$btn-icon-padding-x-lg : 7px;
+$btn-icon-font-size-lg : 1.5rem;
+$btn-icon-line-height-lg : 1.5rem;
+$btn-icon-border-radius-lg : $kap-bdr-rad;
+
+$btn-icon-padding-y-sm : 3px;
+$btn-icon-padding-x-sm : 3px;
+$btn-icon-font-size-sm : 0.75rem;
+$btn-icon-line-height-sm : 0.75rem;
+$btn-icon-border-radius-sm : $kap-bdr-rad;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           $border-radius !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+$btn-border-radius-sm:        $border-radius-sm !default;
+
+
+
+
+//badge
+$badge-font-size : $font-size-sm;
+$badge-font-weight : $kap-fontweight-l;
+$badge-font-weight-lg : $kap-fontweight-r;
+$kap-badge-danger-color : $kap-fontcolor-white;
+$badge-border-radius : $kap-bdr-rad-sm;
+$badge-border-radius-lg : $kap-bdr-rad;
+$badge-padding-y : 0.27em; //20px
+$badge-padding-x : 0.4em;
+$badge-padding-y-lg : 0.43em;
+$badge-padding-x-lg : 0.6em;
+$badge-line-height-lg : 1.3; 
+
+// badge 진행중 사이즈
+$badge-pill-padding-x : 0.2em;
+$badge-pill-padding-x : 0.2em;
+$badge-pill-width : 20px;
+$badge-pill-border-radius : $badge-pill-width;
+$badge-pill-weight : $kap-fontweight-r;
+
+
+// Breadcrumbs
+$breadcrumb-padding-y:              .6rem !default;
+$breadcrumb-padding-x:              0 !default;
+$breadcrumb-item-padding:           15px !default;
+
+$breadcrumb-margin-bottom:          15px !default;
+
+$breadcrumb-bg:                     $white !default;
+$breadcrumb-divider-color:          $kap-fontcolor-gray-light !default;
+$breadcrumb-active-color:           $kap-fontcolor-black !default;
+$breadcrumb-divider:                quote(">") !default;
+$breadcrumb-divider-size:           $font-size-sm;
+$breadcrumbitem-color:              $kap-fontcolor-gray-light !default;
+$breadcrumbitem-fontsize :          $font-size-sm !default;
+
+
+
+
+
+// Progress bars
+
+$progress-height:                   $font-size-base !default;
+$progress-bg:                       $kap-gray-300 !default;
+$progress-border-radius:            $font-size-base !default;
+$progress-font-size:                ($font-size-base * .75) !default;
+$pbar-bg: (
+    "blue":  $kap-blue,
+    "yellow":  $kap-yellow,
+    "green":  $kap-green,
+    "red":  $kap-red,
+);
+
+
+
+// Pagination
+$pagination-line-height:            1 !default;
+$pagination-padding-y:              0 !default;
+$pagination-padding-x:              0 !default;
+$pagination-color:                  $kap-gray-600 !default;
+
+$pagination-hover-color:            $kap-gray-600 !default;
+$pagination-hover-bg:               $kap-gray-300 !default;
+
+$pagination-active-color : $white; 
+$pagination-active-bg : $kap-gray-700; 
+
+
+
+
+
+// Modals
+
+$modal-header-padding-x: 13px;
+$modal-header-padding-y: 10px;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 10px !default; //10px
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 1),
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5)
+  ),
+  $spacers
+);
+
+
+
+
+// Cards
+
+$card-spacer-y:                     .75rem !default;
+$card-spacer-x:                     1.25rem !default;
+$card-border-width:                 1px !default;
+$card-border-radius:                0 !default;
+$card-border-color:                 $kap-gray-400 !default;
+$card-borderbottom-color:           $kap-gray-600 !default;
+
+$card-cap-bg:                       $white !default;
+$card-bg:                           $white !default;
+
+
+
+// Tooltips
+
+$tooltip-font-size:                 $font-size-xs !default;
+$tooltip-bg:                        $kap-gray-700 !default;
+$tooltip-border-radius:             $kap-bdr-rad-xs !default;
+$tooltip-opacity:                   1 !default;
+$tooltip-padding-y:                 .2rem !default;
+$tooltip-padding-x:                 .4rem !default;
+
+
+
+// Popovers
+$popover-all-padding: .4rem !default; 
+$popover-font-size:                 $font-size-sm !default;
+$popover-bg:                        $white !default;
+$popover-max-width:                 276px !default;
+
+$popover-header-bg:                 $white !default;
+$popover-header-color:              $kap-fontcolor-gray-dark !default;
+$popover-header-padding-y:          .5rem .6rem !default;
+$popover-header-padding-x:          .75rem !default;
+
+$popover-body-color:                $kap-fontcolor-gray !default;
+$popover-body-padding-y:           .6rem .5rem !default;
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-padding-y:                .38rem !default;
+$dropdown-border-radius:            $kap-bdr-rad-sm !default;
+$dropdown-header-color:             $kap-gray-700 !default;
+$dropdown-item-border-radius :      $kap-bdr-rad-sm !default;
+$dropdown-divider-bg:               $white !default;
+
+$dropdown-item-padding-y:           .38rem !default;
+$dropdown-item-color :              $kap-gray-600 !default;
+
+$dropdown-link-color:               $dropdown-item-color !default;
+$dropdown-link-hover-color:         $dropdown-item-color !default;
+$dropdown-link-hover-bg:            $kap-gray-200 !default;
+
+$dropdown-link-active-color:        $dropdown-item-color !default;
+$dropdown-link-active-bg:           $dropdown-link-hover-bg !default;
+
+
+///////////////////////////////// wijmo variables
+
+$wj-txt: $kap-fontcolor-black; // content foreground
+$wj-bdr-clr: $kap-border-color !default; // content border color
+$wj-btn-hvr: $kap-hover-color !default; // button hover background
+$wj-item-pdg: 10px 6px 9px 6px !default; // item padding (listbox items, grid cells, etc)
+
+//iconfont
+/* 아이콘 폰트 Style */
+$icon-analysis: "\e900" ;
+$icon-arrow-next: "\e901" ;
+$icon-arrow-prev: "\e902" ;
+$icon-calculator: "\e903" ;
+$icon-calendar: "\e904" ;
+$icon-card: "\e905" ;
+$icon-cart: "\e906" ;
+$icon-change: "\e907" ;
+$icon-chart-view: "\e908" ;
+$icon-check: "\e909" ;
+$icon-check-circle: "\e90a" ;
+$icon-chrome: "\e90b" ;
+$icon-close: "\e90c" ;
+$icon-comparison: "\e90d" ;
+$icon-disk: "\e90e" ;
+$icon-document-check: "\e90f" ;
+$icon-document-view: "\e910" ;
+$icon-dotted: "\e911" ;
+$icon-download: "\e912" ;
+$icon-edit: "\e913" ;
+$icon-error: "\e914" ;
+$icon-excel: "\e915" ;
+$icon-first: "\e916" ;
+$icon-group: "\e917" ;
+$icon-ie: "\e918" ;
+$icon-info: "\e919" ;
+$icon-last: "\e91a" ;
+$icon-list: "\e91b" ;
+$icon-match: "\e91c" ;
+$icon-minus: "\e91d" ;
+$icon-next: "\e91e" ;
+$icon-next-circle: "\e91f" ;
+$icon-pencle: "\e920" ;
+$icon-plus: "\e921" ;
+$icon-prev: "\e922" ;
+$icon-prev-circle: "\e923" ;
+$icon-print: "\e924" ;
+$icon-proposal: "\e925" ;
+$icon-reject: "\e926" ;
+$icon-request: "\e927" ;
+$icon-reset: "\e928" ;
+$icon-search: "\e929" ;
+$icon-time: "\e92a" ;
+$icon-trash-can: "\e92b" ;
+$icon-upload: "\e92c" ;
+$icon-user: "\e92d" ;
+$icon-warning: "\e92e" ;

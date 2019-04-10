@@ -1,0 +1,54 @@
+
+//custom-checkbox
+.custom-checkbox{
+    position: relative;
+    background: $white;
+    border:1px solid $kap-gray-400;
+    border-radius: $kap-bdr-rad-sm;
+    height:30px;
+    display:inline-block;
+    padding-left:0;
+    margin-right:3px;
+
+    label{
+        padding:0 5px 0 27px;
+        color:$kap-fontcolor-gray-dark;
+        margin-bottom:0;
+        line-height:28px;
+        vertical-align:middle;
+        
+        &:before{
+            content:'';
+            position:absolute;
+            left:5px;
+            top:7px;
+            display:inline-block;
+            width:15px;
+            height:15px;
+            line-height:15px;
+            text-align:center;
+            background: $kap-gray-400;
+            border-radius: $kap-bdr-rad-sm;
+        }
+        &:after{
+            display:none;
+        }
+    }
+
+    .custom-control-input{
+        position:absolute;
+        left:5px;
+        top:8px;
+
+        &:checked + label{
+            &:before{
+                @extend .icon-ka;
+                content: $icon-check;
+                color:$white;
+                background: $kap-blue-dark;
+                
+            }
+        }
+    }
+    
+}

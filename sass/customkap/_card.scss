@@ -1,0 +1,102 @@
+// card layout
+
+.card {
+	border-bottom: $card-border-width solid $card-borderbottom-color;
+	
+	.card-header {
+		padding:10px 12px;
+
+		label{
+			margin-bottom: 0;
+		}
+		
+		.card-header-right{
+            position: absolute;
+            right:10px;
+            top:11px;
+            line-height:1;
+
+            button{
+                vertical-align: top;
+                margin-right:5px;
+                
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+		}
+	}
+	
+	.card-body{
+		padding: 10px;
+		
+		.list-group-item{
+			padding:5px 5px 0px 0;
+			margin-bottom:0;
+		
+		}
+	}
+	
+	.card-toplist{
+		margin-bottom:5px;
+
+		.list-group{
+
+			.list-group-item{
+				text-align:center;
+				
+				.list-item-text{
+					display: block;
+				}
+		
+				.list-item-number{
+					display: block;
+					color:#e53749;
+					font-size:2.25rem;
+					font-weight:$kap-fontweight-m;
+				}
+
+				&:first-child {
+					border:0;
+					background:$kap-gray-600;
+					color:$white;
+				}
+			}
+
+		}
+	}
+
+
+}
+
+
+@include media-breakpoint-up(md) {
+
+	.card-toplist{
+		
+		.list-group{
+			width:100%;
+			flex-direction: row;
+
+			.list-group-item{
+				height:90px;
+				flex:1 1 auto;
+				text-align:center;
+				
+				&:first-child {
+					border-radius:3px 0 0 3px;
+					display:flex;
+					align-items: center;
+					justify-content: center!important;
+				}
+
+				&:last-child {
+					border-radius:0px 3px 3px 0;
+					border-left:0;
+				}
+			}
+
+		}
+    }
+    
+}

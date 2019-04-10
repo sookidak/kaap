@@ -2,20 +2,22 @@
 <header class="header-wrap">
 	<div class="util-wrap">
 		<div class="container">
-			<h1 class="title-1 navbar-brand col-sm-4"><img src="./img/logo.svg" alt="ELS master"></h1>
-			<div class="navbar-right col-sm-8 text-right">		
-				<div class="form-inline">
-					<div class="form-group">
+			<div class="row no-gutters">
+				<div class="col-4 title-wrap">
+					<h1 class="logo"><img src="./img/logo.png" alt="ELS master"></h1>
+				</div>
+				<div class="col-8 form-inline justify-content-end align-items-baseline">
+					<div class="form-group mr-3 ">
 						<label class="switch-wrap">
 							<div class="switch">
 								<input type="checkbox">
 								<span class="slider round"></span>
 							</div>
-							<span>사이드메뉴사용</span>
+							<span>사이드메뉴 OFF</span>
 						</label>
 					</div>
-					<div class="form-group">
-						<label class="radio-inline">
+					<div class="form-group mr-3">
+						<label class="radio-inline mr-2">
 							<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">조달하기
 						</label>
 						<label class="radio-inline">
@@ -23,13 +25,42 @@
 						</label>
 					</div>
 					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-						로그인 <span class="caret"></span>
+						<button type="button" class="btn btn-login dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-offset="0,10">
+							<span class="sr-only">로그인</span>
 						</button>
-						<div class="dropdown-menu" role="menu">
-							<input type="text" class="form-control"  placeholder="아이디" />
-							<input type="text" class="form-control"  placeholder="비밀번호" />
-							<button type="button" class="btn btn-primary">로그인</button>
+						<div class="dropdown-menu dropdown-menu-right drop-login" role="menu">
+							<div class="loginform">
+								<ul>
+									<li>
+										<label class="sr-only" for="input-id">아이디 입력</label>
+										<div class="wj-control wj-content wj-inputmask" tabindex="-1" _wjsiblingidprop="2" id="txt">
+											<div class="wj-input">
+												<div class="wj-input-group">
+													<input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required="" placeholder="아이디" id="input-id">
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<label class="sr-only" for="input-pw">비밀번호 입력</label>
+										<div class="wj-control wj-content wj-inputmask" tabindex="-1" _wjsiblingidprop="2" id="txt">
+											<div class="wj-input">
+												<div class="wj-input-group">
+													<input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required="" placeholder="비밀번호" id="input-pw">
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<button type="button" class="btn btn-primary">로그인</button>
+							</div>
+							<div class="logoutform">
+								<div class="login-user-info">
+									<p class="user01">shinhan02</p>
+									<p>신한사용자(TestServer)</p>
+								</div>
+								<button type="button" class="btn btn-primary">로그아웃</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -38,30 +69,110 @@
 	</div>
 	<div class="gnb-wrap">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="btn btn-default">lnb</button>
-			</div>
-			<nav class="navbar">
-				<ul class="nav nav-pills nav-justified">
-					<li role="presentation" class="active"><a href="#">상품정보</a></li>
-					<li role="presentation"><a href="#">상품판매</a></li>
-					<li role="presentation"><a href="#">고객관리</a></li>
-					<li role="presentation"><a href="#">시장분석</a></li>
-					<li role="presentation"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">본사관리 <span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
+
+			<nav class="navbar navbar-expand-md">
+				<form class="form-inline">
+					<button type="button" class="btn btn-lnb" onclick="myFunction(this)">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					</button>
+				</form>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+			  
+				<div class="collapse navbar-collapse " id="navbarSupportedContent">
+				  <ul class="navbar-nav nav-justified col-sm-12">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품 정보 <span class="sr-only">(current)</span></a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="dropdown-header">판매상품</div>
+							<a class="dropdown-item" href="#">판매상품 리스트</a>
+							<a class="dropdown-item" href="#">판매상품 상세</a>
+							<a class="dropdown-item" href="#">판매상품 비교</a>
+							<a class="dropdown-item" href="#">유사상품 검색</a>
+							<div class="dropdown-divider"></div>
+							<div class="dropdown-header">상품 설계</div>
+							<a class="dropdown-item" href="#">상품 계산기</a>
+							<a class="dropdown-item" href="#">전문가 계산기</a>
+							<a class="dropdown-item" href="#">My 상품 관리</a>
+						</div>
 					</li>
-					<li role="presentation"><a href="#">게시판</a></li>
-				</ul>
-			</nav>
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품 판매</a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+						<div class="dropdown-header">판매상품</div>
+						<a class="dropdown-item" href="#">판매상품 리스트</a>
+						<a class="dropdown-item" href="#">판매상품 상세</a>
+						<a class="dropdown-item" href="#">판매상품 비교</a>
+						<a class="dropdown-item" href="#">유사상품 검색</a>
+						<div class="dropdown-divider"></div>
+						<div class="dropdown-header">상품 설계</div>
+						<a class="dropdown-item" href="#">상품 계산기</a>
+						<a class="dropdown-item" href="#">전문가 계산기</a>
+						<a class="dropdown-item" href="#">My 상품 관리</a>
+					  </div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">고객 관리</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+							<div class="dropdown-header">판매상품</div>
+							<a class="dropdown-item" href="#">판매상품 리스트</a>
+							<a class="dropdown-item" href="#">판매상품 상세</a>
+							<a class="dropdown-item" href="#">판매상품 비교</a>
+							<a class="dropdown-item" href="#">유사상품 검색</a>
+							<div class="dropdown-divider"></div>
+							<div class="dropdown-header">상품 설계</div>
+							<a class="dropdown-item" href="#">상품 계산기</a>
+							<a class="dropdown-item" href="#">전문가 계산기</a>
+							<a class="dropdown-item" href="#">My 상품 관리</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						시장 분석
+					  </a>
+					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+					  </div>
+					</li>
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							본사관리
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								게시판
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Another action</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Something else here</a>
+								</div>
+							</li>
+				  </ul>
+				</div>
+			  </nav>
+			
 		</div>
 	</div>
 </header>
 <!-- //header -->
+<script>
+function myFunction(x) {
+	x.classList.toggle("change");
+	$('.body-wrap .container').toggleClass('lnb-open');
+}
+</script>

@@ -1,0 +1,31 @@
+/* modal */
+
+// Modal header
+.modal-content{
+    padding:0 10px;
+}
+.modal-header {
+
+    padding:13px 0 10px ;
+
+    .close {
+        padding: $modal-header-padding;
+        // auto on the left force icon to the right even when there is no .modal-title
+        margin: (-$modal-header-padding) (-$modal-header-padding) (-$modal-header-padding) auto;
+    }
+}
+.modal-title {
+    color:$kap-fontcolor-gray-dark;
+}
+  
+
+// Footer (for actions)
+.modal-footer {
+    padding: 10px 0;
+  // Easily place margin between footer elements
+  > :not(:first-child) { margin-left:0; }
+  > :not(:last-child) { margin-right: .25rem; }
+}
+
+
+

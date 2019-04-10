@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	.guide-table textarea{
+		width:100%;
+		min-height:240px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
+</style>
+<h1>els master guide</h1>
+<div class="guide-p">
+	<h3>컴포넌트 </h3>
+
+	<div><a href="./guide_icons.html" target="_blank">아이콘폰트 가이드 바로가기 ></a></div>
+
+	<table class="guide-table">
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:25%">
+			<col style="width:40%">
+			<col style="width:25%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>컴포넌트명</th>
+				<th>형태</th>
+				<th>html 코드</th>
+				<th>위즈모 or reactstrap</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				radio  / checkbox
+			</td>
+			<td>
+
+				<input type="checkbox" class="wj-cell-check" tabindex="-1"><br>
+				<label><input tabindex="-1" type="checkbox"> QuickPlus Type3 Super Lizard [ B01S02D382 ]</label><br><br>
+
+
+				<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><br>
+				<label>
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2">조달하기
+				</label>
+
+			</td>
+			<td>
+				<textarea>
+<input type="checkbox" class="wj-cell-check" tabindex="-1"><br>
+<label><input tabindex="-1" type="checkbox"> QuickPlus Type3 Super Lizard [ B01S02D382 ]</label>
+
+<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+<label>
+	<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2">조달하기
+</label>
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				checkbox custom
+			</td>
+			<td>
+				<div class="custom-checkbox custom-control custom-control-inline">
+					<input type="checkbox" id="exampleCustomCheckbox1" class="custom-control-input">
+					<label class="custom-control-label" for="exampleCustomCheckbox1">선택상품비교</label>
+				</div>
+			</td>
+			<td>
+				<textarea>
+<div class="custom-checkbox custom-control custom-control-inline">
+	<input type="checkbox" id="exampleCustomCheckbox1" class="custom-control-input">
+	<label class="custom-control-label" for="exampleCustomCheckbox1">선택상품비교</label>
+</div>
+				</textarea>
+			</td>
+			<td>
+<textarea>
+<CustomInput type="checkbox" id="exampleCustomCheckbox" label="선택상품비교" inline/>
+</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				InputText
+			</td>
+			<td>
+				<div class="wj-control wj-content wj-inputmask" tabindex="-1" _wjsiblingidprop="2" id="txt"><div class="wj-input"><div class="wj-input-group"><input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required="" placeholder=""></div></div></div>
+			</td>
+			<td>
+				<textarea>
+<div class="wj-control wj-content wj-inputmask" tabindex="-1" _wjsiblingidprop="2" id="txt">
+	<div class="wj-input">
+		<div class="wj-input-group">
+			<input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required="" placeholder="">
+		</div>
+	</div>
+</div>
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				InputNumber
+			</td>
+			<td>
+				<div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15"><div class="wj-input"><div class="wj-input-group"><span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button></span><input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required=""><span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button></span></div></div></div>
+			</td>
+			<td>
+				<textarea>
+<div role="spinbutton" class="wj-control wj-content wj-inputnumber test_boder test_red wj-input-show-spinner" tabindex="-1" aria-valuenow="10" _wjsiblingidprop="1" id="n" aria-valuemin="5" aria-valuemax="15">
+	<div class="wj-input">
+		<div class="wj-input-group">
+			<span wj-part="btn-dec" class="wj-input-group-btn" tabindex="-1" style="">
+				<button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Decrease Value">-</button>
+			</span>
+			<input type="tel" wj-part="input" class="wj-form-control wj-numeric" autocomplete="off" spellcheck="false" required="">
+			<span wj-part="btn-inc" class="wj-input-group-btn" tabindex="-1" style="">
+				<button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Increase Value">+</button>
+			</span>
+		</div>
+	</div>
+</div>
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				InputDate
+			</td>
+			<td>
+				<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-inputdate" tabindex="-1" _wjsiblingidprop="3" id="d"><div class="wj-template"><div class="wj-input"><div class="wj-input-group wj-input-btn-visible"><input wj-part="input" type="tel" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="Date"><span wj-part="btn" class="wj-input-group-btn"><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+			</td>
+			<td>
+				<textarea>
+<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-inputdate" tabindex="-1" _wjsiblingidprop="3" id="d">
+	<div class="wj-template">
+		<div class="wj-input">
+			<div class="wj-input-group wj-input-btn-visible">
+				<input wj-part="input" type="tel" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="Date">
+				<span wj-part="btn" class="wj-input-group-btn">
+					<button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown">
+						<span class="wj-glyph-down"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				InputDateTime
+			</td>
+			<td>
+<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-inputdate wj-inputdatetime" tabindex="-1" _wjsiblingidprop="5" id="dt">
+	<div class="wj-template">
+		<div class="wj-input">
+			<div class="wj-input-group wj-input-btn-visible">
+				<input wj-part="input" type="tel" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="Date and Time"><span class="wj-input-group-btn">
+					<button wj-part="btn" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Calendar">
+						<span class="wj-glyph-calendar"></span>
+					</button><button wj-part="btn-tm" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Time List">
+						<span class="wj-glyph-clock"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+			</td>
+			<td>
+				<textarea>
+<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-inputdate wj-inputdatetime" tabindex="-1" _wjsiblingidprop="5" id="dt">
+	<div class="wj-template">
+		<div class="wj-input">
+			<div class="wj-input-group wj-input-btn-visible">
+				<input wj-part="input" type="tel" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="Date and Time"><span class="wj-input-group-btn">
+					<button wj-part="btn" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Calendar">
+						<span class="wj-glyph-calendar"></span>
+					</button><button wj-part="btn-tm" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Time List">
+						<span class="wj-glyph-clock"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				MultiAutoComplet
+			</td>
+			<td>
+				<div class="wj-control wj-content wj-dropdown wj-state-empty wj-state-collapsed wj-combobox wj-autocomplete wj-multi-autocomplete wj-state-readonly wj-state-focus wj-state-focused" tabindex="-1" _wjsiblingidprop="11" id="mac"><div class="wj-template"><input type="text" tabindex="-1" class="wj-token-helper" readonly=""><div class="wj-input" style="float: left;"><div class="wj-input-group wj-input-btn-visible"><input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="1자이상 입력시 조회" required="" role="combobox" aria-autocomplete="both" style="width: 456px;"><span wj-part="btn" class="wj-input-group-btn" style="display: none;"><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+			</td>
+			<td>
+				<textarea>
+<div class="wj-control wj-content wj-dropdown wj-state-empty wj-state-collapsed wj-combobox wj-autocomplete wj-multi-autocomplete wj-state-readonly wj-state-focus wj-state-focused" tabindex="-1" _wjsiblingidprop="11" id="mac">
+	<div class="wj-template">
+		<input type="text" tabindex="-1" class="wj-token-helper" readonly="">
+		<div class="wj-input" style="float: left;">
+			<div class="wj-input-group wj-input-btn-visible">
+				<input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="1자이상 입력시 조회" required="" role="combobox" aria-autocomplete="both" style="width: 456px;">
+				<span wj-part="btn" class="wj-input-group-btn" style="display: none;">
+					<button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown">
+						<span class="wj-glyph-down"></span>
+					</button>
+				</span>	
+			</div>
+		</div>
+	</div>
+</div>
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+					InputMask
+			</td>
+			<td>
+					<div class="wj-control wj-content wj-inputmask wj-state-focus wj-state-focused wj-state-invalid" tabindex="-1" _wjsiblingidprop="2" id="m"><div class="wj-input"><div class="wj-input-group"><input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required=""></div></div></div>
+			</td>
+			<td>
+				<textarea>
+<div class="wj-control wj-content wj-inputmask wj-state-focus wj-state-focused" tabindex="-1" _wjsiblingidprop="2" id="m">
+	<div class="wj-input">
+		<div class="wj-input-group">
+			<input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required="">
+		</div>
+	</div>
+</div>
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Calendar
+			</td>
+			<td>
+<div tabindex="-1" class="wj-control wj-calendar" _wjsiblingidprop="6" id="cl"><div class="wj-content wj-calendar-outer"><div wj-part="tbl-header" class="wj-calendar-header"><div wj-part="btn-month" class="wj-month-select" role="button" aria-label="Month View"><span wj-part="span-month">March, 2019</span> <span class="wj-glyph-down"></span></div><div class="wj-btn-group"><button wj-part="btn-prev" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Previous Month"><span class="wj-glyph-left"></span></button><button wj-part="btn-today" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Today"><span class="wj-glyph-circle"></span></button><button wj-part="btn-next" class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Next Month"><span class="wj-glyph-right"></span></button></div></div><table wj-part="tbl-month" class="wj-calendar-month" role="grid" aria-label="Calendar"><tbody><tr tabindex="-1" class="wj-header"><td tabindex="-1" role="gridcell" aria-selected="false">Sun</td><td tabindex="-1" role="gridcell" aria-selected="false">Mon</td><td tabindex="-1" role="gridcell" aria-selected="false">Tue</td><td tabindex="-1" role="gridcell" aria-selected="false">Wed</td><td tabindex="-1" role="gridcell" aria-selected="false">Thu</td><td tabindex="-1" role="gridcell" aria-selected="false">Fri</td><td tabindex="-1" role="gridcell" aria-selected="false">Sat</td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend wj-day-othermonth">24 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">25 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">26 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">27 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">28 </td><td tabindex="-1" role="gridcell" aria-selected="false">1 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">2 </td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">3 </td><td tabindex="-1" role="gridcell" aria-selected="false">4 </td><td tabindex="-1" role="gridcell" aria-selected="false">5 </td><td tabindex="-1" role="gridcell" aria-selected="false">6 </td><td tabindex="-1" role="gridcell" aria-selected="false">7 </td><td tabindex="-1" role="gridcell" aria-selected="false">8 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">9 </td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">10 </td><td tabindex="-1" role="gridcell" aria-selected="false">11 </td><td tabindex="-1" role="gridcell" aria-selected="false">12 </td><td tabindex="0" role="gridcell" aria-selected="true" class="wj-state-selected wj-day-today">13 </td><td tabindex="-1" role="gridcell" aria-selected="false">14 </td><td tabindex="-1" role="gridcell" aria-selected="false">15 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">16 </td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">17 </td><td tabindex="-1" role="gridcell" aria-selected="false">18 </td><td tabindex="-1" role="gridcell" aria-selected="false">19 </td><td tabindex="-1" role="gridcell" aria-selected="false">20 </td><td tabindex="-1" role="gridcell" aria-selected="false">21 </td><td tabindex="-1" role="gridcell" aria-selected="false">22 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">23 </td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">24 </td><td tabindex="-1" role="gridcell" aria-selected="false">25 </td><td tabindex="-1" role="gridcell" aria-selected="false">26 </td><td tabindex="-1" role="gridcell" aria-selected="false">27 </td><td tabindex="-1" role="gridcell" aria-selected="false">28 </td><td tabindex="-1" role="gridcell" aria-selected="false">29 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">30 </td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend">31 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">1 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">2 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">3 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">4 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-othermonth">5 </td><td tabindex="-1" role="gridcell" aria-selected="false" class="wj-day-weekend wj-day-othermonth">6 </td></tr></tbody></table><table wj-part="tbl-year" class="wj-calendar-year" role="grid" style="display:none" aria-label="Calendar"><tbody><tr tabindex="-1" class="wj-header"><td tabindex="-1" role="gridcell" aria-selected="false" colspan="4">2019</td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false">Jan</td><td tabindex="-1" role="gridcell" aria-selected="false">Feb</td><td tabindex="-1" role="gridcell" aria-selected="true" class="wj-state-selected">Mar</td><td tabindex="-1" role="gridcell" aria-selected="false">Apr</td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false">May</td><td tabindex="-1" role="gridcell" aria-selected="false">Jun</td><td tabindex="-1" role="gridcell" aria-selected="false">Jul</td><td tabindex="-1" role="gridcell" aria-selected="false">Aug</td></tr><tr tabindex="-1"><td tabindex="-1" role="gridcell" aria-selected="false">Sep</td><td tabindex="-1" role="gridcell" aria-selected="false">Oct</td><td tabindex="-1" role="gridcell" aria-selected="false">Nov</td><td tabindex="-1" role="gridcell" aria-selected="false">Dec</td></tr></tbody></table></div></div>
+			</td>
+			<td>
+				<textarea>
+
+				</textarea>
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				badge
+			</td>
+			<td>
+				<span class="badge badge-danger1">초저위험</span>
+				<span class="badge badge-danger2">저위험</span>
+				<span class="badge badge-danger3">중위험</span>
+				<span class="badge badge-danger4">고위험</span>
+				<span class="badge badge-danger5">초고위험</span>
+			</td>
+			<td>
+				<textarea>
+<span class="badge badge-danger1">초저위험</span>
+<span class="badge badge-danger2">저위험</span>
+<span class="badge badge-danger3">중위험</span>
+<span class="badge badge-danger4">고위험</span>
+<span class="badge badge-danger5">초고위험</span>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+<Badge color="danger1">초저위험</Badge>
+<Badge color="danger2">저위험</Badge>
+<Badge color="danger3">중위험</Badge>
+<Badge color="danger4">고위험</Badge>
+<Badge color="danger5">초고위험</Badge>						
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+				<td>
+					badge -large
+				</td>
+				<td>
+					<span class="badge badge-danger1 badge-lg">초저위험</span>
+					<span class="badge badge-danger2 badge-lg">저위험</span>
+					<span class="badge badge-danger3 badge-lg">중위험</span>
+					<span class="badge badge-danger4 badge-lg">고위험</span>
+					<span class="badge badge-danger5 badge-lg">초고위험</span>
+				</td>
+				<td>
+					<textarea>
+<span class="badge badge-danger1 badge-lg">초저위험</span>
+<span class="badge badge-danger2 badge-lg">저위험</span>
+<span class="badge badge-danger3 badge-lg">중위험</span>
+<span class="badge badge-danger4 badge-lg">고위험</span>
+<span class="badge badge-danger5 badge-lg">초고위험</span>
+					</textarea>
+				</td>
+				<td>
+					<textarea >
+<Badge color="danger1" className="badge-lg">초저위험</Badge>
+<Badge color="danger2" className="badge-lg">저위험</Badge>
+<Badge color="danger3" className="badge-lg">중위험</Badge>
+<Badge color="danger4" className="badge-lg">고위험</Badge>
+<Badge color="danger5" className="badge-lg">초고위험</Badge>
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					badge -  진행중
+				</td>
+				<td>
+					<span class="badge badge-pill badge-check">P</span><span class="badge-text">확인중</span>
+					<span class="badge badge-pill badge-match">M</span><span class="badge-text">매칭중</span>
+					<span class="badge badge-pill badge-no">N</span><span class="badge-text">요청거절</span>
+					<span class="badge badge-pill badge-define">D</span><span class="badge-text">확정</span>
+				</td>
+				<td>
+					<textarea>
+	<span class="badge badge-pill badge-check">P</span><span class="badge-text">확인중</span>
+	<span class="badge badge-pill badge-match">M</span><span class="badge-text">매칭중</span>
+	<span class="badge badge-pill badge-no">N</span><span class="badge-text">요청거절</span>
+	<span class="badge badge-pill badge-define">D</span><span class="badge-text">확정</span>
+					</textarea>
+				</td>
+				<td>
+					<textarea >
+	<Badge color="check" className="badge-pill">P</Badge><span className="badge-text">확인중</span>
+	<Badge color="match" className="badge-pill">M</Badge><span className="badge-text">매칭중</span>
+	<Badge color="no" className="badge-pill">N</Badge><span className="badge-text">요청거절</span>
+	<Badge color="define" className="badge-pill">D</Badge><span className="badge-text">확정</span>
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					process bar
+				</td>
+				<td>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-yellow" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-green" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar bg-red" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+					</div>
+				</td>
+				<td>
+					<textarea>
+<div class="progress">
+	<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+	<div class="progress-bar bg-blue" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+</div>
+<div class="progress">
+	<div class="progress-bar bg-yellow" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+</div>
+<div class="progress">
+	<div class="progress-bar bg-green" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+</div>
+<div class="progress">
+	<div class="progress-bar bg-red" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+</div>
+					</textarea>
+				</td>
+				<td>
+					<textarea >
+<Progress value="25" className="bg-blue">25%</Progress>
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					pagenation
+				</td>
+				<td>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item">
+							<a class="page-link" href="#" aria-label="Previous">
+								<span aria-hidden="true"><span class="wj-glyph-left"></span></span>
+							</a>
+							</li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+							<a class="page-link" href="#" aria-label="Next">
+								<span aria-hidden="true"><span class="wj-glyph-right"></span></span>
+							</a>
+							</li>
+						</ul>
+					</nav>
+				</td>
+				<td>
+					<textarea>
+<nav aria-label="Page navigation example">
+	<ul class="pagination">
+		<li class="page-item">
+		<a class="page-link" href="#" aria-label="Previous">
+			<span aria-hidden="true"><span class="wj-glyph-left"></span></span>
+		</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item">
+		<a class="page-link" href="#" aria-label="Next">
+			<span aria-hidden="true"><span class="wj-glyph-right"></span></span>
+		</a>
+		</li>
+	</ul>
+</nav>
+					</textarea>
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>
+					tooltips
+				</td>
+				<td>
+					<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+					Tooltip on top
+					</button>
+					<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+					Tooltip on right
+					</button>
+					<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+					Tooltip on bottom
+					</button>
+					<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+					Tooltip on left
+					</button>
+				</td>
+				<td>
+					<textarea>
+<script>
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+Tooltip on top
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+Tooltip on right
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+Tooltip on bottom
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+Tooltip on left
+</button>
+					</textarea>
+				</td>
+				<td>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					popover
+				</td>
+				<td>
+					<button type="button" class="btn btn-lg btn-danger example-popover" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+				</td>
+				<td>
+					<textarea>
+<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+					</textarea>
+				</td>
+				<td>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					modal
+				</td>
+				<td>
+					<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						Launch demo modal
+					</button>
+					
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									</div>
+									<div class="modal-body">
+									...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary">저장</button>
+										<button type="button" class="btn btn-outline-light">취소</button>
+									</div>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>
+					<textarea>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">저장</button>
+				<button type="button" class="btn btn-outline-secondary">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+					</textarea>
+				</td>
+				<td>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					switch 
+				</td>
+				<td>
+					<label class="switch-wrap">
+						<div class="switch">
+							<input type="checkbox">
+							<span class="slider round"></span>
+						</div>
+						<span>스위치</span>
+					</label>
+				</td>
+				<td>
+					<textarea>
+<label class="switch-wrap">
+	<div class="switch">
+		<input type="checkbox">
+		<span class="slider round"></span>
+	</div>
+	<span>스위치</span>
+</label>
+					</textarea>
+				</td>
+				<td>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					toast
+				</td>
+				<td>
+					<div class="alert alert-primary" role="alert">
+					A simple primary alert—check it out!
+					</div>
+				</td>
+				<td>
+					<textarea>
+<div class="alert alert-primary" role="alert">
+A simple primary alert—check it out!
+</div>
+					</textarea>
+				</td>
+				<td>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					loader
+				</td>
+				<td style="background:#ddd">
+				<div class="loader"><div></div><div></div><div></div><div></div><div></div></div>
+				</td>
+				<td>
+					<textarea>
+<div class="loader"><div></div><div></div><div></div><div></div><div></div></div>
+					</textarea>
+				</td>
+				<td>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					loader - white
+				</td>
+				<td style="background:rgb(75, 75, 75)">
+				<div class="loader type-white"><div></div><div></div><div></div><div></div><div></div></div>
+				</td>
+				<td>
+					<textarea>
+<div class="loader type-white"><div></div><div></div><div></div><div></div><div></div></div>
+					</textarea>
+				</td>
+				<td>
+
+				</td>
+			</tr>
+		</tbody>
+	</table>
+<script>
+
+$(document).ready(function(){
+  
+  $('[data-toggle="tooltip"]').tooltip();
+
+  $('.example-popover').popover({
+    container: 'body'
+  })
+})
+
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>

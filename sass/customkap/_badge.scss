@@ -1,0 +1,28 @@
+/*badge*/
+
+.badge{
+    height:20px;
+}
+[class*="badge-danger"]{
+    color:$kap-badge-danger-color;
+    min-width:63px;
+}
+.badge-lg{
+    @include badge-size($badge-padding-y-lg, $badge-padding-x-lg, $font-size-base, $badge-font-weight-lg, $badge-line-height-lg, $badge-border-radius-lg);
+    min-width:73px;
+    height:30px;
+}
+
+.badge-pill {
+    padding-right: $badge-pill-padding-x;
+    padding-left: $badge-pill-padding-x;
+    min-width: $badge-pill-width;
+    color: $kap-badge-danger-color;
+    font-weight: $badge-pill-weight;
+    @include border-radius($badge-pill-border-radius);
+}
+.badge + .badge-text{
+    margin-left: 6px;
+    color:  $kap-fontcolor-gray;
+    font-size:  $font-size-sm;
+}

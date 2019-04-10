@@ -1,0 +1,25 @@
+
+//pagination
+.page-link{
+    border-color: $kap-gray-400 ;
+    font-size:$font-size-sm;
+    font-weight:$kap-fontweight-m;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+}
+.page-item {
+    &:first-child {
+        .page-link {
+        margin-left: 0;
+        @include border-left-radius($kap-bdr-rad-sm);
+        }
+    }
+    &:last-child {
+        .page-link {
+        @include border-right-radius($kap-bdr-rad-sm);
+        }
+    }
+}
+

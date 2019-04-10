@@ -1,0 +1,74 @@
+/* buttons */
+
+
+
+//
+// Alternate buttons
+//
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+		color:$white;
+		min-width:60px;
+
+		&:hover{
+			color:$white;
+		}
+
+		>[class^="icon"]{
+			margin-right:5px;
+		}
+		
+	}
+}
+@each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {
+		color:$kap-fontcolor-gray-dark;
+		&[data-toggle="button"]{
+			&.active{
+				background: $primary !important;
+				color:$white !important;
+				border-color: $primary !important;
+			}
+		}
+    }
+}
+//btn-icon
+.btn-icon{
+    @include button-size($btn-icon-padding-y, $btn-icon-padding-x, $btn-icon-font-size, $btn-icon-line-height, $btn-border-radius);
+    min-width:0px;;
+
+    [class^="icon"]{
+        margin-right:0;
+    }
+
+	&.btn-lg{
+		@include button-size($btn-icon-padding-y-lg, $btn-icon-padding-x-lg, $btn-icon-font-size-lg, $btn-icon-line-height-lg, $btn-icon-border-radius-lg);
+	}
+
+	&.btn-sm{
+		@include button-size($btn-icon-padding-y-sm, $btn-icon-padding-x-sm, $btn-icon-font-size-sm, $btn-icon-line-height-sm, $btn-icon-border-radius-sm);
+	}
+}
+
+[class*="btn-func"]{
+    color:$kap-gray-500;
+    background: $white;
+	border:1px solid $kap-gray-400;
+
+	&:hover{
+		background: $kap-gray-500;
+		border-color: $kap-gray-500;
+		color:$white;
+	}
+	
+	&.active{
+		color:$white;
+		background: $kap-gray-700;
+		border-color: $kap-gray-700;
+	}
+}
+
+.btn-lg {
+	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-base, $btn-line-height-lg, $btn-border-radius-lg);
+  }
+  

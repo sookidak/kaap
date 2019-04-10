@@ -4,11 +4,11 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 $wj-bkg: white !default; // content background
-$wj-txt: #616161 !default; // content foreground
+$wj-txt: black !default; // content foreground
 $wj-bdr-clr: rgba(0,0,0,.2) !default; // content border color
 $wj-bdr-wid: 1px !default; // content border width
 $wj-bdr: $wj-bdr-wid solid $wj-bdr-clr !default; // content border
-$wj-bdr-rad:3px !default; // content border radius
+$wj-bdr-rad: 4px !default; // content border radius
 $wj-box-shadow: 0 6px 13px rgba(0,0,0,.2) !default; // box shadow for drop-downs/dialogs
 $wj-invalid: red !default; // invalid state markers
 $wj-item-pdg: 4px 6px 3px 6px !default; // item padding (listbox items, grid cells, etc)

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	textarea{
+		width:100%;
+		height:240px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	.explain-box textarea{
+		height:160px;
+	}
+</style>
+<h1>버튼가이드</h1>
+<div class="guide-p">
+	<div class="explain-box">
+			<ul>
+				<li>
+				222
+				</li>
+				<li>
+					<textarea>
+
+					</textarea>
+					
+				</li>
+			</ul>
+		
+		</div>
+	<table class="guide-table">
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:25%">
+			<col style="width:40%">
+			<col style="width:25%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>컴포넌트명</th>
+				<th>형태</th>
+				<th>html 코드</th>
+				<th>위즈모 or reactstrap</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				배경타입
+			</td>
+			<td>
+				<button type="button" class="btn btn-primary">primary</button>
+				<button type="button" class="btn btn-secondary">secondary</button>
+				<button type="button" class="btn btn-green">green</button>
+				<button type="button" class="btn btn-red">red</button>
+				<button type="button" class="btn btn-purple">purple</button>
+			</td>
+			<td>
+				<textarea>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-green">green</button>
+<button type="button" class="btn btn-red">red</button>
+<button type="button" class="btn btn-purple">purple</button>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+<Button color="primary">primary</Button>
+<Button color="secondary">secondary</Button>
+<Button color="green">green</Button>
+<Button color="red">red</Button>
+<Button color="purple">purple</Button>
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				배경타입 - lg
+			</td>
+			<td>
+				<button type="button" class="btn btn-primary btn-lg">primary</button>
+				<button type="button" class="btn btn-secondary btn-lg">secondary</button>
+				<button type="button" class="btn btn-green btn-lg">green</button>
+				<button type="button" class="btn btn-red btn-lg">red</button>
+				<button type="button" class="btn btn-purple btn-lg">purple</button>
+			</td>
+			<td>
+				<textarea>
+<button type="button" class="btn btn-primary btn-lg">primary</button>
+<button type="button" class="btn btn-secondary btn-lg">secondary</button>
+<button type="button" class="btn btn-green btn-lg">green</button>
+<button type="button" class="btn btn-red btn-lg">red</button>
+<button type="button" class="btn btn-purple btn-lg">purple</button>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				라인타입
+			</td>
+			<td>
+				<button type="button" class="btn btn-outline-primary">primary</button>
+				<button type="button" class="btn btn-outline-light">light</button>
+			</td>
+			<td>
+				<textarea>
+<button type="button" class="btn btn-outline-primary">primary</button>
+<button type="button" class="btn btn-outline-light">light</button>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+<Button outline color="primary">primary</Button>
+<Button outline color="light">light</Button>
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				버튼 토글 일때
+			</td>
+			<td>
+				<button type="button" class="btn btn-outline-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+					KRW/USD
+				</button>
+			</td>
+			<td>
+				<textarea>
+<button type="button" class="btn btn-outline-light" data-toggle="button" aria-pressed="false" autocomplete="off">
+	KRW/USD
+</button>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				아이콘타입
+			</td>
+			<td>
+				<button type="button" class="btn btn-primary btn-icon btn-sm">
+					<span class="icon-search"></span>
+				</button>
+				<button type="button" class="btn btn-primary btn-icon">
+					<span class="icon-search"></span>
+				</button>
+				<button type="button" class="btn btn-primary btn-icon btn-lg">
+					<span class="icon-search"></span>
+				</button>
+				<button type="button" class="btn btn-outline-light btn-icon">
+					<span class="icon-document-view"></span>
+				</button>
+				<button type="button" class="btn btn-outline-light btn-icon">
+					<span class="icon-excel"></span>
+				</button>
+				<button type="button" class="btn btn-outline-light btn-icon">
+					<span class="icon-print"></span>
+				</button>
+				<button type="button" class="btn btn-outline-light btn-icon">
+					<span class="icon-plus"></span>
+				</button>
+				<button type="button" class="btn btn-outline-light btn-icon">
+					<span class="icon-minus"></span>
+				</button>
+			</td>
+			<td>
+				<textarea>
+<button type="button" class="btn btn-primary btn-icon btn-sm">
+	<span class="icon-search"></span>
+</button>
+<button type="button" class="btn btn-primary btn-icon">
+	<span class="icon-search"></span>
+</button>
+<button type="button" class="btn btn-primary btn-icon btn-lg">
+	<span class="icon-search"></span>
+</button>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				스타일 예외케이스
+			</td>
+			<td>
+				<button type="button" class="btn btn-function">
+					<span class="icon-list"></span>
+				</button>
+				<button type="button" class="btn btn-function active">
+					<span class="icon-card"></span>
+				</button>
+				
+			</td>
+			<td>
+				<textarea>
+<button type="button" class="btn btn-function">
+	<span class="icon-list"></span>
+</button>
+<button type="button" class="btn btn-function active">
+	<span class="icon-card"></span>
+</button>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				활용예제
+			</td>
+			<td>
+				<div>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-search"></span>조회</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-search"></span>검색</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-check-circle"></span>확인</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-reset"></span>초기화</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-calculator"></span>
+						계산</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-group"></span>그룹설정</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-edit"></span>입력</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-request"></span>본사요청</button>
+					<button type="button" class="btn btn-primary">상품설명서<span class="icon-next-circle"></span>
+					</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-edit"></span>일괄등록</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-change"></span>변경</button>
+					<button type="button" class="btn btn-primary">
+						<span class="icon-chart-view"></span>시물레이션 결과보기</button>
+					<button type="button" class="btn btn-green">
+						<span class="icon-chart-view"></span>시나리오 분석</button>
+					<button type="button" class="btn btn-red">
+						<span class="icon-trash-can"></span>삭제</button>
+					<button type="button" class="btn btn-red">
+						<span class="icon-reject"></span>Reject</button>
+					<button type="button" class="btn btn-purple">
+						<span class="icon-match"></span>Match</button>
+					<button type="button" class="btn btn-red">
+						<span class="icon-check-circle"></span>확정</button>
+				</div>
+				<div>
+					<button type="button" class="btn btn-secondary">
+						<span class="icon-arrow-prev"></span>이전</button>
+					<button type="button" class="btn btn-secondary">다음
+							<span class="icon-arrow-next"></span></button>
+					<button type="button" class="btn btn-secondary">닫기</button>
+				</div>
+				<div>
+					<button type="button" class="btn btn-outline-light btn-icon">
+						<span class="icon-document-view"></span>
+					</button>
+					<button type="button" class="btn btn-outline-light btn-icon">
+						<span class="icon-excel"></span>
+					</button>
+					<button type="button" class="btn btn-outline-light btn-icon">
+						<span class="icon-print"></span>
+					</button>
+					<button type="button" class="btn btn-outline-light btn-icon">
+						<span class="icon-plus"></span>
+					</button>
+					<button type="button" class="btn btn-outline-light btn-icon">
+						<span class="icon-minus"></span>
+					</button>
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-icon">
+						<span class="icon-search"></span>
+					</button>
+				</div>
+				<div>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-prev-circle"></span>
+						판매상품 리스트
+					</button>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-analysis"></span>
+						상품 시뮬레이션
+					</button>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-analysis"></span>
+						MY 시뮬레이션
+					</button>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-disk"></span>
+						결과저장
+					</button>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-request"></span>
+						상품요청
+					</button>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-print"></span>
+						프린트
+					</button>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-excel"></span>
+						엑셀다운
+					</button>
+					<button type="button" class="btn btn-outline-light">
+						<span class="icon-trash-can"></span>
+						비교함 비우기
+					</button>
+				</div>
+			</td>
+			<td>
+				<textarea>
+
+<button type="button" class="btn btn-primary">
+	<span class="icon-search"></span>조회</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-search"></span>검색</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-check-circle"></span>확인</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-reset"></span>초기화</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-calculator"></span>
+	계산</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-group"></span>그룹설정</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-edit"></span>입력</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-request"></span>본사요청</button>
+<button type="button" class="btn btn-primary">상품설명서<span class="icon-next-circle"></span>
+</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-edit"></span>일괄등록</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-change"></span>변경</button>
+<button type="button" class="btn btn-primary">
+	<span class="icon-chart-view"></span>시물레이션 결과보기</button>
+<button type="button" class="btn btn-green">
+	<span class="icon-chart-view"></span>시나리오 분석</button>
+<button type="button" class="btn btn-red">
+	<span class="icon-trash-can"></span>삭제</button>
+<button type="button" class="btn btn-red">
+	<span class="icon-reject"></span>Reject</button>
+<button type="button" class="btn btn-red">
+	<span class="icon-check-circle"></span>확정</button>
+
+<button type="button" class="btn btn-secondary">
+	<span class="icon-arrow-prev"></span>이전</button>
+<button type="button" class="btn btn-secondary">다음
+		<span class="icon-arrow-next"></span></button>
+<button type="button" class="btn btn-secondary">닫기</button>
+
+<button type="button" class="btn btn-outline-light btn-icon">
+	<span class="icon-document-view"></span>
+</button>
+<button type="button" class="btn btn-outline-light btn-icon">
+	<span class="icon-excel"></span>
+</button>
+<button type="button" class="btn btn-outline-light btn-icon">
+	<span class="icon-print"></span>
+</button>
+<button type="button" class="btn btn-outline-light btn-icon">
+	<span class="icon-plus"></span>
+</button>
+<button type="button" class="btn btn-outline-light btn-icon">
+	<span class="icon-minus"></span>
+</button>
+
+<button type="button" class="btn btn-primary btn-icon">
+	<span class="icon-search"></span>
+</button>
+
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-prev-circle"></span>
+	판매상품 리스트
+</button>
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-analysis"></span>
+	상품 시뮬레이션
+</button>
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-analysis"></span>
+	MY 시뮬레이션
+</button>
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-disk"></span>
+	결과저장
+</button>
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-request"></span>
+	상품요청
+</button>
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-print"></span>
+	프린트
+</button>
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-excel"></span>
+	엑셀다운
+</button>
+<button type="button" class="btn btn-outline-light">
+	<span class="icon-trash-can"></span>
+	비교함 비우기
+</button>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+
+				</textarea>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>
