@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	h1{
+		 margin:20px 20px 10px;
+		 font-weight:bold;
+		 font-size:28px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	.guide-table  tbody tr >th{
+		background: #eee;
+		padding-left:10px;
+	}
+	textarea{
+		width:100%;
+		height:200px;
+		border:1px solid #ddd;
+		background: #1e1e1e;
+		color:#d4d4d4;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	.guide-section{
+		border:1px solid #acc2ce;
+		margin-bottom:40px;
+		padding:65px 10px 10px;
+		position: relative;
+		background: #ececec;
+	}
+	h2{
+		font-size:16px;
+		border-bottom:1px;
+		margin-bottom:20px;
+		background: #87a2b1;
+		padding:10px;
+		color:#fff;
+		display:inline-block;
+		font-weight: bold;
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	.guide-dl dt{
+		text-align: left;
+		padding:6px;
+		position: relative;
+		cursor:pointer;
+		color: #757575;
+		background: #ececec;
+		border-bottom: 1px solid #d4d4d4;
+	}
+	.guide-dl dt:after{
+		content:'▼';
+		font-size:10px;
+		margin-left:10px;
+		margin-top:-6px;
+		vertical-align: top;
+	}
+	.guide-dl dt.open:after{
+		content:'▲';
+	}
+	.guide-dl dd{
+		display:none;
+	}
+	.guide-code{
+		margin-top:20px;
+	}
+</style>
+<h1>테이블 가이드</h1>
+
+<div class="guide-p">
+	<div class="explain-box">
+		<ul>
+			<li>
+				- table 은 기본형, horizontal형, 입력형 으로 나뉜다.
+			</li>
+			<li>
+				
+			</li>
+		</ul>
+	
+	</div>
+	<div class="guide-section">
+		<h2>table : table 기본 형</h2>
+		<div class="row">
+			<div class="col-sm-12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>행사주기</th>
+							<th>3M</th>
+							<th>3M</th>
+							<th>3M</th>
+							<th>3M</th>
+							<th>3M</th>
+							<th>3M</th>
+							<th>3M</th>
+							<th>3M</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>조기상환 행사가(%)</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+						</tr>
+						<tr>
+							<td>조기상환 행사가(%)</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+							<td>95</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="guide-code">
+			<dl class="guide-dl">
+				<dt>html 코드</dt>
+				<dd>
+					<textarea>
+<table class="table">
+<thead>
+	<tr>
+		<th>행사주기</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>조기상환 행사가(%)</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+	</tr>
+	<tr>
+		<td>조기상환 행사가(%)</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+	</tr>
+
+</tbody>
+</table>
+					</textarea>
+				</dd>
+				<dt>reactstrap 코드</dt>
+				<dd>
+					<textarea>
+<Table>
+<thead>
+	<tr>
+		<th>행사주기</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+		<th>3M</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>조기상환 행사가(%)</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+	</tr>
+	<tr>
+		<td>조기상환 행사가(%)</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+		<td>95</td>
+	</tr>
+
+</tbody>
+</Table>
+					</textarea>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="guide-section">
+		<h2>table table-horizontal : 가로 기본 형</h2>
+		<table class="table table-horizontal">
+			<tbody>
+				<tr>
+					<th>상품유형</th>
+					<td>스탭다운형</td>
+				</tr>
+				<tr>
+					<th>상품유형</th>
+					<td>스탭다운형</td>
+				</tr>
+				<tr>
+					<th>상품유형</th>
+					<td>스탭다운형</td>
+				</tr>
+				<tr>
+					<th>상품유형</th>
+					<td>스탭다운형</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="guide-code">
+			<dl class="guide-dl">
+				<dt>html 코드</dt>
+				<dd>
+					<textarea>
+<table class="table table-horizontal">
+<tbody>
+	<tr>
+		<th>상품유형</th>
+		<td>스탭다운형</td>
+	</tr>
+	<tr>
+		<th>상품유형</th>
+		<td>스탭다운형</td>
+	</tr>
+	<tr>
+		<th>상품유형</th>
+		<td>스탭다운형</td>
+	</tr>
+	<tr>
+		<th>상품유형</th>
+		<td>스탭다운형</td>
+	</tr>
+</tbody>
+</table>
+					</textarea>
+				</dd>
+				<dt>reactstrap 코드</dt>
+				<dd>
+					<textarea>
+<Table className="table-horizontal">
+	<tbody>
+		<tr>
+			<th>상품유형</th>
+			<td>스탭다운형</td>
+		</tr>
+		<tr>
+			<th>상품유형</th>
+			<td>스탭다운형</td>
+		</tr>
+		<tr>
+			<th>상품유형</th>
+			<td>스탭다운형</td>
+		</tr>
+		<tr>
+			<th>상품유형</th>
+			<td>스탭다운형</td>
+		</tr>
+	</tbody>
+</table>
+					</textarea>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	
+
+
+	
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  $('.guide-dl dt').on('click',function(){
+	  $(this).toggleClass('open').next('dd').toggle();
+  })
+})
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>

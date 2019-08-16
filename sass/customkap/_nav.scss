@@ -1,0 +1,60 @@
+
+//
+// Tabs
+//
+
+.nav-tabs {
+
+	.nav-item {
+		margin-bottom: -$nav-tabs-border-width;
+		font-size:13px;
+		&+.nav-item{
+			margin-left:-1px;
+		}
+	}
+	.nav-link {
+		color: $nav-link-color;
+		background: $kap-gray-300 ;
+		border-color:$nav-link-border-color;
+		
+		@include hover-focus {
+			border-color: $nav-tabs-link-hover-border-color;
+			border-bottom:1px solid $nav-link-border-color;
+		}
+
+		&.disabled {
+			background-color: $kap-gray-300;
+			color: $nav-tabs-border-color;
+			border:1px solid $kap-gray-300;
+		}
+		
+	}
+	.nav-link.active,
+	.nav-item.show .nav-link {
+		color: $nav-tabs-link-active-color;
+		background-color: $nav-tabs-link-active-bg;
+		border-color: $nav-tabs-link-active-border-color;
+	}
+
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+	width:100%;
+	
+	> .tab-pane {
+		display: none;
+		padding:10px;
+		border-radius:0 4px 4px 4px;
+		border-left:1px solid $kap-gray-400;
+		border-right:1px solid $kap-gray-400;
+		border-bottom:1px solid $kap-gray-400;
+	}
+	> .active {
+	  display: block;
+	  background: #fff;
+	}
+}

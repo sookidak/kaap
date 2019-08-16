@@ -1,6 +1,7 @@
 /* buttons */
-
-
+.btn +.btn{
+	margin-left:5px;
+}
 
 //
 // Alternate buttons
@@ -9,51 +10,129 @@
 	.btn-#{$color} {
 		color:$white;
 		min-width:60px;
-
+		height:30px;
+		font-size:$font-size-base;
+		
 		&:hover{
 			color:$white;
+			.icon-wrap{
+				background: #fff;
+				color:$value;
+			}
 		}
 
 		>[class^="icon"]{
-			margin-right:5px;
+			margin-right:9px;
 		}
-		
-	}
-}
-@each $color, $value in $theme-colors {
-    .btn-outline-#{$color} {
-		color:$kap-fontcolor-gray-dark;
-		&[data-toggle="button"]{
-			&.active{
-				background: $primary !important;
-				color:$white !important;
-				border-color: $primary !important;
+		.icon-arrow-next{
+			margin-right:0 ;
+			margin-left:8px;
+		}
+
+		&.btn-one{
+			white-space: normal;
+			border-radius:50%;
+			height:235px;
+			width:235px;
+			background:$white;
+			border:6px solid #ccd1d9;
+			padding:20px;
+			&+.btn-one{
+				margin-left:30px;
+			}
+			
+			.btn-title{
+				font-size:36px;
+				color:$value;
+				display:inline-block;
+				font-weight: bold;
+				letter-spacing: -0.09em;
+				padding-bottom:4px;
+				margin-top:14px;
+			}
+			.btn-text{
+				border-top:1px solid #e6e9ed;
+				color:#616161;
+				display:block;
+				padding-top: 10px;
+				font-size:$font-size-xl;
+				line-height:1.3;
+			}
+			&:hover,
+			&:active{
+				background: $value !important;
+				border-color: $value !important;
+
+				.btn-title{
+					color:#fff;
+				}
+				.btn-text{
+					border-top:1px solid  darken($value,15%);
+					color:#fff;
+				}
 			}
 		}
-    }
+		.icon-wrap{
+			background:$value;
+			width:40px;
+			height:40px;
+			line-height:40px;
+			font-size:25px;
+			border-radius:50%;
+		}
+	} 
+}
+@each $color, $value in $theme-colors {
+	.btn-outline-#{$color} {
+		color:$kap-fontcolor-gray-dark;
+		background:$white;
+		height: 30px;
+	
+		&.active{
+			background: $primary !important;
+			color:$white !important;
+			border-color: $primary !important;
+		}
+		>[class^="icon"]{
+			margin-right:8px;
+		}
+	
+	}
 }
 //btn-icon
 .btn-icon{
     @include button-size($btn-icon-padding-y, $btn-icon-padding-x, $btn-icon-font-size, $btn-icon-line-height, $btn-border-radius);
     min-width:0px;;
 
-    [class^="icon"]{
-        margin-right:0;
+    >[class^="icon"]{
+		margin-right:0;
+		margin-left:0;
     }
 
 	&.btn-lg{
+		width:30px;
+		min-width:auto;
+		min-height:30px;
 		@include button-size($btn-icon-padding-y-lg, $btn-icon-padding-x-lg, $btn-icon-font-size-lg, $btn-icon-line-height-lg, $btn-icon-border-radius-lg);
 	}
 
 	&.btn-sm{
+		width:20px;
+		height:20px;
 		@include button-size($btn-icon-padding-y-sm, $btn-icon-padding-x-sm, $btn-icon-font-size-sm, $btn-icon-line-height-sm, $btn-icon-border-radius-sm);
 	}
 }
 
 [class*="btn-func"]{
-    color:$kap-gray-500;
-    background: $white;
+	color:$kap-gray-500;
+	background: $white;
 	border:1px solid $kap-gray-400;
+	width:30px;
+	min-width:auto;
+	
+	>[class^="icon"]{
+        margin-right:0;
+    }
 
 	&:hover{
 		background: $kap-gray-500;
@@ -68,7 +147,14 @@
 	}
 }
 
+
 .btn-lg {
-	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-base, $btn-line-height-lg, $btn-border-radius-lg);
+	height:40px;
+	@include button-size(0, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+	min-width:78px;
   }
-  
+
+.btn-sm {
+	min-height:20px;
+	@include button-size(0, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}

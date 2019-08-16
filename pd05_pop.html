@@ -1,0 +1,348 @@
+@@include('_inc/_top-setting.html')
+@@include('_inc/_header.html')
+
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+		@@include('_inc/_lnb.html')
+		<!-- main 컨텐츠 영역 -->
+		<div class="body-main-wrap">
+			<div class="location-wrap">
+				<nav class="d-flex justify-content-end" aria-label="breadcrumb">
+					<div class="breadcrumb">
+						<a href="#" class="breadcrumb-item">상품정보</a>
+						<a href="#" class="breadcrumb-item">상품 설계</a>
+						<span class="active breadcrumb-item" aria-current="page">계산기</span>
+					</div>
+				</nav>
+			</div>
+			<div class="title-wrap level-2">
+				<h2 class="title">계산기</h2>
+				<div class="title-right">
+				</div>
+			</div>
+			<!-- contents all -->
+			<div class="contents-wrap">
+				<div class="contents-top">
+					<div class="lookup-wrap mb-1">
+						<form class="row align-items-center no-gutters">
+							<div class="col-sm-12 form-inline"> 
+								<div class="form-group">
+									<label for="form1">상품명</label>
+									@@include('_inc/_wj-inputtext.html')
+								</div>
+								<div class="form-group">
+									<label for="form2">통화</label>
+									@@include('_inc/_wj-select.html')
+								</div>
+							</div>
+						</form>
+						<div class="row align-items-center no-gutters">
+							<div class="col-sm">
+							</div>
+							<div class="col-sm text-right">
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-document-view"></span>MY 상품관리
+								</button>
+								<button type="button" class="btn btn-outline-light">
+										<span class="icon-disk"></span>
+										결과저장
+									</button>
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-request"></span>
+									상품요청
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents-body">
+					<div class="row">
+						<div class="col-sm-12 mb-3">
+							<!-- step -->	
+							<ul class="step">
+								<li class="step-item focus">
+									<div class="step-box">
+										<div class="step-name-outer">
+											<div class="step-name">STEP 01</div>
+										</div>
+										<p class="step-text">기초자산 및 유형</p>
+									</div>
+								</li>
+								<li class="step-item ">
+									<div class="step-box ">
+										<div class="step-name-outer">
+											<div class="step-name">STEP 02</div>
+										</div>
+										<p class="step-text">상환베리어</p>
+									</div>	
+								</li>
+								<li class="step-item">
+									<div class="step-box">	
+										<div class="step-name-outer">	
+											<div class="step-name">STEP 03</div>
+										</div>
+										<p class="step-text">결과</p>
+									</div>
+								</li>
+							</ul>
+							<!-- //step -->
+						</div>
+					</div>
+					<!-- data-wrap -->
+					<div class="row data-wrap">
+						<div class="col-sm-12">
+							<div class="card-deck">
+								<!-- card-basic -->
+								<div class="card card-basic">
+									<div class="card-header">
+										<div class="title-wrap level-4">
+											<h1 class="title">기초자산</h1>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="form-row">
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													KOSPI200
+												</button>
+											</div>
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													HSCEI
+												</button>
+											</div>
+											<div class="w-100"></div>
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													S&P500
+												</button>
+											</div>
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													EUROSTOXX50
+												</button>
+											</div>
+											<div class="w-100"></div>
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													NIKKEI225
+												</button>
+											</div>
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													HSI
+												</button>
+											</div>
+											<div class="w-100"></div>
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													WTI
+												</button>
+											</div>
+											<div class="col-sm-6 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													KRW/USD
+												</button>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- //card-basic -->
+								
+							
+								<!-- card-basic -->
+								<div class="card card-basic">
+									<div class="card-header">
+										<div class="title-wrap level-4">
+											<h1 class="title">상품유형</h1>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="form-row">
+											<div class="col-sm-12 col-lg-5 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													조기상환형
+												</button>
+											</div>
+											<div class="col-sm-12 col-lg-7 mb-1">
+												@@include('_inc/_wj-select_lg.html')
+											</div>
+											<div class="col-sm-12 col-lg-5 mb-1">
+												<button type="button" class="btn btn-outline-light btn-lg w-100" data-toggle="button" aria-pressed="false" autocomplete="off">
+													리자드형
+												</button>
+											</div>
+											<div class="col-sm-12 col-lg-7 mb-1">
+												@@include('_inc/_wj-select_lg.html')
+											</div>
+											<div class="col-sm-12">
+												<label class="mr-1"><input type="checkbox">월지급식</label>
+												<label><input  type="checkbox">노낙인</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //card-basic -->
+							
+								<!-- card-basic -->
+								<div class="card card-basic">
+									<div class="card-header">
+										<div class="title-wrap level-4">
+											<h1 class="title">만기</h1>
+										</div>
+									</div>
+									<div class="card-body">
+										<div class="form-group type-plain mb-3">
+											<label for="input1">만기</label>
+											<input type="text" class="form-control-plaintext border-bottom" id="input2" value="3" />
+											<span class="form-text">년</span>
+										</div>
+										<div class="form-group type-plain">
+											<label for="input2">조기상환주기</label>
+											<input type="text" class="form-control-plaintext border-bottom" id="input2" value="6" />
+											<span class="form-text">개월</span>
+										</div>
+									</div>
+								</div>
+								<!-- //card-basic -->
+							</div>
+						</div>
+						<div class="col-sm-12 text-center mt-3">
+							<button type="button" class="btn btn-secondary btn-lg">다음<span class="icon-arrow-next"></span></button>
+							<button type="button" class="btn btn-primary btn-lg"><span class="icon-reset"></span>초기화</button>
+						</div>
+				</div>
+				<!-- //data-wrap -->
+			</div>
+		</div>
+		<!-- contents all -->
+	</div>
+	<!-- //main 컨텐츠 영역 -->
+</div>
+</main>
+<!-- //contents body -->
+ 
+<div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="padding-right: 17px; display: block;">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">My 상품 저장</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="form-group type-plain mb-3">
+						<label for="input1">상품명 입력</label>
+						<input type="text" class="form-control-plaintext border-bottom" id="input2" value="3" />
+					</div>
+					<div class="form-group type-plain">
+						<label for="input2">조기상환주기</label>
+						<input type="text" class="form-control-plaintext border-bottom" id="input2" value="6" />
+						<span class="form-text">개월</span>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<div class="">
+					<button type="button" class="btn btn-primary">그룹설정</button>
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary">저장</button>
+					<button type="button" class="btn btn-outline-light">취소</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="padding-right: 17px; display: block;top:370px;">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">My 상품 관리</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="form-group type-plain mb-3">
+					<label for="input1">그룹명</label>
+					<input type="text" class="form-control-plaintext border-bottom" id="input2" value="3" />
+				</div>
+				<h3>그룹 내 저장 상품리스트</h3>
+				<div class="row">
+					<div class="col-sm-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>행사주기</th>
+									<th>3M</th>
+									<th>3M</th>
+									<th>3M</th>
+									<th>3M</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>조기상환 행사가(%)</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>조기상환 행사가(%)</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>조기상환 행사가(%)</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>조기상환 행사가(%)</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>조기상환 행사가(%)</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+									<td>95</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">저장</button>
+				<button type="button" class="btn btn-outline-light">취소</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal-backdrop fade show"></div>
+
+<script>
+$('#tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+@@include('_inc/_footer.html')

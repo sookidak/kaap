@@ -2,30 +2,69 @@
 
 // Modal header
 .modal-content{
-    padding:0 10px;
+    box-shadow:0 5px 0px 0px rgba(0,0,0,0.1);
 }
 .modal-header {
-
-    padding:13px 0 10px ;
+    background:$modal-header-bg;
+    padding:13px 10 0px ;
 
     .close {
-        padding: $modal-header-padding;
-        // auto on the left force icon to the right even when there is no .modal-title
-        margin: (-$modal-header-padding) (-$modal-header-padding) (-$modal-header-padding) auto;
+        color:$modal-close-color;
+        opacity: 1;
+        font-weight:normal;
+        text-shadow: none;
+        line-height:8px;
+        margin:-10px -10px -10px 0;
+        font-size:30px;
+        height:40px;
+        width:40px;
+        span{
+            display:inline-block;
+            height:14px;
+            vertical-align: top;
+        }
+        
+        &:not(:disabled):not(.disabled) {
+
+            @include hover-focus {
+                color: $modal-close-color;
+            }
+        }
     }
 }
 .modal-title {
-    color:$kap-fontcolor-gray-dark;
+    color:$modal-header-title-color;
+    font-size: $modal-title-font-size;
 }
   
-
+.modal-body{
+    color:#616161;
+}
 // Footer (for actions)
 .modal-footer {
-    padding: 10px 0;
+    padding: 10px;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
   // Easily place margin between footer elements
   > :not(:first-child) { margin-left:0; }
   > :not(:last-child) { margin-right: .25rem; }
+  &.border-none{
+      border-top:0;
+  }
+    .custom-checkbox + .custom-checkbox{
+        margin-left:16px;
+
+    }
+    .btn{
+		min-width:80px
+	}
 }
 
+// Scale up the modal
+@include media-breakpoint-up(sm) {
+    .modal-xl { max-width: $modal-xl; }
+}
 
-
+@include media-breakpoint-up(lg) {
+    .modal-xl { max-width: $modal-xl; }
+}

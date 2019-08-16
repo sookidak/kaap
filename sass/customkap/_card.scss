@@ -1,29 +1,31 @@
 // card layout
-
+.cardlist-wrap{
+	height:450px;
+	overflow:auto;
+}
 .card {
 	border-bottom: $card-border-width solid $card-borderbottom-color;
-	
+	.card{
+		border-radius:5px;
+		overflow:hidden;
+		border:1px solid #e6e9ed;
+	}
 	.card-header {
 		padding:10px 12px;
+		background-color:transparent;
 
 		label{
 			margin-bottom: 0;
 		}
 		
-		.card-header-right{
-            position: absolute;
-            right:10px;
-            top:11px;
-            line-height:1;
+		
 
-            button{
-                vertical-align: top;
-                margin-right:5px;
-                
-                &:last-child{
-                    margin-right:0;
-                }
-            }
+		button{
+			margin-right:5px;
+			
+			&:last-child{
+				margin-right:0;
+			}
 		}
 	}
 	
@@ -36,7 +38,185 @@
 		
 		}
 	}
-	
+	// card 기본형
+	&.card-basic{
+		>.card-header{
+			padding:0;
+			margin:0;
+		}
+		.card-body{
+			padding:20px;
+			.list-group-item {
+				padding:10px 0;
+				border-top:0;
+			}
+		}
+	}
+
+	// card 상단 정보 입력 box
+	&.card-info{
+		border-color:$kap-gray-400;
+		background: $kap-gray-200;
+		>.card-header{
+			padding:0 0 10px 0;
+			margin:20px 20px 0 20px;
+		}
+		.title-wrap{
+			margin-bottom:0;
+			.title{
+				color:#212121;
+				font-weight:600;
+				font-size:$kap-level3-em-font-size;
+			}
+		}
+		.card-body{
+			padding:20px 20px 0;
+		}
+	}
+	// card select list 
+	&.card-list{
+		.list-group-flush {
+			.list-group-item {
+				display:table;
+				border:0;
+				-webkit-align-items: center !important;
+				 align-items: center !important;
+
+				.list-title{
+					display:table-cell;
+					vertical-align: middle;
+					background: #f5f7fa;
+					text-align:center;
+					width:66px;
+					min-height:20px;
+					border:1px solid #e6e9ed;
+					border-radius:2px;
+					&.two-line{
+						height:38px;
+						
+					}
+
+				}
+				.list-cont{
+					display:table-cell;
+					padding-left:5px;
+					vertical-align: middle;
+					color:#616161;
+					word-break:keep-all;
+				
+				}
+			}
+		}
+		>.card-header{
+			min-height:40px;
+			label{
+				color:$kap-fontcolor-gray;
+			}
+		}
+		&.disabled{
+			&:before{
+				content:'';
+				display:block;
+				position:absolute;
+				left:0;
+				right:0;
+				top:0;
+				bottom:0;
+				z-index:1;
+			}
+			color:#bdbdbd;
+			.card-header{
+				border-color:#e6e9ed;
+			}
+			.custom-control-label{
+				color:#bdbdbd;
+				&:before{
+					background: #ccd1d9;
+					border:none;
+				}
+			}
+			.btn, .badge{
+				background: #ccd1d9;
+				border:none;
+			}
+			.card-toplist .list-group .list-group-item:first-child{
+				background: #ccd1d9;
+				.list-item-text{
+					color: #fff;
+				}
+			}
+			.card-toplist .list-group .list-group-item .list-item-text,
+			.card-toplist .list-group .list-group-item .list-item-number,
+			.list-group-flush .list-group-item .list-title,
+			.list-group-flush .list-group-item .list-cont{
+				color:#ccd1d9
+			}
+			.list-group-item{
+				border-color:#e6e9ed;
+			}
+		}
+	}
+
+	// contents가 바로 들어가는 card
+	&.card-notitle{
+		padding:0;
+		border:0;
+		.card-header{
+			padding:0;
+			border:0;
+		}
+		.card-body{
+			padding:0;
+		}
+	}
+
+	// horizontal 형 card
+	&.card-horizontal{
+		display:table;
+		width:100%;
+		height:60px;
+
+		>.card-header{
+			display:table-cell;
+			padding:0;
+			border-bottom:0;
+			background:$kap-gray-600;
+			width:200px;
+			vertical-align: middle;
+			text-align: center;
+
+			.title-wrap{
+				height:auto;
+				padding:0;
+				background-color:transparent;
+				vertical-align: middle;
+				display:inline-block;
+
+				.title{
+					float:none;
+					display:inline;
+					font-size:24px;
+				}
+			}
+		}
+		
+		.card-body{
+			padding:0 20px;
+			display:table-cell;
+			flex:none;
+			vertical-align: middle;
+			.text{
+				color:$kap-fontcolor-gray;
+				font-size:$font-size-xl;
+				em{
+					font-weight:600;
+					font-size:$font-size-24;
+					color:$kap-fontcolor-black;
+				}
+			}
+		}
+	}
+
 	.card-toplist{
 		margin-bottom:5px;
 
@@ -44,9 +224,12 @@
 
 			.list-group-item{
 				text-align:center;
+				padding-top:8px;
 				
 				.list-item-text{
 					display: block;
+					color:$kap-fontcolor-gray;
+					font-size:$font-size-sm;
 				}
 		
 				.list-item-number{
@@ -59,14 +242,27 @@
 				&:first-child {
 					border:0;
 					background:$kap-gray-600;
-					color:$white;
+					padding-top:0px;
+					.list-item-text{
+						color:$white;
+						font-size:$font-size-lg;
+					}
+					@include media-breakpoint-up(lg) {
+						max-width:150px;
+					}
+					
 				}
 			}
 
 		}
 	}
-
-
+	.card-footer{
+		-webkit-justify-content: center !important;
+		justify-content: center !important;
+		.custom-checkbox + .custom-checkbox{
+			margin-left:16px;
+		}
+	}
 }
 
 
@@ -100,3 +296,4 @@
     }
     
 }
+

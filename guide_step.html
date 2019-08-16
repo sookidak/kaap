@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	.guide-table  tbody tr >th{
+		background: #eee;
+		padding-left:10px;
+	}
+	textarea{
+		width:100%;
+		height:40px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	textarea{
+		height:220px;
+	}
+</style>
+<h1>step 가이드</h1>
+
+<div class="guide-p">
+	<div class="explain-box">
+		<ul>
+			<li>
+				- step-item 클래스에<br>
+			현재 진행단계 : focus 클래스 추가 / 진행완료단계 : complete 클래스 추가
+			</li>
+			<li>
+				
+			</li>
+		</ul>
+	
+	</div>
+	<table class="guide-table">
+		<colgroup>
+			<col style="width:15%">
+			<col style="">
+		</colgroup>
+		<thead>
+			<tr>
+				<th colspan="2">컴포넌트</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td colspan="2">
+<!-- step -->	
+<ul class="step">
+	<li class="step-item complete">
+		<div class="step-box">
+			<div class="step-name">STEP 01</div>
+			<p class="step-text">기초자산 및 유형</p>
+		</div>
+	</li>
+	<li class="step-item focus">
+		<div class="step-box ">
+			<div class="step-name">STEP 02</div>
+			<p class="step-text">상환베리어</p>
+		</div>	
+	</li>
+	<li class="step-item">
+		<div class="step-box">	
+			<div class="step-name">STEP 03</div>
+			<p class="step-text">결과</p>
+		</div>
+	</li>
+</ul>
+<!-- //step -->
+			</td>
+		</tr>
+		<tr>
+			<th>html 코드</th>
+			<td>
+				<textarea>
+<!-- step -->	
+<ul class="step">
+	<li class="step-item complete">
+		<div class="step-box">
+			<div class="step-name">STEP 01</div>
+			<p class="step-text">기초자산 및 유형</p>
+		</div>
+	</li>
+	<li class="step-item focus">
+		<div class="step-box ">
+			<div class="step-name">STEP 02</div>
+			<p class="step-text">상환베리어</p>
+		</div>	
+	</li>
+	<li class="step-item">
+		<div class="step-box">	
+			<div class="step-name">STEP 03</div>
+			<p class="step-text">결과</p>
+		</div>
+	</li>
+</ul>
+<!-- //step -->
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			
+			<th>reactstrap 코드</th>
+			<td>
+				<textarea>
+				
+				</textarea>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>

@@ -1,0 +1,188 @@
+@@include('_inc/_top-setting.html')
+@@include('_inc/_header.html')
+
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+		@@include('_inc/_lnb.html')
+		<!-- main 컨텐츠 영역 -->
+		<div class="body-main-wrap">
+			<div class="location-wrap">
+				<nav class="d-flex justify-content-end" aria-label="breadcrumb">
+					<div class="breadcrumb">
+						<a href="#" class="breadcrumb-item">상품정보</a>
+						<a href="#" class="breadcrumb-item">판매상품</a>
+						<span class="active breadcrumb-item" aria-current="page">판매상품 스트</span>
+					</div>
+				</nav>
+			</div>
+			<div class="title-wrap level-2">
+				<h2 class="title">시나리오 분석</h2>
+				<div class="title-right">
+					<span class="badge badge-secondary badge-lg">
+						기준일 : <span>2019. 03. 01</span>
+					</span>
+				</div>
+			</div>
+			<!-- contents all -->
+			<div class="contents-wrap">
+				<div class="contents-top">
+
+					<!-- 조회 -->
+					<div class="lookup-wrap mb-1">
+						<form class="row align-items-center no-gutters">
+							<div class="col-sm-12 form-inline"> 
+								
+								<div class="form-group">
+									<label for="form5">상품명</label>
+									@@include('_inc/_wj-inputtext.html')
+								</div>
+								<div class="form-group">
+									<label for="form6">통화</label>
+									@@include('_inc/_wj-select.html')
+								</div>
+							</div>
+						</form>
+						<div class="row align-items-center no-gutters">
+							<div class="col-sm text-right">
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-analysis"></span>
+									MY 시뮬레이션
+								</button>
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-disk"></span>
+									결과저장
+								</button>
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-request"></span>
+									상품요청
+								</button>
+								<button type="submit" class="btn btn-primary"><span class="icon-search "></span><span class="">조회</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- //조회 -->					
+				</div>
+
+				<div class="contents-body">
+					
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-info">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">기초자산</div>
+												<div class="tags">
+													<div class="tag">HSCEI</div>
+													<div class="tag">S&P500</div>
+													<div class="tag">EUROSTOXX50</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">상품유형</div>
+												<div class="tags">
+													<div class="tag">345+리자드 1.5배형</div>
+													<div class="tag">노낙인</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">만기</div>
+												<div class="tags">
+													<div class="tag">3년 / 6개월</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">조기상환구조</div>
+												<div class="tags">
+													<div class="tag">95(3m)-93(4m)-90(5m)-90(L75)-90(L65)-85-85-80-65</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- data-wrap -->
+					<div class="row data-wrap mt-3">
+						<div class="col-sm-12">
+							<!-- card-basic -->
+							<div class="card card-horizontal">
+								<div class="card-header bg-blue">
+									<div class="title-wrap level-4">
+										<h1 class="title">안정형 1</h1>
+									</div>
+								</div>
+								<div class="card-body">
+										<span class=""><em>90</em>(3m) - 93(4m) - 90(5m) - 90(L75) - 90(L65) - 85 - 85 - 80 - 65</span>
+								</div>
+							</div>
+							<!-- card-basic -->
+						</div>
+						<div class="col-sm-12 mt-2">
+							<div class="row">
+								<div class="col-sm-12 border-1">
+									<div class="card-deck">
+										<div class="card card-basic">
+											<div class="card-header">
+												<div class="title-wrap level-4 text-center">
+													<h1 class="title">선취수수료</h1>
+												</div>
+											</div>
+											<div class="card-body">
+												<div><img src="./img/sample_graph.png" alt=""></div>
+											</div>
+										</div>
+										<div class="card card-basic">
+											<div class="card-header">
+												<div class="title-wrap level-4 text-center">
+													<h1 class="title">과거 시뮬레이션</h1>
+												</div>
+											</div>
+											<div class="card-body">
+												<div><img src="./img/sample_graph.png" alt=""></div>
+											</div>
+										</div>
+										<div class="card card-basic">
+											<div class="card-header">
+												<div class="title-wrap level-4 text-center">
+													<h1 class="title">미래 시뮬레이션</h1>
+												</div>
+											</div>
+											<div class="card-body">
+												<div><img src="./img/sample_graph.png" alt=""></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<!-- //data-wrap -->
+				</div>
+			</div>
+			<!-- contents all -->
+		</div>
+		<!-- //main 컨텐츠 영역 -->
+	</div>
+</main>
+<!-- //contents body -->
+<script>
+$('#tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+@@include('_inc/_footer.html')

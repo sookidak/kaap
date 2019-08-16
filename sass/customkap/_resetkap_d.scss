@@ -1,5 +1,33 @@
 // Variables ===================================================================
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+//@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
+@font-face {
+	font-family: 'Noto Sans KR Regular';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
+		 url('../fonts/NotoSansKR-Regular.woff') format('woff'),
+		 url('../fonts/NotoSansKR-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Noto Sans KR Medium';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../fonts/NotoSansKR-Medium.woff2') format('woff2'),
+		 url('../fonts/NotoSansKR-Medium.woff') format('woff'),
+		 url('../fonts/NotoSansKR-Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans KR Light';
+	font-weight: 300;
+	font-style: normal;
+	src: url('../fonts/NotoSansKR-Light.woff2') format('woff2'),
+		 url('../fonts/NotoSansKR-Light.woff') format('woff'),
+		 url('../fonts/NotoSansKR-Light.otf') format('opentype');
+}
+
 @font-face {
 	font-family: 'kap-icon';
 	src:  url('../fonts/kap-icon.eot?j6cx4x');
@@ -10,11 +38,11 @@
 	font-weight: normal;
 	font-style: normal;
 }
-  
+
+
 
 body {
-	font-family: 'Noto sans',sans-serif; // 2
-	letter-spacing: -0.03em;
+	font-family:  $kap-font-family-sans-serif;
 	}
 	
 a {
@@ -32,7 +60,14 @@ a {
 table {
 	border-collapse: collapse; // Prevent double borders
 	border-spacing: 0;
-  }
+
+	label + label{
+		margin-left:5px;
+	}
+}
+th{
+	font-weight:normal;
+}
 	
 .container{
 	padding:0;
@@ -55,4 +90,36 @@ ul{
 
 p{
 	margin:0;
+}
+em{
+	font-style: normal;
+}
+button{
+	font-family:  $kap-font-family-sans-serif;
+	outline:none;
+	border:0;
+}
+
+input{
+	&::-webkit-input-placeholder {
+		color: #bdbdbd;
+	}
+	&:-ms-input-placeholder {
+		color: #bdbdbd;
+	}
+}
+textarea{
+	border:1px solid #ccd1d9;
+	border-radius:3px;
+	padding:8px;
+	width:100%;
+	font-size:14px;
+	color:#424242;
+
+	&::-webkit-input-placeholder {
+		color: #bdbdbd;
+	}
+	&:-ms-input-placeholder {
+		color: #bdbdbd;
+	}
 }

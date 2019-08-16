@@ -5,12 +5,28 @@
 // moved to top level for backward compatibility
 .wj-header {
     font-weight: normal;
+    .wj-cell {
+        vertical-align: middle;
+        display: table-cell;
+    }
 }
 
 // primary control class: applies to all Wijmo controls
 .wj-control {
     color: $kap-fontcolor-gray-dark;
 }
+.wj-content {
+    //border-bottom:1px solid $kap-border-color
+}
+.wj-flexgrid {
+    border: 0;
+    
+}
+.wj-flexgrid .wj-group:not(.wj-state-selected):not(.wj-state-multi-selected) {
+    background: #fff;
+    color: #444;
+}
+
 
 // glyphs --------------------------------
 .wj-glyph {
@@ -19,153 +35,270 @@
 .wj-glyph-calendar {
     border: 0;
     opacity: 1;
-    width:16px;
-    height:16px;
-    line-height:1;
-
+    width: 16px;
+    height: 16px;
+    line-height: 1;
     &:after {
-        @extend .icon-ka ;
+        @extend .icon-ka;
         content: $icon-calendar;
         display: inline-block;
-        font-size:16px;
-        left:50%;
+        font-size: 16px;
+        left: 50%;
         transform: translateX(-50%);
     }
 }
 
 .wj-glyph-down {
-    top:-2px;
-    border-top: .35em solid;
-    border-right: .27em solid transparent;
-    border-left: .27em solid transparent;
+    top: -2px;
+    border-top: 0.35em solid;
+    border-right: 0.27em solid transparent;
+    border-left: 0.27em solid transparent;
 }
 
 .wj-glyph-left {
-    top:-2px;
-    border-top: .27em solid transparent;
-    border-right: .36em solid;
-    border-bottom: .27em solid transparent;
+    top: -2px;
+    border-top: 0.27em solid transparent;
+    border-right: 0.36em solid;
+    border-bottom: 0.27em solid transparent;
 }
 
 .wj-glyph-right {
-    top:-2px;
-    border-top: .27em solid transparent;
-    border-bottom: .27em solid transparent;
-    border-left: .35em solid;
+    top: -2px;
+    border-top: 0.27em solid transparent;
+    border-bottom: 0.27em solid transparent;
+    border-left: 0.35em solid;
 }
 
 .wj-glyph-circle {
-    border: .25em solid;
+    border: 0.25em solid;
     transform: translateY(-.15em);
 }
 
-.wj-glyph-clock{
-		transform: translateY(0);
-		line-height:0;
-		border:0;
-		width:16px;
-		height:16px;
-
-    &:after{
-        @extend .icon-ka ;
+.wj-glyph-clock {
+    transform: translateY(0);
+    border: 0;
+    width: 16px;
+    height: 16px;
+    &:after {
+        @extend .icon-ka;
         content: $icon-time;
         display: inline-block;
-        font-size:16px;
+        font-size: 16px;
         position: relative;
         left: initial;
-        top:initial;
-        line-height:0;
-		border:0;
-		width:16px;
-		height:16px;
-	}
-}
-
-
-//input --------------------------------
-
-.wj-content {
-    &.wj-calendar-outer{
+        line-height: 0;
         border: 0;
-        border-top:1px solid $kap-gray-500;
-        border-bottom:1px solid $kap-gray-500;
-        border-radius:0;
+        width: 16px;
+        height: 16px;
     }
 }
 
-//input group
-.wj-control{
 
+
+// wijmo grid
+
+.wj-colheaders {
+
+    .wj-header {
+        background: rgba(255,255,255,1);
+        color: #212121;
+        border-top: 1px solid $kap-gray-700;
+        border-bottom: 1px solid $kap-gray-700;
+        border-left: 1px solid #e6e9ed;
+        border-right: 1px solid rgba(255, 255, 255, 0);
+        &:first-child {
+            border-left: 0;
+        }
+
+        .wj-glyph-up {
+            top: -1px;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0.4em solid #bdbdbd;
+            border-left: 0.3em solid transparent;
+        }
+        .wj-glyph-down {
+            top: 0;
+            border-top: 0.4em solid #bdbdbd;
+            border-right: 0.3em solid transparent;
+            border-left: 0.3em solid transparent;
+        }
+    }
+}
+
+.wj-topleft {
+
+    .wj-header {
+        border-top: 1px solid $kap-gray-700;
+        border-bottom: 1px solid $kap-gray-700;
+        background: #fff;
+        border-right: 1px solid #e6e9ed;
+    }
+}
+
+.wj-cells {
+
+    .wj-cell {
+        line-height:20px;
+        border-color: #e6e9ed;
+        border-left: 1px solid #e6e9ed;
+        border-right: 1px solid rgba(255, 255, 255, 0);
+        color:#616161;
+         
+            
+        &.wj-header {
+            white-space: pre-wrap;
+        }
+    }
+    .wj-row {
+        .wj-cell {
+            &:first-child {
+                border-left: 0;
+            }
+        }
+    }
+}
+
+.wj-grouppanel {
+    background: $data-body-bg;
+}
+.wj-cell {
+    font-size:$font-size-sm;
+    line-height:20px;
+    &.wj-header {
+        white-space: pre-wrap;
+    }
+}
+// horizontal 형
+.wj-rowheaders {
+    .wj-cell {
+        &.wj-header {
+            background: $kap-gray-200;
+            color: #212121;
+            border-color: #e6e9ed;
+        }
+
+    }
+}
+
+// .wj-flexgrid 
+.wj-flexgrid .wj-marquee {
+    border: none;
+    box-shadow: inset 0 0 0 2px #4a89dc;
+    transition: all .7s;
+	/* want to play? -> http://cubic-bezier.com */
+	transition-timing-function: cubic-bezier(.5,0,.5,1);
+}
+
+//input --------------------------------
+
+
+
+//input group
+.wj-control {
+    &.text-right{
+        input{
+            text-align:right;
+        }
+    }
     .wj-input-group {
 
         .wj-input-group-btn {
-            min-width: 31px;
+            //min-width: 31px;
             vertical-align: top;
+
+        }
+        .wj-form-control {
+            padding: 2px 8px;
+            line-height: 24px;
+            min-height:auto;
         }
     }
     .wj-btn-group > .wj-btn,
     .wj-input-group-btn > .wj-btn {
-    
+
         &.wj-btn-default {
             color: $kap-fontcolor-gray;
             vertical-align: top;
-            line-height:28px;
+            line-height: 26px;
+            padding:0 3px;
         }
     }
+    
+
 }
 
 // calendar
 .wj-calendar {
 
     .wj-calendar-outer {
-        padding:0;
+        padding: 0;
+        background: #fff;
     }
 
     .wj-calendar-header {
         position: relative;
         background: $kap-gray-200;
-        text-align:center;
-        padding:13px 0;
-        height:49px;
+        text-align: center;
+        padding: 13px 0;
+        height: 49px;
         box-sizing: border-box;
-        
-        .wj-btn-group{
-            float:initial;
+
+        .wj-btn-group {
+            float: initial;
             position: absolute;
-            right:10px;
-            top:10px;
+            right: 10px;
+            top: 10px;
+            border:1px solid #ddd;
         }
     }
-
+    
     td {
-        border-bottom:1px solid $kap-border-color-light;
-        font-size:$font-size-sm;
-    }
-    //주말 날짜 색상 변경
-    .wj-day-weekend{
-        color: $kap-red-dark;
+        border-bottom: 1px solid $kap-border-color-light;
+        font-size: $font-size-sm;
+        &.wj-day-today{
+            position: relative;
+           &:before{
+               content:'';
+               display:inline-block;
+               position: absolute;
+               left:0;
+               top:-1px;
+               right:0;
+               bottom:-1px;
+               border:1px solid #ccd1d9;
+           }
+        }
         
     }
-    td.wj-day-weekend:last-child{
-        color:$kap-fontcolor-gray;
+    //달력 요일td 빼고, 오늘날짜 빼고, 선택된 날짜 빼고 나머지 td 마우스 오버시 색상바뀜
+    tr:not(.wj-header){
+       td:not(.wj-state-selected):not(.wj-day-today):hover{
+            background: #f6f7fb;
+        }
+    }
+    //주말 날짜 색상 변경
+    .wj-day-weekend {
+        color: $kap-red-dark;
+
+    }
+    td.wj-day-weekend:last-child {
+        color: $kap-fontcolor-gray;
     }
     //마지막줄 td 라인 bottom 삭제
-    tr:last-child{
-        td{
-            border-bottom:0;
+    tr:last-child {
+        td {
+            border-bottom: 0;
         }
     }
 }
 
 
-
-
 // multi-autocomplete
 .wj-multi-autocomplete {
-    padding: 0px;
+    padding: 0;
 
     .wj-input-group .wj-form-control {
-        margin-top: 0px;
+        margin-top: 0;
         height: auto;
     }
 
@@ -178,8 +311,10 @@
         vertical-align: middle;
         float: left;
         cursor: default;
-
-        &:focus, &:hover, &.wj-token-active { // REVIEW: use wj-state-active instead?
+        &.wj-token-active,
+        &:focus,
+        &:hover {
+            // REVIEW: use wj-state-active instead?
             @include backgradient($wj-btn-hvr, $wj-btn-grd);
             transition-duration: $wj-tdn-focus;
         }
@@ -199,9 +334,9 @@
             vertical-align: middle;
             cursor: pointer;
             text-decoration: none;
-
-            &:hover, &:focus {
-                opacity: .5;
+            &:focus,
+            &:hover {
+                opacity: 0.5;
                 transition-duration: $wj-tdn-focus;
             }
         }
@@ -213,29 +348,170 @@
     }
 }
 
-
-
-
-
-// wijmo table
-.wj-colheaders {
-    border-top: 1px solid #434a54;
-    border-bottom: 1px solid #434a54;
-
-}
-.wj-header {
-    background: #fff;
-    color: #212121;
-    font-weight: 600;
-}
-
-
-.wj-control{
-    &.wj-lg{
-        height:40px;
-        .wj-form-control{
-            line-height:30px;
+// form-group 내에 wj-content
+.wj-content {
+    &:hover {
+        .wj-input-group{
+            background:#f6f7fb;
         }
     }
+    &.wj-calendar{
+        border:0;
+        border-radius:0;
+    }
+    &.wj-calendar-outer {
+        border: 0;
+        border-top: 1px solid $kap-gray-500;
+        border-bottom: 1px solid $kap-gray-500;
+        border-radius: 0;
+    }
+    &.state-invalid {
+        color: #424242;
+        border-color: $kap-red;
+    }
     
+    &.wj-listbox{
+        border-radius:0 0 4px 4px;
+        margin-top:-3px;
+        border-color:#aab2bd;
+        border-top:1px solid $primary;
+
+        .wj-listbox-item{
+            padding:6px 8px 5px;
+            font-size:$font-size-sm;
+        }
+    }
+
+    .wj-input-group{
+        .wj-form-control{
+            border:0;
+            border-radius:0;
+            border-bottom: 1px solid $kap-gray-400;
+            transition: background 0.3s;
+            &:hover {
+                background: #f6f7fb;
+            }
+            // &:focus {
+            //     border-color: #212121;
+            // }
+            &[readonly], &[readonly]:hover {
+                background:#e6e9ed;
+                border-color:#ccd1d9;
+            }
+        }
+    }
+    .wj-input-group-btn{
+        .wj-btn {
+            border:0;
+            border-radius:0;
+            border-bottom: 1px solid $kap-gray-400;
+            transition: background 0.3s;
+            &:hover{
+                background:darken($kap-gray-400,90%);
+            }
+        }
+    }
+
+    &.wj-inputnumber {
+
+    }
+    &.wj-inputdate {
+        .wj-glyph-down{
+            top: 50%;
+            @extend .wj-glyph-calendar;
+        }
+
+    }
+
+    &.wj-calendar{
+        border:0;
+        border-radius:0;
+        margin-top:5px;
+        &:hover{
+            background: #fff;
+        }
+    }
+    &.wj-treeview{
+        &:hover{
+            background: none;
+        }
+    }
+    //wj-content focus 일때
+    &.wj-state-focus{
+        .wj-input-group{
+            input{
+                border-color: #212121;
+            }   
+        }
+        .wj-input-group-btn{
+            .wj-btn {
+                border-bottom: 1px solid  #212121;
+            }
+        }
+        
+    }
+}
+
+
+//조회 영역 내에서 스타일 
+.lookup-wrap{
+    .wj-content{
+        border-radius:4px;
+        border: 1px solid $kap-gray-400;
+        .wj-input-group{
+            
+            .wj-form-control, .wj-btn{
+                border:none;
+            }
+            
+        }
+        
+        &.wj-inputdate {
+            
+            transition: background 0.3s;
+
+            &:hover {
+                background: #fff;
+            }
+            input {
+            
+                &:focus {
+                    border-color: #212121;
+                    background: #fff;
+                }
+            }
+        }
+
+        &.wj-inputmask {
+            height:30px;
+            .wj-input-group{
+    
+                input {
+    
+                    &:hover {
+                        background: #fff;
+                    }
+                    &:focus {
+                        border-color: #212121;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+
+        &.wj-state-focused{
+            border-color:$primary;
+            .wj-input-group{
+                .wj-btn{
+                    background:$primary;
+                    color:#fff;
+                    border:0;
+                    &:hover{
+                        background:darken($primary,10%);
+                    }
+                }
+            }
+        }
+        
+    }
 }

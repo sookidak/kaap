@@ -1,0 +1,260 @@
+@@include('_inc/_top-setting.html')
+@@include('_inc/_header.html')
+
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+		@@include('_inc/_lnb.html')
+		<!-- main 컨텐츠 영역 -->
+		<div class="body-main-wrap">
+			<div class="location-wrap">
+				<nav class="d-flex justify-content-end" aria-label="breadcrumb">
+					<div class="breadcrumb">
+						<a href="#" class="breadcrumb-item">상품정보</a>
+						<a href="#" class="breadcrumb-item">상품 설계</a>
+						<span class="active breadcrumb-item" aria-current="page">계산기</span>
+					</div>
+				</nav>
+			</div>
+			<div class="title-wrap level-2">
+				<h2 class="title">계산기</h2>
+				<div class="title-right">
+				</div>
+			</div>
+			<!-- contents all -->
+			<div class="contents-wrap">
+				<div class="contents-top">
+					<div class="lookup-wrap mb-1">
+						<form class="row align-items-center no-gutters">
+							<div class="col-sm-12 form-inline"> 
+								<div class="form-group">
+									<label for="form1">상품명</label>
+									@@include('_inc/_wj-inputtext.html')
+								</div>
+								<div class="form-group">
+									<label for="form2">통화</label>
+									@@include('_inc/_wj-select.html')
+								</div>
+							</div>
+						</form>
+						<div class="row align-items-center no-gutters">
+							<div class="col-sm">
+							</div>
+							<div class="col-sm text-right">
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-document-view"></span>MY 상품관리
+								</button>
+								<button type="button" class="btn btn-outline-light">
+										<span class="icon-disk"></span>
+										결과저장
+									</button>
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-request"></span>
+									상품요청
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents-body">
+					<div class="row">
+						<div class="col-sm-12 mb-3">
+							<!-- step -->	
+							<ul class="step">
+								<li class="step-item complete">
+									<div class="step-box">
+										<div class="step-name-outer">
+											<div class="step-name">STEP 01</div>
+										</div>
+										<p class="step-text">기초자산 및 유형</p>
+									</div>
+								</li>
+								<li class="step-item focus">
+									<div class="step-box ">
+										<div class="step-name-outer">
+											<div class="step-name">STEP 02</div>
+										</div>
+										<p class="step-text">상환베리어</p>
+									</div>	
+								</li>
+								<li class="step-item">
+									<div class="step-box">	
+										<div class="step-name-outer">	
+											<div class="step-name">STEP 03</div>
+										</div>
+										<p class="step-text">결과</p>
+									</div>
+								</li>
+							</ul>
+							<!-- //step -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 mb-2">
+							<div class="card card-info">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">기초자산</div>
+												<div class="tags">
+													<div class="tag">HSCEI</div>
+													<div class="tag">S&P500</div>
+													<div class="tag">EUROSTOXX50</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">상품유형</div>
+												<div class="tags">
+													<div class="tag">345+리자드 1.5배형</div>
+													<div class="tag">노낙인</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">만기</div>
+												<div class="tags">
+													<div class="tag">3년 / 6개월</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- data-wrap -->
+					<div class="row data-wrap">
+						<div class="col-sm-12">
+							<!-- card-basic -->
+							<div class="card card-basic">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-4 mb-3">
+											<div class="form-group type-plain">
+												<label for="input1">선취수수료</label>
+												<input type="text" class="form-control-plaintext border-bottom" id="input2" value="3">
+												<span class="form-text">%</span>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-3">
+											<div class="form-group type-plain">
+												<label for="input1">월지급행사가</label>
+												<input type="text" class="form-control-plaintext border-bottom" id="input2" value="3">
+												<span class="form-text">%</span>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-3">
+											<div class="form-group type-plain">
+												<label for="input1">낙인베리어</label>
+												<input type="text" class="form-control-plaintext border-bottom" id="input2" value="3">
+												<span class="form-text">%</span>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<table class="table">
+												<thead>
+													<tr>
+														<th>행사주기</th>
+														<th>3M</th>
+														<th>3M</th>
+														<th>3M</th>
+														<th>3M</th>
+														<th>3M</th>
+														<th>3M</th>
+														<th>3M</th>
+														<th>3M</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>조기상환 행사가(%)</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+													</tr>
+													<tr>
+														<td>조기상환 행사가(%)</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+													</tr>
+													<tr>
+														<td>조기상환 행사가(%)</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+													</tr>
+													<tr>
+														<td>조기상환 행사가(%)</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+													</tr>
+													<tr>
+														<td>조기상환 행사가(%)</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+														<td>95</td>
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 text-center mt-3">
+							<button type="button" class="btn btn-primary btn-lg"><span class="icon-arrow-prev"></span>이전</button>
+							<button type="button" class="btn btn-secondary btn-lg">다음<span class="icon-arrow-next"></span></button>
+						</div>
+				</div>
+				<!-- //data-wrap -->
+			</div>
+		</div>
+		<!-- contents all -->
+	</div>
+	<!-- //main 컨텐츠 영역 -->
+</div>
+</main>
+<!-- //contents body -->
+<script>
+$('#tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+@@include('_inc/_footer.html')

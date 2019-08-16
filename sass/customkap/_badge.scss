@@ -2,6 +2,9 @@
 
 .badge{
     height:20px;
+    min-width:40px;
+    vertical-align: middle;
+    line-height: $kap-components-line-height-base;
 }
 [class*="badge-danger"]{
     color:$kap-badge-danger-color;
@@ -25,4 +28,13 @@
     margin-left: 6px;
     color:  $kap-fontcolor-gray;
     font-size:  $font-size-sm;
+}
+
+@each $color, $value in $theme-colors {
+    .badge-outline-#{$color} {
+        color:$kap-fontcolor-gray-dark;
+        border:1px solid  $value;
+        background:#fff;
+		
+    }
 }

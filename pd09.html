@@ -1,0 +1,201 @@
+@@include('_inc/_top-setting.html')
+@@include('_inc/_header.html')
+
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+		@@include('_inc/_lnb.html')
+		<!-- main 컨텐츠 영역 -->
+		<div class="body-main-wrap">
+			<div class="location-wrap">
+				<nav class="d-flex justify-content-end" aria-label="breadcrumb">
+					<div class="breadcrumb">
+						<a href="#" class="breadcrumb-item">상품정보</a>
+						<a href="#" class="breadcrumb-item">상품 요청</a>
+						<span class="active breadcrumb-item" aria-current="page">본사 상품 요청</span>
+					</div>
+				</nav>
+			</div>
+			<div class="title-wrap level-2">
+				<h2 class="title">본사 상품 요청</h2>
+				<div class="title-right">
+				</div>
+			</div>
+			<!-- contents all -->
+			<div class="contents-wrap">
+				<div class="contents-top">
+					<div class="lookup-wrap mb-1">
+						<div class="row align-items-center no-gutters">
+							<div class="col-sm">
+								
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-reset"></span>
+									초기화
+								</button>
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-document-view"></span>MY 상품관리
+								</button>
+							</div>
+							<div class="col-sm text-right">
+								<button type="button" class="btn btn-primary">
+									입력
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents-body">
+					<!-- data-wrap -->
+					<div class="row data-wrap">
+						<div class="col-sm-12 mb-2">
+							<div class="card card-notitle">
+								<div class="card-header">
+								</div>
+								<div class="card-body">
+									<table class="table table-horizontal text-left">
+										<colgroup>
+											<col style="width:15%">
+											<col style="width:35%">
+											<col style="width:15%">
+											<col >
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>설정예정일</th>
+												<td colspan="3">@@include('_inc/_wj-date.html')</td>
+											</tr>
+											<tr>
+												<th>상품상세</th>
+												<td colspan="3">
+
+													<div class="row">
+														<div class="col-sm-3">
+															<a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">조기상환형</a>
+														</div>
+														<div class="col-sm-3 collapse multi-collapse" id="multiCollapseExample1">
+																Anim pariat
+														</div>
+														<div class="col-sm-3">
+															<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+														</div>
+														<div class="col-sm-3 collapse multi-collapse" id="multiCollapseExample2">
+																Anim par
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-sm-12">
+															<div class="form-group form-check">
+																<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+																<label class="form-check-label" for="defaultCheck1">
+																	낙인
+																</label>
+															</div>
+															
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-12">
+															<div class="form-group form-check">
+																<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+																<label class="form-check-label" for="defaultCheck1">
+																	낙인
+																</label>
+															</div>
+														</div>
+													</div>
+													
+												</td>
+											</tr>
+											<tr>
+												<th>예상수익률</th>
+												<td colspan="3">
+
+												</td>
+											</tr>
+											<tr>
+												<th>기초자산</th>
+												<td colspan="3">
+													<div class="row">
+														<div class="col-sm-3">
+															<label><input type="checkbox">KOSPI200</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">S&P 500</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">EUROSTOXX 50</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">KRW/ USD</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">HSCEI</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">HSI</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">HSI</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">HSI</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">HSI</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">HSI</label>
+														</div>
+														<div class="col-sm-3">
+															<label><input type="checkbox">HSI</label>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th>통화</th>
+												<td >
+
+												</td>
+												<th>모집금액</th>
+												<td >
+
+												</td>
+											</tr>
+											<tr>
+												<th>요청사항</th>
+												<td colspan="3">
+													<textarea name="" id="" rows="3"></textarea>
+
+												</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+					
+				</div>
+				<!-- //data-wrap -->
+			</div>
+		</div>
+		<!-- contents all -->
+	</div>
+	<!-- //main 컨텐츠 영역 -->
+</div>
+</main>
+<!-- //contents body -->
+<script>
+$('#tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+@@include('_inc/_footer.html')

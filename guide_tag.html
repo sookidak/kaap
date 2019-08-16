@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	textarea{
+		width:100%;
+		height:240px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	.explain-box textarea{
+		height:160px;
+	}
+</style>
+<h1>tag 가이드</h1>
+<div class="guide-p">
+	<div class="explain-box">
+			<ul>
+				<li>
+				222
+				</li>
+				<li>
+					<textarea>
+
+					</textarea>
+					
+				</li>
+			</ul>
+		
+		</div>
+	<table class="guide-table">
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:25%">
+			<col style="width:40%">
+			<col style="width:25%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>컴포넌트명</th>
+				<th>형태</th>
+				<th>html 코드</th>
+				<th>위즈모 or reactstrap</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				기본
+			</td>
+			<td>
+				<div class="tag">HSCEI</div>
+				
+			</td>
+			<td>
+				<textarea>
+<div class="tag">HSCEI</div>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				색상 primary, 사이즈 lg
+			</td>
+			<td>
+				<div class="tag tag-primary tag-lg">HSCEI</div>
+			
+				
+			</td>
+			<td>
+				<textarea>
+<div class="tag tag-primary tag-lg">HSCEI</div>
+			
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				삭제버튼 추가
+			</td>
+			<td>
+				<div class="tag"> S&P500
+					<button class="btn btn btn-secondary btn-icon" type="button"><span class="icon-close"><span class="sr-only">태그 삭제</span></span>
+					</button>
+				</div>
+			</td>
+			<td>
+				<textarea>
+<div class="tag"> S&P500
+	<button class="btn btn btn-secondary btn-icon" type="button"><span class="icon-close"><span class="sr-only">태그 삭제</span></span>
+	</button>
+</div>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+				</textarea>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				tag 그룹
+			</td>
+			<td>
+				<div class="tag-group">
+					<div class="tag-name">기초자산</div>
+					<div class="tags">
+						<div class="tag">HSCEI</div>
+						<div class="tag"> S&P500
+							<button class="btn btn btn-secondary btn-icon" type="button"><span class="icon-close"><span class="sr-only">태그 삭제</span></span>
+							</button>
+						</div>
+						<div class="tag"> S&P500
+							<button class="btn btn btn-secondary btn-icon" type="button"><span class="icon-close"><span class="sr-only">태그 삭제</span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td>
+				<textarea>
+<div class="tag-group">
+	<div class="tag-name">기초자산</div>
+	<div class="tags">
+		<div class="tag">HSCEI</div>
+		<div class="tag"> S&P500
+			<button class="btn btn btn-secondary btn-icon" type="button"><span class="icon-close"><span class="sr-only">태그 삭제</span></span>
+			</button>
+		</div>
+		<div class="tag"> S&P500
+			<button class="btn btn btn-secondary btn-icon" type="button"><span class="icon-close"><span class="sr-only">태그 삭제</span></span>
+			</button>
+		</div>
+	</div>
+</div>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+				</textarea>
+
+			</td>
+		</tr>
+		</tbody>
+	</table>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	h1{
+		 margin:20px 20px 10px;
+		 font-weight:bold;
+		 font-size:28px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	.guide-table  tbody tr >th{
+		background: #eee;
+		padding-left:10px;
+	}
+	textarea{
+		width:100%;
+		height:200px;
+		border:1px solid #ddd;
+		background: #1e1e1e;
+		color:#d4d4d4;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	.guide-section{
+		border:1px solid #acc2ce;
+		margin-bottom:40px;
+		padding:65px 10px 10px;
+		position: relative;
+		background: #ececec;
+	}
+	h2{
+		font-size:16px;
+		border-bottom:1px;
+		margin-bottom:20px;
+		background: #87a2b1;
+		padding:10px;
+		color:#fff;
+		display:inline-block;
+		font-weight: bold;
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	.guide-dl dt{
+		text-align: left;
+		padding:6px;
+		position: relative;
+		cursor:pointer;
+		color: #757575;
+		background: #ececec;
+		border-bottom: 1px solid #d4d4d4;
+	}
+	.guide-dl dt:after{
+		content:'▼';
+		font-size:10px;
+		margin-left:10px;
+		margin-top:-6px;
+		vertical-align: top;
+	}
+	.guide-dl dt.open:after{
+		content:'▲';
+	}
+	.guide-dl dd{
+		display:none;
+	}
+	.guide-code{
+		margin-top:20px;
+	}
+</style>
+<h1>카드형 레이아웃 가이드</h1>
+
+<div class="guide-p">
+	<div class="explain-box">
+		<ul>
+			<li>
+				- 전체 레이아웃은 row-col 구조, col 내부로 card 가 공통으로 들어간다. 상하 마진은 row box에 mt-1/2/3... mb-1/2/3... 으로 조절 한다
+			</li>
+			<li>
+				
+			</li>
+		</ul>
+	
+	</div>
+	<div class="guide-section">
+		<h2>card card-basic 클래스 추가 : content box 기본 형</h2>
+		<!-- card-content -->
+		<div class="card card-basic">
+			<div class="card-header">
+				<div class="title-wrap level-4">
+					<h1 class="title">기초자산</h1>
+				</div>
+			</div>
+			<div class="card-body">
+				내용 
+			</div>
+
+		</div>
+		<!-- //card-content -->
+		<div class="guide-code">
+			<dl class="guide-dl">
+				<dt>html 코드</dt>
+				<dd>
+					<textarea>
+<!-- card-content -->
+<div class="card card-basic">
+	<div class="card-header">
+		<div class="title-wrap level-4">
+			<h1 class="title">기초자산</h1>
+		</div>
+	</div>
+	<div class="card-body">
+		내용 
+	</div>
+
+</div>
+<!-- //card-content -->
+					</textarea>
+				</dd>
+				<dt>reactstrap 코드</dt>
+				<dd>
+					<textarea>
+<Card className="card-basic">
+	<CardHeader>
+		<div className="title-wrap level-4">
+			<h1 className="title">기초자산</h1>
+		</div>
+	</CardHeader>
+	<CardBody>
+			내용 
+	</CardBody>
+</Card>
+					</textarea>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="guide-section">
+		<h2>card  card-horizontal 클래스 추가 : 좌우  기본 형</h2>
+		<!-- card-content -->
+		<div class="card card-horizontal">
+			<div class="card-header">
+				<div class="title-wrap level-4">
+					<h1 class="title">안정형</h1>
+				</div>
+			</div>
+			<div class="card-body">
+				<div>90(3m) - 93(4m) - 90(5m) - 90(L75) - 90(L65) - 85 - 85 - 80 - 65</div>
+			</div>
+
+		</div>
+		<!-- //card-content -->
+		<div class="guide-code">
+			<dl class="guide-dl">
+				<dt>html 코드</dt>
+				<dd>
+					<textarea>
+<!-- card-content -->
+<div class="card card-horizontal">
+	<div class="card-header">
+		<div class="title-wrap level-4">
+			<h1 class="title">안정형</h1>
+		</div>
+	</div>
+	<div class="card-body">
+		<div>90(3m) - 93(4m) - 90(5m) - 90(L75) - 90(L65) - 85 - 85 - 80 - 65</div>
+	</div>
+
+</div>
+<!-- //card-content -->
+					</textarea>
+				</dd>
+				<dt>reactstrap 코드</dt>
+				<dd>
+					<textarea>
+<Card className="card-horizontal">
+	<CardHeader>
+		<div className="title-wrap level-4">
+			<h1 className="title">안정형</h1>
+		</div>
+	</CardHeader>
+	<CardBody>
+			<div>90(3m) - 93(4m) - 90(5m) - 90(L75) - 90(L65) - 85 - 85 - 80 - 65</div>
+	</CardBody>
+</Card>
+					</textarea>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="guide-section">
+		<h2>card card-info 클래스 추가 : 상단 혹은 정보요약형 tag 리스트 등이 들어갈때</h2>
+		<!-- card-info-list -->
+		<div class="card card-info mb-2">
+			<div class="card-header">
+				<div class="title-wrap level-3">
+					<h1 class="title"><span class="icon-point"></span>타이틀</h1>
+					<div class="title-right">
+						<button type="button" class="btn btn-primary btn-icon"><span class="icon-search"></span></button>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				내용
+			</div>
+		</div>
+		<!-- //card-info-list -->
+		<div class="guide-code">
+			<dl class="guide-dl">
+				<dt>html 코드</dt>
+				<dd>
+					<textarea>
+<!-- card-info-list -->
+<div class="card card-info mb-2">
+	<div class="card-header">
+		<div class="title-wrap level-3">
+			<h1 class="title"><span class="icon-point"></span>타이틀</h1>
+			<div class="title-right">
+				<button type="button" class="btn btn-primary btn-icon"><span class="icon-search"></span></button>
+			</div>
+		</div>
+	</div>
+	<div class="card-body">
+		내용
+	</div>
+</div>
+<!-- //card-info-list -->
+					</textarea>
+				</dd>
+				<dt>reactstrap 코드</dt>
+				<dd>
+					<textarea>
+
+					</textarea>
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="guide-section">
+		<h2>card card-list 클래스 추가</h2>
+		<!-- card-box -->
+		<div class="card card-list">
+			<div class="card-header">
+				<label><input tabindex="-1" type="checkbox">삼성증권 ELS 12345</label>
+				<div class="card-header-right">
+					<button type="button" class="btn btn-primary btn-icon btn-sm">
+						<span class="icon-search"></span>
+					</button>
+					<span class="badge badge-danger4">고위험</span>
+				</div>
+			</div>
+			<div class="card-body">
+
+				<div class="card-toplist">
+					<ul class="list-group">
+						<li class="list-group-item">
+							<span class="list-item-text">고쿠폰추구형</span>
+						</li>
+						<li class="list-group-item">
+							<span class="list-item-text">수익률(연)</span>
+							<span class="list-item-number">5.00%</span>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item align-items-center">
+						<span class="list-title">기초자산</span>
+						<span class="list-cont">Eurostoxx50, S&P500, HSCEI</span>
+					</li>
+					<li class="list-group-item align-items-center">
+						<span class="list-title">구조</span>
+						<span class="list-cont">92-92-87-87-82-80/ KI 50</span>
+					</li>
+					<li class="list-group-item align-items-center">
+						<span class="list-title">만기/주기</span>
+						<span class="list-cont">3년/6개월</span>
+					</li>
+					<li class="list-group-item align-items-center">
+						<span class="list-title">통화</span>
+						<span class="list-cont">KRW</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //card-box -->
+		<div class="guide-code">
+			<dl class="guide-dl">
+				<dt>html 코드</dt>
+				<dd>
+					<textarea>
+<!-- card-box -->
+<div class="card card-list">
+	<div class="card-header">
+		<label><input tabindex="-1" type="checkbox">삼성증권 ELS 12345</label>
+		<div class="card-header-right">
+			<button type="button" class="btn btn-primary btn-icon btn-sm">
+				<span class="icon-search"></span>
+			</button>
+			<span class="badge badge-danger4">고위험</span>
+		</div>
+	</div>
+	<div class="card-body">
+
+		<div class="card-toplist">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<span class="list-item-text">고쿠폰추구형</span>
+				</li>
+				<li class="list-group-item">
+					<span class="list-item-text">수익률(연)</span>
+					<span class="list-item-number">5.00%</span>
+				</li>
+			</ul>
+		</div>
+
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item align-items-center">
+				<span class="list-title">기초자산</span>
+				<span class="list-cont">Eurostoxx50, S&P500, HSCEI</span>
+			</li>
+			<li class="list-group-item align-items-center">
+				<span class="list-title">구조</span>
+				<span class="list-cont">92-92-87-87-82-80/ KI 50</span>
+			</li>
+			<li class="list-group-item align-items-center">
+				<span class="list-title">만기/주기</span>
+				<span class="list-cont">3년/6개월</span>
+			</li>
+			<li class="list-group-item align-items-center">
+				<span class="list-title">통화</span>
+				<span class="list-cont">KRW</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- //card-box -->
+					</textarea>
+				</dd>
+				<dt>reactstrap 코드</dt>
+				<dd>
+					<textarea>
+
+					</textarea>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="guide-section">
+		<h2>card card-notitle 클래스 추가 : title 없이 컨텐츠만 들어가는 기본 형</h2>
+			<!-- card-content -->
+			<div class="card card-notitle">
+				<div class="card-body">
+					<table class="table">
+						<tr>
+							<th>상품유형</th>
+							<td>스탭다운형</td>
+						</tr>
+						<tr>
+							<th>상품유형</th>
+							<td>스탭다운형</td>
+						</tr>
+						<tr>
+							<th>상품유형</th>
+							<td>스탭다운형</td>
+						</tr>
+						<tr>
+							<th>상품유형</th>
+							<td>스탭다운형</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+			<!-- //card-content -->
+		<div class="guide-code">
+			<dl class="guide-dl">
+				<dt>html 코드</dt>
+				<dd>
+					<textarea>
+<!-- card-content -->
+<div class="card card-notitle">
+	<div class="card-body">
+		<table class="table">
+			<tr>
+				<th>상품유형</th>
+				<td>스탭다운형</td>
+			</tr>
+			<tr>
+				<th>상품유형</th>
+				<td>스탭다운형</td>
+			</tr>
+			<tr>
+				<th>상품유형</th>
+				<td>스탭다운형</td>
+			</tr>
+			<tr>
+				<th>상품유형</th>
+				<td>스탭다운형</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+<!-- //card-content -->
+					</textarea>
+				</dd>
+				<dt>reactstrap 코드</dt>
+				<dd>
+					<textarea>
+
+					</textarea>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  $('.guide-dl dt').on('click',function(){
+	  $(this).toggleClass('open').next('dd').toggle();
+  })
+})
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>

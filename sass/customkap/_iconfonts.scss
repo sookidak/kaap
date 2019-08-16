@@ -11,6 +11,11 @@
 		content: $icon-analysis;
 	}
 }
+.icon-arrow-down{
+	&:before {
+		content: $icon-arrow-down;
+	}
+}
 .icon-arrow-next{
 	&:before {
 		content: $icon-arrow-next;
@@ -19,6 +24,11 @@
 .icon-arrow-prev{
 	&:before {
 		content: $icon-arrow-prev;
+	}
+}
+.icon-arrow-up{
+	&:before {
+		content: $icon-arrow-up;
 	}
 }
 .icon-calculator{
@@ -71,9 +81,19 @@
 		content: $icon-close;
 	}
 }
+.icon-compare{
+	&:before {
+		content: $icon-compare;
+	}
+}
 .icon-comparison{
 	&:before {
 		content: $icon-comparison;
+	}
+}
+.icon-cursor{
+	&:before {
+		content: $icon-cursor;
 	}
 }
 .icon-disk{
@@ -86,6 +106,11 @@
 		content: $icon-document-check;
 	}
 }
+.icon-document-list{
+	&:before {
+		content: $icon-document-list;
+	}
+}
 .icon-document-view{
 	&:before {
 		content: $icon-document-view;
@@ -94,6 +119,11 @@
 .icon-dotted{
 	&:before {
 		content: $icon-dotted;
+	}
+}
+.icon-down{
+	&:before {
+		content: $icon-down;
 	}
 }
 .icon-download{
@@ -106,9 +136,19 @@
 		content: $icon-edit;
 	}
 }
+.icon-email{
+	&:before {
+		content: $icon-email;
+	}
+}
 .icon-error{
 	&:before {
 		content: $icon-error;
+	}
+}
+.icon-event{
+	&:before {
+		content: $icon-event;
 	}
 }
 .icon-excel{
@@ -121,9 +161,19 @@
 		content: $icon-first;
 	}
 }
+.icon-folder{
+	&:before {
+		content: $icon-folder;
+	}
+}
 .icon-group{
 	&:before {
 		content: $icon-group;
+	}
+}
+.icon-hourglass{
+	&:before {
+		content: $icon-hourglass;
 	}
 }
 .icon-ie{
@@ -151,9 +201,24 @@
 		content: $icon-match;
 	}
 }
+.icon-medal {
+	&:before{
+		content: $icon-medal;
+	}
+}
 .icon-minus{
 	&:before {
 		content: $icon-minus;
+	}
+}
+.icon-money-hand{
+	&:before {
+		content: $icon-money-hand;
+	}
+}
+.icon-move{
+	&:before {
+		content: $icon-move;
 	}
 }
 .icon-next{
@@ -174,6 +239,11 @@
 .icon-plus{
 	&:before {
 		content: $icon-plus;
+	}
+}
+.icon-point{
+	&:before {
+		content: $icon-point;
 	}
 }
 .icon-prev{
@@ -211,9 +281,19 @@
 		content: $icon-reset;
 	}
 }
+.icon-script{
+	&:before {
+		content: $icon-script;
+	}
+}
 .icon-search{
 	&:before {
 		content: $icon-search;
+	}
+}
+.icon-settings {
+	&:before {
+		content: $icon-settings;
 	}
 }
 .icon-time{
@@ -224,6 +304,11 @@
 .icon-trash-can{
 	&:before {
 		content: $icon-trash-can;
+	}
+}
+.icon-up{
+	&:before {
+		content: $icon-up;
 	}
 }
 .icon-upload{

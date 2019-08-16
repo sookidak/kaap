@@ -22,17 +22,20 @@ $container-max-widths: (
 $grid-columns:                12 !default;
 $grid-gutter-width:           20px !default;
 
-$line-height-lg:              1.5 !default;
-$line-height-sm:              1.5 !default;
+$line-height-lg:              1.6 !default;
+$line-height-sm:              1.4 !default;
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$kap-font-family-sans-serif: 'Noto sans',  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$kap-font-family-sans-serif: 'Noto sans KR Regular',  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$kap-font-family-Light: 'Noto Sans KR Light' !default;
+$kap-font-family-Medium: 'Noto Sans KR Medium' !default;
 
 $font-family-base:            $kap-font-family-sans-serif !default;
+
 // stylelint-enable value-keyword-case
 $kap-font-size-base : 1rem;// Assumes the browser default, typically `16px`
 
@@ -42,21 +45,50 @@ $font-size-sm:                ($kap-font-size-base * .813) !default;// `13px`
 $font-size-base:              ($kap-font-size-base * .875) !default; //  `14px`
 $font-size-lg:                ($kap-font-size-base * .938) !default; //  `15px`
 $font-size-xl:                1rem !default;//  `16px`
+$font-size-18:                1.286rem !default;//  `18px`
+$font-size-24:                ($kap-font-size-base * 1.714) !default; //  `24px`
 
 $kap-fontweight-l : 300;
 $kap-fontweight-r : 400;
 $kap-fontweight-m : 600;
 
 $font-weight-base:            $kap-fontweight-r !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.3 !default;
+
+$kap-level1-font-size:  $font-size-base * 2.5 !default; //35px
+$kap-level2-font-size:                $kap-font-size-base * 2 !default; //28px
+$kap-level3-font-size:                1rem !default; //21px
+$kap-level3-em-font-size:           $kap-font-size-base * 1.5 !default; //21px
+$kap-level4-font-size:                $font-size-base !default; //14px
+$kap-level5-font-size:                $font-size-base * 1.25 !default; //17px
+$kap-level6-font-size:                $font-size-base !default; //14px
 
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $kap-font-size-base * 2 !default;
-$h3-font-size:                $kap-font-size-base * 1.5 !default;
-$h4-font-size:                $font-size-base !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    5: 5%,
+    10: 10%,
+    15: 15%,
+    20: 20%,
+    25: 25%,
+    30: 30%,
+    35: 35%,
+    40: 40%,
+    60: 60%,
+    65: 65%,
+    70: 70%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
+
 
 
 
@@ -155,11 +187,12 @@ $border-radius-sm:            $kap-bdr-rad-sm !default;
 // theme colors
 
 // 위험군 배지
-$danger1:     $kap-blue !default;
-$danger2:     $kap-green-dark !default;
-$danger3:     $kap-yellow-dark !default;
-$danger4:     $kap-orange-dark !default;
-$danger5:     $kap-red-dark !default;
+$danger6:     $kap-blue !default;
+$danger5:     $kap-green-dark !default;
+$danger4:     $kap-yellow !default;
+$danger3:     #f5af21 !default;
+$danger2:     $kap-orange-dark !default;
+$danger1:     $kap-red-dark !default;
 
 // 진행관련 배지
 $check:     $kap-yellow-dark !default;
@@ -168,16 +201,11 @@ $no:        $kap-red-dark !default;
 $define:    $kap-blue !default;
 
 // 기본 컬러 재지정
-
 $primary:       $kap-blue !default;
 $secondary:     $kap-gray-600 !default;
-$success:       $kap-green !default;
-$info:          $kap-aqua !default;
-$warning:       $kap-yellow !default;
 $danger:        $kap-red !default;
 $light:         $kap-gray-400 !default;
 $dark:          $kap-gray-600  !default;
-
 
 
 
@@ -185,25 +213,39 @@ $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary":    $primary,
+    "primary":    $kap-blue,
     "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $kap-gray-400,
-    "lightbetter":      $kap-gray-200,
-    "dark":       $dark,
     "green":      $kap-green,
     "red":        $kap-red,
+    "red-dark":   $kap-red-dark,
     "purple":     $kap-purple,
-    "blue":    $primary,
- 
+    "blue":       $primary,
+    "orange" : $kap-orange,
+    "yellow" : $kap-yellow,
+
+    "light":      $kap-gray-400,
+    "dark":       $dark,
+    
+    "gray" : $kap-fontcolor-gray,
+    "gray-light" : $kap-fontcolor-gray-light,
+    "gray-dark" : $kap-fontcolor-gray-dark,
+    
+    "gray100"  :  $kap-gray-100,
+    "gray200"  : $kap-gray-200,
+    "gray300"  : $kap-gray-300,
+    "gray400"  : $kap-gray-400,
+    "gray500"  : $kap-gray-500,
+    "gray600"  : $kap-gray-600,
+    "gray700"  : $kap-gray-700,
+
+    //badge
+    "danger":   $danger,
     "danger1":  $danger1,
     "danger2":  $danger2,
     "danger3":  $danger3,
     "danger4":  $danger4,
     "danger5":  $danger5,
+    "danger6":  $danger6,
     "check":    $check,
     "match":    $match,
     "no":       $no,
@@ -212,50 +254,63 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+// data 영역 백그라운드 색상
+$data-body-bg : #ecf0f1;
+
 
 // text-sm
 $text-sm-color: $kap-fontcolor-gray;
 $text-sm-size: $font-size-sm;
 
 
-
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .22rem !default;
+$input-btn-padding-y:         0 !default;
 $input-btn-padding-x:         .75rem !default;
 $input-btn-line-height:       $line-height-base !default;
 
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               7px !default;
-$btn-line-height:             $input-btn-line-height !default;
+$input-btn-padding-y-sm:      .1rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-line-height-sm:    $line-height-sm !default;
 
 $input-btn-padding-y-lg:      .5rem !default;
 $input-btn-padding-x-lg:      0.5rem !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
-$btn-line-height-lg:          $input-btn-line-height-lg !default;
+
+$kap-components-line-height-base: 1.3;
+
+$btn-padding-y:               5px !default;
+$btn-padding-x:               7px !default;
+$btn-line-height:             $kap-components-line-height-base !default;
+
+$btn-padding-y-lg:            10px !default;
+$btn-padding-x-lg:            12px !default;
+$btn-line-height-lg:          $kap-components-line-height-base;
+
+$btn-padding-y-sm:            2px !default;
+$btn-padding-x-sm:            8px !default;
+$btn-line-height-sm:          $kap-components-line-height-base;
 
 //btn-icon
-$btn-icon-padding-y : 6px;
-$btn-icon-padding-x : 6px;
+$btn-icon-padding-y : 5px;
+$btn-icon-padding-x : 7px;
 $btn-icon-font-size : 1rem;
-$btn-icon-line-height : 1rem;;
+$btn-icon-line-height : $kap-components-line-height-base;
 $btn-icon-border-radius : $kap-bdr-rad;
 
-$btn-icon-padding-y-lg : 7px;
-$btn-icon-padding-x-lg : 7px;
+$btn-icon-padding-y-lg : 10px;
+$btn-icon-padding-x-lg : 12px;
 $btn-icon-font-size-lg : 1.5rem;
-$btn-icon-line-height-lg : 1.5rem;
+$btn-icon-line-height-lg : $kap-components-line-height-base;
 $btn-icon-border-radius-lg : $kap-bdr-rad;
 
-$btn-icon-padding-y-sm : 3px;
-$btn-icon-padding-x-sm : 3px;
+$btn-icon-padding-y-sm : 0;
+$btn-icon-padding-x-sm : 0;
 $btn-icon-font-size-sm : 0.75rem;
-$btn-icon-line-height-sm : 0.75rem;
+$btn-icon-line-height-sm :$kap-components-line-height-base;
 $btn-icon-border-radius-sm : $kap-bdr-rad;
 
 // Allows for customizing button radius independently from global border radius
@@ -270,14 +325,17 @@ $btn-border-radius-sm:        $border-radius-sm !default;
 $badge-font-size : $font-size-sm;
 $badge-font-weight : $kap-fontweight-l;
 $badge-font-weight-lg : $kap-fontweight-r;
+
 $kap-badge-danger-color : $kap-fontcolor-white;
+
 $badge-border-radius : $kap-bdr-rad-sm;
 $badge-border-radius-lg : $kap-bdr-rad;
-$badge-padding-y : 0.27em; //20px
+
+$badge-padding-y : 2px; //20px
 $badge-padding-x : 0.4em;
-$badge-padding-y-lg : 0.43em;
+$badge-padding-y-lg : 5px;//30px
 $badge-padding-x-lg : 0.6em;
-$badge-line-height-lg : 1.3; 
+$badge-line-height-lg : $kap-components-line-height-base; 
 
 // badge 진행중 사이즈
 $badge-pill-padding-x : 0.2em;
@@ -334,13 +392,35 @@ $pagination-active-color : $white;
 $pagination-active-bg : $kap-gray-700; 
 
 
-
-
-
 // Modals
 
-$modal-header-padding-x: 13px;
-$modal-header-padding-y: 10px;
+// Padding applied to the modal body
+$modal-inner-padding:               20px !default;
+
+$modal-dialog-margin:               .5rem !default;
+$modal-dialog-margin-y-sm-up:       1.75rem !default;
+
+$modal-header-title-color: $white;
+$modal-title-font-size:       $font-size-xl;
+$modal-close-color : $modal-header-title-color;
+$modal-content-bg:                  $white !default;
+$modal-backdrop-opacity:            .5 !default;
+$modal-header-padding:              10px !default;
+$modal-header-bg:              #434a54 !default;
+
+$modal-lg:                          880px !default;
+$modal-xl:                          1160px !default;
+$modal-md:                          500px !default;
+$modal-sm:                          300px !default;
+
+$modal-transition:                  transform .3s ease-out !default;
+
+
+
+
+
+
+
 
 
 // Spacing
@@ -429,58 +509,143 @@ $dropdown-link-active-bg:           $dropdown-link-hover-bg !default;
 
 
 ///////////////////////////////// wijmo variables
-
+$wj-bdr-wid: 0 !default; // content border width
 $wj-txt: $kap-fontcolor-black; // content foreground
 $wj-bdr-clr: $kap-border-color !default; // content border color
 $wj-btn-hvr: $kap-hover-color !default; // button hover background
-$wj-item-pdg: 10px 6px 9px 6px !default; // item padding (listbox items, grid cells, etc)
+$wj-item-pdg: 9px 5px 9px 5px !default; // item padding (listbox items, grid cells, etc)
+$wj-bdr-rad:0;
 
 //iconfont
 /* 아이콘 폰트 Style */
 $icon-analysis: "\e900" ;
-$icon-arrow-next: "\e901" ;
-$icon-arrow-prev: "\e902" ;
-$icon-calculator: "\e903" ;
-$icon-calendar: "\e904" ;
-$icon-card: "\e905" ;
-$icon-cart: "\e906" ;
-$icon-change: "\e907" ;
-$icon-chart-view: "\e908" ;
-$icon-check: "\e909" ;
-$icon-check-circle: "\e90a" ;
-$icon-chrome: "\e90b" ;
-$icon-close: "\e90c" ;
-$icon-comparison: "\e90d" ;
-$icon-disk: "\e90e" ;
-$icon-document-check: "\e90f" ;
-$icon-document-view: "\e910" ;
-$icon-dotted: "\e911" ;
-$icon-download: "\e912" ;
-$icon-edit: "\e913" ;
-$icon-error: "\e914" ;
-$icon-excel: "\e915" ;
-$icon-first: "\e916" ;
-$icon-group: "\e917" ;
-$icon-ie: "\e918" ;
-$icon-info: "\e919" ;
-$icon-last: "\e91a" ;
-$icon-list: "\e91b" ;
-$icon-match: "\e91c" ;
-$icon-minus: "\e91d" ;
-$icon-next: "\e91e" ;
-$icon-next-circle: "\e91f" ;
-$icon-pencle: "\e920" ;
-$icon-plus: "\e921" ;
-$icon-prev: "\e922" ;
-$icon-prev-circle: "\e923" ;
-$icon-print: "\e924" ;
-$icon-proposal: "\e925" ;
-$icon-reject: "\e926" ;
-$icon-request: "\e927" ;
-$icon-reset: "\e928" ;
-$icon-search: "\e929" ;
-$icon-time: "\e92a" ;
-$icon-trash-can: "\e92b" ;
-$icon-upload: "\e92c" ;
-$icon-user: "\e92d" ;
-$icon-warning: "\e92e" ;
+$icon-arrow-down: "\e901" ;
+$icon-arrow-next: "\e902" ;
+$icon-arrow-prev: "\e903" ;
+$icon-arrow-up: "\e904" ;
+$icon-calculator: "\e905" ;
+$icon-calendar: "\e906" ;
+$icon-card: "\e907" ;
+$icon-cart: "\e908" ;
+$icon-change: "\e909" ;
+$icon-chart-view: "\e90a" ;
+$icon-check: "\e90b" ;
+$icon-check-circle: "\e90c" ;
+$icon-chrome: "\e90d" ;
+$icon-close: "\e90e" ;
+$icon-compare: "\e90f" ;
+$icon-comparison: "\e910" ;
+$icon-cursor: "\e911" ;
+$icon-disk: "\e912" ;
+$icon-document-check: "\e913" ;
+$icon-document-list: "\e914" ;
+$icon-document-view: "\e915" ;
+$icon-dotted: "\e916" ;
+$icon-down: "\e917" ;
+$icon-download: "\e918" ;
+$icon-edit: "\e919" ;
+$icon-email: "\e91a" ;
+$icon-error: "\e91b" ;
+$icon-event: "\e91c" ;
+$icon-excel: "\e91d" ;
+$icon-first: "\e91e" ;
+$icon-folder: "\e91f" ;
+$icon-group: "\e920" ;
+$icon-hourglass: "\e921" ;
+$icon-ie: "\e922" ;
+$icon-info: "\e923" ;
+$icon-last: "\e924" ;
+$icon-list: "\e925" ;
+$icon-match: "\e926" ;
+$icon-medal: "\e927" ;
+$icon-minus: "\e928" ;
+$icon-money-hand: "\e929" ;
+$icon-move: "\e92a" ;
+$icon-next: "\e92b" ;
+$icon-next-circle: "\e92c" ;
+$icon-pencle: "\e92d" ;
+$icon-plus: "\e92e" ;
+$icon-point: "\e92f" ;
+$icon-prev: "\e930" ;
+$icon-prev-circle: "\e931" ;
+$icon-print: "\e932" ;
+$icon-proposal: "\e933" ;
+$icon-reject: "\e934" ;
+$icon-request: "\e935" ;
+$icon-reset: "\e936" ;
+$icon-script: "\e937" ;
+$icon-search: "\e938" ;
+$icon-settings: "\e939" ;
+$icon-time: "\e93a" ;
+$icon-trash-can: "\e93b";
+$icon-up: "\e93c" ;
+$icon-upload: "\e93d" ;
+$icon-user: "\e93e" ;
+$icon-warning: "\e93f" ;
+
+
+// step
+$step-box-height: 1.875rem;
+$step-box-border-radius : $step-box-height;
+$step-name-width : 114px;
+
+$step-base-color : $kap-gray-500;
+$step-base-bg-color : $kap-gray-500;
+$step-base-icon : $icon-dotted;
+
+$step-focus-color : $kap-blue-dark;
+$step-focus-bg-color : $step-focus-color;
+$step-focus-icon : $icon-pencle;
+
+$step-complete-color : $kap-blue-dark;
+$step-complete-bg-color : $step-complete-color;
+$step-complete-icon : $icon-check;
+
+
+
+// Navs
+
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                1rem !default;
+$nav-link-color:                    $kap-gray-500 !default;
+$nav-link-border-color:             $kap-gray-400  !default;
+$nav-link-disabled-color:           $kap-gray-200 !default;
+
+$nav-tabs-border-color:             $kap-gray-400 !default;
+$nav-tabs-border-radius:            $border-radius !default;
+$nav-tabs-link-active-color:        $kap-fontcolor-gray-dark !default;
+$nav-tabs-link-active-bg:           $white !default;
+
+$nav-tabs-link-hover-border-color:  $kap-gray-400 $kap-gray-400 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-active-border-color: $kap-gray-400 $kap-gray-400 $nav-tabs-link-active-bg !default;
+
+
+// wijmo selected
+$wj-sel-bkg: $kap-blue-dark !default; // selected element background
+$wj-sel-txt: $white !default; // selected element foreground
+
+
+
+// table
+$table-bg : $white;
+$table-spacer : 0;
+$table-outline-color: $kap-gray-700;
+
+
+
+// List group
+$list-group-border-color:       $kap-border-color !default;
+
+
+// article
+$article-h2-color: $kap-fontcolor-black;
+$article-h2-font-size : $font-size-18;
+$article-h3-font-size : $font-size-lg;
+$article-h3-color : $kap-fontcolor-gray-dark ;
+
+$article-ul-color: $kap-fontcolor-gray;
+$article-ul-font-size: $font-size-lg;
+$article-ul-depth-font-size: $font-size-sm;
+
+$article-ul-dot-size : 4px;
+

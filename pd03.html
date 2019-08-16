@@ -1,0 +1,146 @@
+@@include('_inc/_top-setting.html')
+@@include('_inc/_header.html')
+
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+		@@include('_inc/_lnb.html')
+		<!-- main 컨텐츠 영역 -->
+		<div class="body-main-wrap">
+			<div class="location-wrap">
+				<nav class="d-flex justify-content-end" aria-label="breadcrumb">
+					<div class="breadcrumb">
+						<a href="#" class="breadcrumb-item">상품정보</a>
+						<a href="#" class="breadcrumb-item">판매상품</a>
+						<span class="active breadcrumb-item" aria-current="page">판매 상품 비교</span>
+					</div>
+				</nav>
+			</div>
+			<div class="title-wrap level-2">
+				<h2 class="title">판매 상품 비교</h2>
+				<div class="title-right">
+				</div>
+			</div>
+			<!-- contents all -->
+			<div class="contents-wrap">
+				<div class="contents-top">
+						<div class="lookup-wrap mb-1">
+								<div class="row align-items-center no-gutters">
+									<div class="col-sm">
+										<button type="button" class="btn btn-outline-light">
+											<span class="icon-arrow-prev"></span>판매상품 리스트
+										</button>
+										<button type="button" class="btn btn-outline-light">
+											<span class="icon-analysis"></span>상품시뮬레이션
+										</button>
+									</div>
+									<div class="col-sm text-right">
+										
+									</div>
+								</div>
+							</div>
+				</div>
+
+				<div class="contents-body">
+
+					<!-- data-wrap -->
+					<div class="row data-wrap">
+						<div class="col-sm-12">
+							<!-- card-basic -->
+							<div class="card card-notitle">
+								<div class="card-header">
+								</div>
+								<div class="card-body">
+									<table class="table table-horizontal">
+										<colgroup>
+											<col style="">
+											<col style="width:29%">
+											<col style="width:29%">
+											<col style="width:29%">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>상품명</th>
+												<td><label><input type="checkbox">삼성증권 ELS 12345회</label></td>
+												<td><label><input type="checkbox">삼성증권 ELS 12345회</label></td>
+												<td><label><input type="checkbox">삼성증권 ELS 12345회</label></td>
+											</tr>
+											<tr>
+												<th>상품위험도</th>
+												<td><span class="badge badge-danger5">초고위험</span></td>
+												<td><span class="badge badge-danger5">초고위험</span></td>
+												<td><span class="badge badge-danger5">초고위험</span></td>
+											</tr>
+											<tr>
+												<th>상품유형</th>
+												<td>조기상환형</td>
+												<td>월지급형</td>
+												<td>리자드형</td>
+											</tr>
+											<tr>
+												<th>구조</th>
+												<td>92-92-87-87-82-80/ KI 50</td>
+												<td>92-92-87-87-82-80/ 월베리어 60</td>
+												<td>95(L90)-90(L88)-87-85-77-70</td>
+											</tr>
+											<tr>
+												<th>수익률</th>
+												<td><span class="text-red">연 5.00%</span></td>
+												<td><span class="text-red">연 4.62%</span></td>
+												<td><span class="text-red">연 5.20%/ 리자드 7.80%</span></td>
+											</tr>
+											<tr>
+												<th>기초자산</th>
+												<td>Eurostoxx50/S&P500/HSCEI</td>
+												<td>Eurostoxx50/S&P500/HSCEI</td>
+												<td>Eurostoxx50/S&P500/WTI</td>
+											</tr>
+											<tr>
+												<th>통화</th>
+												<td>KRW</td>
+												<td>KRW</td>
+												<td>USD</td>
+											</tr>
+											<tr>
+												<th>발행일</th>
+												<td>2018.10.08</td>
+												<td>2018.10.08</td>
+												<td>2018.10.08</td>
+											</tr>
+											<tr>
+												<th>만기일</th>
+												<td>2018.10.08</td>
+												<td>2018.10.08</td>
+												<td>2018.10.08</td>
+											</tr>
+											<tr>
+												<th>판매기간</th>
+												<td>2018.10.01~2018.10.05</td>
+												<td>2018.10.01~2018.10.05</td>
+												<td>2018.10.01~2018.10.05</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- card-basic -->
+						</div>
+						
+					</div>
+					<!-- //data-wrap -->
+				</div>
+			</div>
+			<!-- contents all -->
+		</div>
+		<!-- //main 컨텐츠 영역 -->
+	</div>
+</main>
+<!-- //contents body -->
+<script>
+$('#tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+@@include('_inc/_footer.html')

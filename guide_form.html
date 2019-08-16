@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	textarea{
+		width:100%;
+		height:220px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
+	[class^="icon-"]{
+		color:black;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	.explain-box textarea{
+		height:160px;
+	}
+</style>
+<h1>form 가이드</h1>
+
+<form class="guide-p">
+	<div class="explain-box">
+		<ul>
+			<li>
+				- 
+			</li>
+		</ul>
+	
+	</div>
+	<table class="guide-table">
+		<colgroup>
+			<col style="width:15%">
+			<col style="width:25%">
+			<col style="">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>컴포넌트명</th>
+				<th>형태</th>
+				<th>html 코드</th>
+				<th>reactstrap 코드</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				레이블 + 폼  가로형
+			</td>
+			<td>
+				<form>
+					<div class="form-group row form-lg mb-1">
+						<Label class="col-sm-4">설정예정일</Label>
+						<div class="col-sm-8">
+							<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-combobox" tabindex="-1" _wjsiblingidprop="2" id="publicType"><div class="wj-template"><div class="wj-input"><div class="wj-input-group wj-input-btn-visible"><input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="인풋값" role="combobox" aria-autocomplete="both"><span wj-part="btn" class="wj-input-group-btn" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+						</div>
+					</div>
+				</form>
+			</td>
+			<td>
+				<textarea>
+<form>
+	<div class="form-group row form-lg mb-1">
+		<Label class="col-sm-4">설정예정일</Label>
+		<div class="col-sm-8">
+			<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-combobox" tabindex="-1" _wjsiblingidprop="2" id="publicType"><div class="wj-template"><div class="wj-input"><div class="wj-input-group wj-input-btn-visible"><input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="인풋값" role="combobox" aria-autocomplete="both"><span wj-part="btn" class="wj-input-group-btn" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+		</div>
+	</div>
+</form>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+<form>
+	<FormGroup row className="form-lg mb-1">
+		<Label sm="4">설정예정일</Label>
+		<Col sm="8">
+			<InputDate state={this.state.fromToDateInput} callback={this.callback} />
+		</Col>
+	</FormGroup>
+</form>
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				레이블 + 폼  세로형
+			</td>
+			<td>
+				<form>
+					<div class="form-group row form-lg mb-1">
+						<Label class="col-sm-12">설정예정일</Label>
+						<div class="col-sm-12">
+							<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-combobox " tabindex="-1" _wjsiblingidprop="2" id="publicType"><div class="wj-template"><div class="wj-input"><div class="wj-input-group wj-input-btn-visible"><input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="인풋값" role="combobox" aria-autocomplete="both"><span wj-part="btn" class="wj-input-group-btn" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+						</div>
+					</div>
+				</form>
+			</td>
+			<td>
+				<textarea>
+<form>
+	<div class="form-group row form-lg mb-1">
+		<Label class="col-sm-12">설정예정일</Label>
+		<div class="col-sm-12">
+			<div class="wj-control wj-content wj-dropdown wj-state-collapsed wj-combobox " tabindex="-1" _wjsiblingidprop="2" id="publicType"><div class="wj-template"><div class="wj-input"><div class="wj-input-group wj-input-btn-visible"><input wj-part="input" type="text" class="wj-form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required="" placeholder="인풋값" role="combobox" aria-autocomplete="both"><span wj-part="btn" class="wj-input-group-btn" style=""><button class="wj-btn wj-btn-default" tabindex="-1" type="button" aria-label="Toggle Dropdown"><span class="wj-glyph-down"></span></button></span></div></div></div></div>
+		</div>
+	</div>
+</form>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+<form>
+	<FormGroup row className="form-lg mb-1">
+		<Label sm="12" htmlFor="input1">상품명 입력</Label>
+		<Col sm="12">
+			<InputText state={this.state.publicType} callback={this.callback} />
+		</Col>
+	</FormGroup>
+</form>
+					
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				레이블 + 폼 + 텍스트 조합
+			</td>
+			<td>
+				<form>
+					<div class="form-lg mb-1 row form-group">
+						<label for="input1" class="col-sm-12">만기</label>
+						<div class="col-sm-12">
+							<div class="input-group">
+								<label for="publicType" class=""></label>
+								<!-- 위즈모 컴포넌트 -->
+								<div class="wj-control wj-content wj-inputmask wj-state-empty" tabindex="-1" _wjsiblingidprop="3" id="publicType"><div class="wj-input"><div class="wj-input-group"><input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required="" placeholder=""></div></div></div>
+								<!-- //위즈모 컴포넌트 -->
+								
+								<span class="form-text">년</span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</td>
+			<td>
+				<textarea>
+<form>
+	<div class="form-lg mb-1 row form-group">
+		<label for="input1" class="col-sm-12">만기</label>
+		<div class="col-sm-12">
+			<div class="input-group">
+				<label for="publicType" class=""></label>
+				<!-- 위즈모 컴포넌트 -->
+				<div class="wj-control wj-content wj-inputmask wj-state-empty" tabindex="-1" _wjsiblingidprop="3" id="publicType"><div class="wj-input"><div class="wj-input-group"><input wj-part="input" class="wj-form-control" autocomplete="off" spellcheck="false" required="" placeholder=""></div></div></div>
+				<!-- //위즈모 컴포넌트 -->
+				<span class="form-text">년</span>
+			</div>
+		</div>
+	</div>
+</form>
+				</textarea>
+			</td>
+			<td>
+				<textarea>
+<Form>
+	<FormGroup row className="form-lg mb-1">
+		<Label sm="12" htmlFor="input1">만기</Label>
+		<Col sm="12">
+			<div className="input-group">
+				<InputText state={this.state.publicType} callback={this.callback} />
+				<span className="form-text">년</span>
+			</div>
+		</Col>
+	</FormGroup>
+</Form>	
+				</textarea>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+
+@@include('_inc/_bottom.html')
+</body>
+</html>

@@ -1,0 +1,282 @@
+@@include('_inc/_top-setting.html')
+@@include('_inc/_header.html')
+
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+		@@include('_inc/_lnb.html')
+		<!-- main 컨텐츠 영역 -->
+		<div class="body-main-wrap">
+			<div class="location-wrap">
+				<nav class="d-flex justify-content-end" aria-label="breadcrumb">
+					<div class="breadcrumb">
+						<a href="#" class="breadcrumb-item">상품정보</a>
+						<a href="#" class="breadcrumb-item">판매상품</a>
+						<span class="active breadcrumb-item" aria-current="page">판매상품 리스트</span>
+					</div>
+				</nav>
+			</div>
+			<div class="title-wrap">
+			</div>
+			<!-- contents all -->
+			<div class="contents-wrap">
+				<div class="contents-top">
+				</div>
+
+				<div class="contents-body">
+					<div class="row mb-1">
+						<div class="col-sm-12">
+							<div class="title-wrap level-3 title-em">
+								<h1 class="title">삼성증권 ELS 12345</h1>
+								<span class="badge badge-danger5 badge-lg">초고위험</span>
+								<div class="title-right">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- data-wrap -->
+					<div class="row data-wrap">
+						<div class="col-sm-12">
+							<!-- card-basic -->
+							<div class="card card-basic">
+								<div class="card-header">
+									<div class="title-wrap level-4">
+										<h1 class="title">기본정보</h1>
+									</div>
+								</div>
+								<div class="card-body">
+									<!-- <table class="table table-horizontal text-left">
+										<colgroup>
+											<col style="width:25%">
+											<col>
+										</colgroup>
+										<tbody>
+										<tr>
+											<th>상품유형</th>
+											<td><a href="#" class="link" >스탭다운형</a></td>
+										</tr>
+										<tr>
+											<th>만기</th>
+											<td>3년만기 (2021.11.09)</td>
+										</tr>
+										<tr>
+											<th>기초자산</th>
+											<td><a href="#" class="link" >HSCEI</a>/<a href="#" class="link" >S&P500</a>/  <a href="#" class="link" >Eurostoxx50</a></td>
+										</tr>
+										<tr>
+											<th>구조 /낙인여부 </th>
+											<td>92-92-87-87-82-80</td>
+										</tr>
+										<tr>
+											<th>발행구분</th>
+											<td>공모</td>
+										</tr>
+										<tr>
+											<th>발행사</th>
+											<td>삼성증권</td>
+										</tr>
+										<tr>
+											<th>발행일</th>
+											<td>2018.11.14</td>
+										</tr>
+										<tr>
+											<th>공시문서 (DART)</th>
+											<td>
+												<button type="button" class="btn btn-outline-light btn-icon">
+													<span class="icon-document-view"></span>
+												</button>
+											</td>
+										</tr>
+									</tbody></table> -->
+									<div class="row">
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">상품유형</div>
+												<div class="tags">
+													<div class="tag">스텝다운 형 (낙인)</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">수익률 (연)</div>
+												<div class="tags">
+													<div class="tag">4.60% (세전)</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">청약기간</div>
+												<div class="tags">
+													<div class="tag">2018.11.07 ~2018.11.12</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">기초자산</div>
+												<div class="tags">
+													<div class="tag">HSCEI</div>
+													<div class="tag">S&P 500</div>
+													<div class="tag">EUROSTOXX 50</div>
+													<div class="tag">EUROSTOXX 50</div>
+													<div class="tag">EUROSTOXX 50</div>
+													<div class="tag">EUROSTOXX 50</div>
+													<div class="tag">EUROSTOXX 50</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group mb-2">
+												<div class="tag-name">통화</div>
+												<div class="tags">
+													<div class="tag">KRW</div>
+												</div>
+											</div>
+											<div class="tag-group">
+												<div class="tag-name">만기 / 상환주기   
+												</div>
+												<div class="tags">
+													<div class="tag">3년 / 6개월</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group mb-2">
+												<div class="tag-name">발행일</div>
+												<div class="tags">
+													<div class="tag">2018.11.14</div>
+												</div>
+											</div>
+											<div class="tag-group">
+												<div class="tag-name">문서</div>
+												<div class="tags">
+													<button type="button" class="btn btn-outline-light">
+														<span class="icon-document-check"></span>상품설명서
+													</button>
+													<button type="button" class="btn btn-outline-light">
+														<span class="icon-document-view"></span>공시문서
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- card-basic -->
+						</div>
+						<div class="col-sm-12 mt-2">
+							<!-- card-basic -->
+							<div class="card card-basic">
+								<div class="card-header">
+									<div class="title-wrap level-4">
+										<h1 class="title">상환일정 및 정보</h1>
+									</div>
+								</div>
+								<div class="card-body">
+									<table class="table">
+										<colgroup>
+											<col style="width:25%">
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th rowspan="2"></th>
+												<th rowspan="2">상환조건</th>
+												<th rowspan="2">평가일</th>
+												<th rowspan="2">수익률</th>
+												<th colspan="3">기초자산기준가</th>
+											</tr>
+											<tr>
+												<th class="cell-divide">HSCEI</th>
+												<th class="cell-divide">S&P500</th>
+												<th class="cell-divide">Eurostoxx50</th>
+											</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>1차</td>
+											<td>모든 기초자산이 92% 이상</td>
+											<td>2019.05.07</td>
+											<td>2.50%</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td>2차</td>
+											<td>모든 기초자산이 92% 이상</td>
+											<td>2019.05.07</td>
+											<td>5.00%</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td>1차</td>
+											<td>모든 기초자산이 92% 이상</td>
+											<td>2019.05.07</td>
+											<td>2.50%</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td>2차</td>
+											<td>모든 기초자산이 92% 이상</td>
+											<td>2019.05.07</td>
+											<td>5.00%</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td>1차</td>
+											<td>모든 기초자산이 92% 이상</td>
+											<td>2019.05.07</td>
+											<td>2.50%</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td>2차</td>
+											<td>모든 기초자산이 92% 이상</td>
+											<td>2019.05.07</td>
+											<td>5.00%</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+								</div>
+							</div>
+							<!-- card-basic -->
+						</div>
+					</div>
+					<!-- //data-wrap -->
+				</div>
+			</div>
+			<!-- contents all -->
+		</div>
+		<!-- //main 컨텐츠 영역 -->
+	</div>
+</main>
+<!-- //contents body -->
+<script>
+$('#tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+@@include('_inc/_footer.html')

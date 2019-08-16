@@ -1,33 +1,39 @@
 /* listgroup */
 
 @each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, theme-color-level($color, 1), theme-color-level($color, 1));
-}
+	@include list-group-item-variant($color, theme-color-level($color, 1), theme-color-level($color, 1));
+  }
+  
+  .list-title{
+	  display:inline-block;
+	  background: $kap-gray-200;
+	  font-size:$font-size-sm;
+	  color:$kap-fontcolor-gray;
+	  border:1px solid $kap-border-color-light ;
+	  min-width:60px;
+	  text-align: center;
+	  @include border-radius(3px);
+	  &+.list-cont{
+		  margin-left:6px;
+	  }
+  }
+  
+  .list-cont{
+	  font-size:$font-size-sm;
+	  color:$kap-fontcolor-gray;
+  }
+  .list-right{
+	  text-align:right;
+  }
 
-.list-title{
-	display:inline-block;
-	background: $kap-gray-200;
-	font-size:$font-size-sm;
-	color:$kap-fontcolor-gray;
-	border:1px solid $kap-border-color-light ;
-	min-width:60px;
-	text-align: center;
-	@include border-radius(3px);
-	&+.list-cont{
-		margin-left:6px;
+.list-group{
+	&.item-between{
+		li{
+			display:flex;
+			-webkit-align-items: center !important;
+			align-items: center !important;
+			-webkit-justify-content: space-between !important;
+			justify-content: space-between !important;
+		}
 	}
 }
-
-.list-cont{
-	font-size:$font-size-sm;
-	color:$kap-fontcolor-gray;
-}
-
-// border 없는 list-group
-.list-group-flush {
-    .list-group-item {
-      border:0;
-    }
-  
-}
-

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+@@include('_inc/_top-setting.html')
+<style>
+	.pblock{margin-bottom:20px;}
+	body{
+		padding-bottom:100px;
+	}
+	.guide-table{
+		border:1px solid #ddd;
+		width:100%;
+	}
+	.guide-table >tbody> tr >th,
+	.guide-table >tbody > tr >td{
+		border:1px solid #ddd;
+	}
+	.guide-table thead tr > th{
+		background: #eee;
+		text-align: center;
+		padding:6px;
+	}
+	.guide-table  tbody tr >td{
+		padding:10px;
+	}
+	textarea{
+		width:100%;
+		height:40px;
+		border:1px solid #ddd;
+		background: #f5f7fa;
+		color:black;
+	}
+	[class^="icon-"]{
+		color:black;
+	}
+	.guide-p{
+		padding:20px;
+	}
+	.explain-box{
+		margin-bottom:20px;
+	}
+	.explain-box ul li{
+		color:rgb(17, 17, 17);
+	}
+	.explain-box textarea{
+		height:160px;
+	}
+.color-box{
+	width:300px;display:inline-block;height:30px;
+}
+.kap-gray-100{background:#fafafa;}
+.kap-gray-200{background:#f5f7fa;}
+.kap-gray-300{background:#e6e9ed;}
+.kap-gray-400{background:#ccd1d9;}
+.kap-gray-500{background:#aab2bd;}
+.kap-gray-600{background:#656d78;}
+.kap-gray-700{background:#434a54;}
+.kap-blue{background:#5d9cec;}
+.kap-secondary{background:#656d78;}
+.kap-green{background:#a0d468;}
+.kap-red{background:#f74b5d;}
+.kap-purple{background:#ac92ec;}
+.kap-graylight{background:#9e9e9e;}
+.kap-graydark{background:#424242;}
+
+</style>
+<h1>컬러 가이드</h1>
+
+<div class="guide-p">
+	<div class="explain-box">
+		<ul>
+			<li>
+				- 기본 컬러 가이드 변수로사용가능
+			</li>
+			<li>
+				- buttons, text, bg, badge.. 등등<br> .btn-primary, text-red, bg-gray, badge-red 등등 테마명을 기본 클래스 뒤에 붙이면 색상이 반영된다
+			</li>
+		</ul>
+	
+	</div>
+	<table class="guide-table">
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:10%">
+			<col style="width:10%">
+			<col style="width:25%">
+			<col style="">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>카테고리</th>
+				<th>컬러명</th>
+				<th>테마명</th>
+				<th>컬러</th>
+				<th>컬러변수</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td rowspan="7">basic gray</td>
+			<td>
+				#fafafa
+			</td>
+			<td>
+				gray100
+			</td>
+			<td>
+				<span class="color-box kap-gray-100"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-gray-100
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#f5f7fa
+			</td>
+			<td>
+				gray200
+			</td>
+			<td>
+				<span class="color-box kap-gray-200"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-gray-200
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#e6e9ed
+			</td>
+			<td>
+				gray300
+			</td>
+			<td>
+				<span class="color-box kap-gray-300"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-gray-300
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#ccd1d9
+			</td>
+			<td>
+				gray400
+			</td>
+			<td>
+				<span class="color-box kap-gray-400"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-gray-400
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#aab2bd
+			</td>
+			<td>
+				gray500
+			</td>
+			<td>
+				<span class="color-box kap-gray-500"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-gray-500
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#656d78
+			</td>
+			<td>
+				gray600
+			</td>
+			<td>
+				<span class="color-box kap-gray-600"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-gray-600
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#434a54
+			</td>
+			<td>
+				gray700
+			</td>
+			<td>
+				<span class="color-box kap-gray-700"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-gray-700
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="9">theme color</td>
+			<td>
+					#5d9cec
+			</td>
+			<td>
+				primary
+			</td>
+			<td>
+				<span class="color-box kap-blue"></span>
+			</td>
+			<td>
+				<textarea>
+$primary, $kap-blue
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#656d78
+			</td>
+			<td>
+				secondary
+			</td>
+			<td>
+				<span class="color-box kap-secondary"></span>
+			</td>
+			<td>
+				<textarea>
+$secondary, $kap-gray-600
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#a0d468
+			</td>
+			<td>
+				green
+			</td>
+			<td>
+				<span class="color-box kap-green"></span>
+			</td>
+			<td>
+				<textarea>
+$green, $kap-green
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#f74b5d
+			</td>
+			<td>
+				red
+			</td>
+			<td>
+				<span class="color-box kap-red"></span>
+			</td>
+			<td>
+				<textarea>
+$red, $kap-red
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#ac92ec
+			</td>
+			<td>
+				purple
+			</td>
+			<td>
+				<span class="color-box kap-purple"></span>
+			</td>
+			<td>
+				<textarea>
+$purple, $kap-purple
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#ccd1d9
+			</td>
+			<td>
+				light
+			</td>
+			<td>
+				<span class="color-box kap-gray-400"></span>
+			</td>
+			<td>
+				<textarea>
+$light, $kap-gray-400
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#656d78
+			</td>
+			<td>
+				dark
+			</td>
+			<td>
+				<span class="color-box kap-gray-600"></span>
+			</td>
+			<td>
+				<textarea>
+$dark, $kap-gray-600
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					#9e9e9e
+			</td>
+			<td>
+				gray
+			</td>
+			<td>
+				<span class="color-box kap-graylight"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-fontcolor-gray-light
+				</textarea>
+			</td>
+		</tr>	
+		<tr>
+			<td>
+					#424242
+			</td>
+			<td>
+				gray-dark
+			</td>
+			<td>
+				<span class="color-box kap-graydark"></span>
+			</td>
+			<td>
+				<textarea>
+$kap-fontcolor-gray-dark
+				</textarea>
+			</td>
+		</tr>	
+		
+		</tbody>
+	</table>
+</div>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+@@include('_inc/_bottom.html')
+</body>
+</html>

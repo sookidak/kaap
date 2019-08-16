@@ -1,0 +1,68 @@
+
+
+// tag
+.tag-wrap{
+	border:1px solid $kap-gray-400;
+	background: $kap-gray-200;
+	margin-bottom:20px;
+}
+.tag{
+	background: $kap-gray-600;
+	min-height:$kap-components-height;
+	line-height:30px;
+	color:$white;
+	font-size:$font-size-sm;
+	display:inline-block;
+	@include border-radius($kap-bdr-rad-xs);
+	padding:0px 10px;
+	vertical-align: middle;
+	word-break:break-all;
+	.btn-icon{
+		padding:0;
+		vertical-align: middle;
+		margin-top:-2px;
+	}
+}
+
+// tag-group
+.tag-group{
+	.tag-name{
+		font-size:$font-size-lg;
+		color:$kap-fontcolor-gray-dark;
+		button{
+			padding:0;
+			margin-left:5px;
+			margin-top:-2px;
+		}
+		[class^="icon-"]{
+			font-size:20px;
+			color:#656d78;
+		}
+    }
+    .tags{
+		margin-top:5px;
+        .tag{
+			margin-right:5px;
+			margin-bottom:5px;
+			
+            &:last-child{
+                margin-left:0;
+            }
+        }
+    }
+}
+@each $color, $value in $theme-colors {
+    .tag-#{$color} {
+        background: $value;
+		
+    }
+}
+.tag-lg {
+	font-size:$font-size-lg;
+	line-height:38px;
+	height:40px;
+}
+.tag-link {
+	cursor: pointer;
+}
+

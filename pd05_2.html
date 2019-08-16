@@ -1,0 +1,266 @@
+@@include('_inc/_top-setting.html')
+@@include('_inc/_header.html')
+
+<!-- contents body -->
+<main class="body-wrap" role="main">
+	<div class="container"><!-- lnb 열릴때는 conainer에  lnb-open 클래스 추가 -->
+		@@include('_inc/_lnb.html')
+		<!-- main 컨텐츠 영역 -->
+		<div class="body-main-wrap">
+			<div class="location-wrap">
+				<nav class="d-flex justify-content-end" aria-label="breadcrumb">
+					<div class="breadcrumb">
+						<a href="#" class="breadcrumb-item">상품정보</a>
+						<a href="#" class="breadcrumb-item">상품 설계</a>
+						<span class="active breadcrumb-item" aria-current="page">계산기</span>
+					</div>
+				</nav>
+			</div>
+			<div class="title-wrap level-2">
+				<h2 class="title">계산기</h2>
+				<div class="title-right">
+				</div>
+			</div>
+			<!-- contents all -->
+			<div class="contents-wrap">
+				<div class="contents-top">
+					<div class="lookup-wrap mb-1">
+						<form class="row align-items-center no-gutters">
+							<div class="col-sm-12 form-inline"> 
+								<div class="form-group">
+									<label for="form1">상품명</label>
+									@@include('_inc/_wj-inputtext.html')
+								</div>
+								<div class="form-group">
+									<label for="form2">통화</label>
+									@@include('_inc/_wj-select.html')
+								</div>
+							</div>
+						</form>
+						<div class="row align-items-center no-gutters">
+							<div class="col-sm">
+							</div>
+							<div class="col-sm text-right">
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-document-view"></span>MY 상품관리
+								</button>
+								<button type="button" class="btn btn-outline-light">
+										<span class="icon-disk"></span>
+										결과저장
+									</button>
+								<button type="button" class="btn btn-outline-light">
+									<span class="icon-request"></span>
+									상품요청
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="contents-body">
+					<div class="row">
+						<div class="col-sm-12 mb-3">
+							<!-- step -->	
+							<ul class="step">
+								<li class="step-item complete">
+									<div class="step-box">
+										<div class="step-name-outer">
+											<div class="step-name">STEP 01</div>
+										</div>
+										<p class="step-text">기초자산 및 유형</p>
+									</div>
+								</li>
+								<li class="step-item complete">
+									<div class="step-box ">
+										<div class="step-name-outer">
+											<div class="step-name">STEP 02</div>
+										</div>
+										<p class="step-text">상환베리어</p>
+									</div>	
+								</li>
+								<li class="step-item focus">
+									<div class="step-box">	
+										<div class="step-name-outer">	
+											<div class="step-name">STEP 03</div>
+										</div>
+										<p class="step-text">결과</p>
+									</div>
+								</li>
+							</ul>
+							<!-- //step -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 mb-2">
+							<div class="card card-info">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">기초자산</div>
+												<div class="tags">
+													<div class="tag">HSCEI</div>
+													<div class="tag">S&P500</div>
+													<div class="tag">EUROSTOXX50</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">상품유형</div>
+												<div class="tags">
+													<div class="tag">345+리자드 1.5배형</div>
+													<div class="tag">노낙인</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">만기</div>
+												<div class="tags">
+													<div class="tag">3년 / 6개월</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-2">
+											<div class="tag-group">
+												<div class="tag-name">조기상환 구조</div>
+												<div class="tags">
+													<div class="tag">95(3m)-93(4m)-90(5m)-90(L75)-90(L65)-85-85-80-65</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 text-center mb-2">
+						<button type="button" class="btn btn-primary btn-lg"><span class="icon-arrow-prev"></span>이전</button>
+						<button type="button" class="btn btn-secondary btn-lg"><span class="icon-calculator"></span>계산</button>
+					</div>
+					<!-- data-wrap -->
+					<div class="row data-wrap">
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-sm-12 border-1">
+									<div class="card-deck">
+										<div class="card card-basic">
+											<div class="card-header">
+												<div class="title-wrap level-4 text-center">
+													<h1 class="title">예상수익률</h1>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="text-red-dark h-65 d-table w-100">
+													<div class="d-table-cell align-middle text-center font-weight-bold">
+														<span class="text-24">연</span>
+														<span class="text-36">6.40</span>
+														<span class="text-24">%</span>
+													</div>
+												</div>
+												<div class="bg-gray300 rounded h-35 d-flex align-items-center justify-content-center">
+													<div class="text-16 text-gray-dark font-weight-bold">리자드 9.6%</div>
+												</div>
+												
+											</div>
+										</div>
+										<div class="card card-basic">
+											<div class="card-header">
+												<div class="title-wrap level-4 text-center">
+													<h1 class="title">과거 시뮬레이션</h1>
+												</div>
+											</div>
+											<div class="card-body">
+												<ul class="list-group list-group-flush">
+													<li class="list-group-item d-table">
+														<span class="d-table-cell">평균만기</span>
+														<div class="d-table-cell text-right">
+															<em class="text-red-dark text-24">0.84</em>
+															<span class="">년</span>
+														</div>
+													</li>
+													<li class="list-group-item d-table">
+														<span class="d-table-cell">1차 상환확률</span>
+														<div class="d-table-cell text-right">
+															<em class="text-red-dark text-24">83.45</em>
+															<span class="">%</span>
+														</div>
+													</li>
+													<li class="list-group-item d-table">
+														<span class="d-table-cell">손실확률</span>
+														<div class="d-table-cell text-right">
+															<em class="text-red-dark text-24">1.20</em>
+															<span class="">%</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="card card-basic">
+											<div class="card-header">
+												<div class="title-wrap level-4 text-center">
+													<h1 class="title">미래 시뮬레이션</h1>
+												</div>
+											</div>
+											<div class="card-body">
+												<ul class="list-group list-group-flush">
+													<li class="list-group-item d-table">
+														<span class="d-table-cell">평균만기</span>
+														<div class="d-table-cell text-right">
+															<em class="text-red-dark text-24">0.84</em>
+															<span class="">년</span>
+														</div>
+													</li>
+													<li class="list-group-item d-table">
+														<span class="d-table-cell">1차 상환확률</span>
+														<div class="d-table-cell text-right">
+															<em class="text-red-dark text-24">83.45</em>
+															<span class="">%</span>
+														</div>
+													</li>
+													<li class="list-group-item d-table">
+														<span class="d-table-cell">손실확률</span>
+														<div class="d-table-cell text-right">
+															<em class="text-red-dark text-24">1.20</em>
+															<span class="">%</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 text-center mt-2">
+							<button type="button" class="btn btn-primary btn-lg">
+								<span class="icon-calculator"></span>전문가계산기</button>
+							<button type="button" class="btn btn-green btn-lg">
+								<span class="icon-chart-view"></span>시나리오 분석</button>
+						</div>
+						<div class="col-sm-12 etc-wrap mt-1">
+							<span class="icon-info"></span>본 정보는 금융상품 평가 또는 분석 시점까지에 입수한 제한된 자료에 근거하고 있으며, 적절한 가정과 모형을 이용하여 산출되었으며,  위의 정보로 환금되거나 처분될 가능성을 확인하거나 보장하는 것은 아닙니다. 이론가격 결정에 사용된 가정과 모형은 환경변화 및 당사가 정한 기준에 따라 변경될 수 있습니다
+	
+						</div>
+					</div>
+					
+					
+				</div>
+				<!-- //data-wrap -->
+			</div>
+		</div>
+		<!-- contents all -->
+	</div>
+	<!-- //main 컨텐츠 영역 -->
+</div>
+</main>
+<!-- //contents body -->
+<script>
+$('#tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+@@include('_inc/_footer.html')
